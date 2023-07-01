@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>VirtualBox中各版本Kali Linux的安装 - 苒</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="苒"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="苒"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Hi~"><meta property="og:type" content="blog"><meta property="og:title" content="VirtualBox中各版本Kali Linux的安装"><meta property="og:url" content="http://example.com/2021/10/28/Kali/"><meta property="og:site_name" content="苒"><meta property="og:description" content="Hi~"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image1.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image2.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image3.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image4.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image5.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image6.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image7.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image8.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image9.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image10.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image11.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image12.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image13.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image14.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image15.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image16.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image17.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image18.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image19.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image20.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image21.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image22.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image23.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image24.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image25.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image26.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image27.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image28.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image29.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image30.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image31.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image32.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image33.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image34.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image35.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image36.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image37.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image38.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image39.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image40.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image41.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image42.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image43.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image44.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image45.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image46.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image47.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image48.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image49.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image50.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image51.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image52.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image53.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image54.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image55.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image56.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image57.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image58.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image59.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image60.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image61.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image62.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image63.png"><meta property="og:image" content="http://example.com/2021/10/28/Kali/Kali/media/image64.png"><meta property="article:published_time" content="2021-10-28T05:26:09.000Z"><meta property="article:modified_time" content="2021-11-09T06:45:50.744Z"><meta property="article:author" content="苒"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/2021/10/28/Kali/Kali/media/image1.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/10/28/Kali/"},"headline":"VirtualBox中各版本Kali Linux的安装","image":["http://example.com/2021/10/28/Kali/Kali/media/image1.png","http://example.com/2021/10/28/Kali/Kali/media/image2.png","http://example.com/2021/10/28/Kali/Kali/media/image3.png","http://example.com/2021/10/28/Kali/Kali/media/image4.png","http://example.com/2021/10/28/Kali/Kali/media/image5.png","http://example.com/2021/10/28/Kali/Kali/media/image6.png","http://example.com/2021/10/28/Kali/Kali/media/image7.png","http://example.com/2021/10/28/Kali/Kali/media/image8.png","http://example.com/2021/10/28/Kali/Kali/media/image9.png","http://example.com/2021/10/28/Kali/Kali/media/image10.png","http://example.com/2021/10/28/Kali/Kali/media/image11.png","http://example.com/2021/10/28/Kali/Kali/media/image12.png","http://example.com/2021/10/28/Kali/Kali/media/image13.png","http://example.com/2021/10/28/Kali/Kali/media/image14.png","http://example.com/2021/10/28/Kali/Kali/media/image15.png","http://example.com/2021/10/28/Kali/Kali/media/image16.png","http://example.com/2021/10/28/Kali/Kali/media/image17.png","http://example.com/2021/10/28/Kali/Kali/media/image18.png","http://example.com/2021/10/28/Kali/Kali/media/image19.png","http://example.com/2021/10/28/Kali/Kali/media/image20.png","http://example.com/2021/10/28/Kali/Kali/media/image21.png","http://example.com/2021/10/28/Kali/Kali/media/image22.png","http://example.com/2021/10/28/Kali/Kali/media/image23.png","http://example.com/2021/10/28/Kali/Kali/media/image24.png","http://example.com/2021/10/28/Kali/Kali/media/image25.png","http://example.com/2021/10/28/Kali/Kali/media/image26.png","http://example.com/2021/10/28/Kali/Kali/media/image27.png","http://example.com/2021/10/28/Kali/Kali/media/image28.png","http://example.com/2021/10/28/Kali/Kali/media/image29.png","http://example.com/2021/10/28/Kali/Kali/media/image30.png","http://example.com/2021/10/28/Kali/Kali/media/image31.png","http://example.com/2021/10/28/Kali/Kali/media/image32.png","http://example.com/2021/10/28/Kali/Kali/media/image33.png","http://example.com/2021/10/28/Kali/Kali/media/image34.png","http://example.com/2021/10/28/Kali/Kali/media/image35.png","http://example.com/2021/10/28/Kali/Kali/media/image36.png","http://example.com/2021/10/28/Kali/Kali/media/image37.png","http://example.com/2021/10/28/Kali/Kali/media/image38.png","http://example.com/2021/10/28/Kali/Kali/media/image39.png","http://example.com/2021/10/28/Kali/Kali/media/image40.png","http://example.com/2021/10/28/Kali/Kali/media/image41.png","http://example.com/2021/10/28/Kali/Kali/media/image42.png","http://example.com/2021/10/28/Kali/Kali/media/image43.png","http://example.com/2021/10/28/Kali/Kali/media/image44.png","http://example.com/2021/10/28/Kali/Kali/media/image45.png","http://example.com/2021/10/28/Kali/Kali/media/image46.png","http://example.com/2021/10/28/Kali/Kali/media/image47.png","http://example.com/2021/10/28/Kali/Kali/media/image48.png","http://example.com/2021/10/28/Kali/Kali/media/image49.png","http://example.com/2021/10/28/Kali/Kali/media/image50.png","http://example.com/2021/10/28/Kali/Kali/media/image51.png","http://example.com/2021/10/28/Kali/Kali/media/image52.png","http://example.com/2021/10/28/Kali/Kali/media/image53.png","http://example.com/2021/10/28/Kali/Kali/media/image54.png","http://example.com/2021/10/28/Kali/Kali/media/image55.png","http://example.com/2021/10/28/Kali/Kali/media/image56.png","http://example.com/2021/10/28/Kali/Kali/media/image57.png","http://example.com/2021/10/28/Kali/Kali/media/image58.png","http://example.com/2021/10/28/Kali/Kali/media/image59.png","http://example.com/2021/10/28/Kali/Kali/media/image60.png","http://example.com/2021/10/28/Kali/Kali/media/image61.png","http://example.com/2021/10/28/Kali/Kali/media/image62.png","http://example.com/2021/10/28/Kali/Kali/media/image63.png","http://example.com/2021/10/28/Kali/Kali/media/image64.png"],"datePublished":"2021-10-28T05:26:09.000Z","dateModified":"2021-11-09T06:45:50.744Z","author":{"@type":"Person","name":"苒"},"publisher":{"@type":"Organization","name":"苒","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"Hi~"}</script><link rel="canonical" href="http://example.com/2021/10/28/Kali/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="苒" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-10-28T05:26:09.000Z" title="2021/10/28 13:26:09">2021-10-28</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-11-09T06:45:50.744Z" title="2021/11/9 14:45:50">2021-11-09</time></span><span class="level-item"><a class="link-muted" href="/categories/Learn/">Learn</a></span><span class="level-item">9 minutes read (About 1306 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">VirtualBox中各版本Kali Linux的安装</h1><div class="content"><p>Hi~</p>
+<span id="more"></span>
+<p>VirtualBox 6.1.28 r147628 (Qt5.6.2)</p>
+<p>映像名：kali-linux-2019.4-amd64.iso</p>
+<p>下载：<a target="_blank" rel="noopener" href="http://old.kali.org/kali-images/">http://old.kali.org/kali-images/</a></p>
+<h5 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h5><h6 id="1-打开virtualbox，点击新建"><a href="#1-打开virtualbox，点击新建" class="headerlink" title="1.  打开virtualbox，点击新建"></a>1.  打开virtualbox，点击新建</h6><img src="Kali/media/image1.png" style="clear: both; display: block; margin: auto;">
+
+<h6 id="2-名称随意，文件夹路径选个大点的盘，类型版本如图（名称和路径尽量全英文）"><a href="#2-名称随意，文件夹路径选个大点的盘，类型版本如图（名称和路径尽量全英文）" class="headerlink" title="2.  名称随意，文件夹路径选个大点的盘，类型版本如图（名称和路径尽量全英文）"></a>2.  名称随意，文件夹路径选个大点的盘，类型版本如图（名称和路径尽量全英文）</h6><img src="Kali/media/image2.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image3.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image4.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image5.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<h6 id="3-加载-kali-的-iso-镜像文件"><a href="#3-加载-kali-的-iso-镜像文件" class="headerlink" title="3.  加载 kali 的 iso 镜像文件"></a>3.  加载 kali 的 iso 镜像文件</h6><img src="Kali/media/image6.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image7.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<h6 id="4-设置"><a href="#4-设置" class="headerlink" title="4.  设置"></a>4.  设置</h6><img src="Kali/media/image8.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>改为双向方便使用（个人习惯，非必改）</p>
+<img src="Kali/media/image9.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>储存—添加虚拟硬盘</p>
+<img src="Kali/media/image10.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>创建</p>
+<img src="Kali/media/image11.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image12.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image13.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>看个人情况，建议20~40GB</p>
+<img src="Kali/media/image14.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>选择刚刚创建的这个</p>
+<img src="Kali/media/image15.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image16.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>正常显示如下</p>
+<img src="Kali/media/image17.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<h6 id="5-启动"><a href="#5-启动" class="headerlink" title="5.  启动"></a>5.  启动</h6><img src="Kali/media/image18.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>选择Graphical install，回车</p>
+<img src="Kali/media/image19.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image20.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image21.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image22.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image23.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image24.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>填入主机名，最好英文</p>
+<img src="Kali/media/image25.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>空 继续</p>
+<img src="Kali/media/image26.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>设置root账户密码</p>
+<img src="Kali/media/image27.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image28.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image29.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image30.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image31.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image32.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image33.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image34.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image35.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image36.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>留空</p>
+<img src="Kali/media/image37.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image38.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image39.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>如图选择</p>
+<img src="Kali/media/image40.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image41.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image42.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image43.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>选择Kali GNU&#x2F;Linux</p>
+<img src="Kali/media/image44.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>用户名为root</p>
+<img src="Kali/media/image45.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<h6 id="6-网络配置"><a href="#6-网络配置" class="headerlink" title="6.  网络配置"></a>6.  网络配置</h6><p>进入全局设定---选择网络---添加NAT网络</p>
+<img src="Kali/media/image46.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>设置NAT（名称和CIDR可根据需要自行设定）</p>
+<img src="Kali/media/image47.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>（提供内网访问）配置Host-Only设置（建议设置顺序为 网卡设定 --- DHCP服务器设定）</p>
+<img src="Kali/media/image48.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>虚拟主机提供3种网络（NAT模式，Host-Only模式，桥接模式）</p>
+<img src="Kali/media/image49.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>NAT模式</p>
+<img src="Kali/media/image50.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>桥接模式</p>
+<img src="Kali/media/image51.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>仅主机</p>
+<img src="Kali/media/image52.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>（为了方便管理，建议虚拟主机同时添加NAT网络，和Host-Only网络，既可以访问内网也可以访问外网）</p>
+<h6 id="7-中文乱码（没有中文字体）"><a href="#7-中文乱码（没有中文字体）" class="headerlink" title="7.  中文乱码（没有中文字体）"></a>7.  中文乱码（没有中文字体）</h6><pre><code>Kali Linux 2019.4开始默认使用的是Xfce桌面环境，替代了之前版本所使用的GNOME3桌面环境。
+
+安装系统时，选择了中文语言时，进入系统后，中文会显示乱码
+
+打开命令行 更改默认编码
+</code></pre>
+<img src="Kali/media/image53.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>输入:<code>dpkg-reconfigure locales </code>进入图形化界面</p>
+<p>空格是选择，Tab是切换，*是选中，回车是执行</p>
+<p>找到<code>zh_CN.UTF-8 UTF-8</code>并设置为默认</p>
+<img src="Kali/media/image54.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>空格选中后回车</p>
+<img src="Kali/media/image55.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>Tab键选中左下所框（内容为确定），回车</p>
+<img src="Kali/media/image56.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p># 编辑sources.list文件，并添加以下源，选择自己相对快一点的源。</p>
+<p><code>vim /etc/apt/sources.list</code></p>
+<p># 不会vim的可以使用图形界面编辑器</p>
+<p><code>mousepad /etc/apt/sources.list</code></p>
+<img src="Kali/media/image57.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># 阿里源</span><br><span class="line"></span><br><span class="line">deb https://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br><span class="line">deb-src https://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line"></span><br><span class="line"># 清华大学</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line"></span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free</span><br><span class="line"></span><br><span class="line"># 中科大（亲测唯一可行）</span><br><span class="line"></span><br><span class="line">deb http://mirrors.ustc.edu.cn/kali kali main non-free contrib</span><br><span class="line"></span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali main non-free contrib</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<img src="Kali/media/image58.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+s 保存后关闭该窗口</span><br><span class="line"></span><br><span class="line">apt-get update # 取回更新的软件包列表信息</span><br><span class="line"></span><br><span class="line">apt-get upgrade # 进行一次升级</span><br><span class="line"></span><br><span class="line">apt-get dist-upgrade #这一步是更新软件，如果你对新版本软件的需求不是那么迫切，可以不执行</span><br><span class="line"></span><br><span class="line">apt-get clean # 删除已经下载的安装包</span><br><span class="line"></span><br><span class="line">sudo apt-get install ttf-wqy-microhei ttf-wqy-zenhei xfonts-intl-chinese #安装中文字体，开源的文泉驿微米黑和文泉驿正黑字体</span><br><span class="line"></span><br><span class="line">reboot #重启</span><br></pre></td></tr></table></figure>
+
+<h6 id="2021版Kali安装后无图形化界面"><a href="#2021版Kali安装后无图形化界面" class="headerlink" title="2021版Kali安装后无图形化界面"></a>2021版Kali安装后无图形化界面</h6><p>映像名：kali-linux-2021.3-installer-netinst-amd64.iso</p>
+<p>下载：<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/kali-images/">https://mirrors.aliyun.com/kali-images/</a></p>
+<p>对于Kali系统的2020.1版本，开发团队宣称：”我们不再为每个桌面环境(DE)提供单独的映像。相反，我们现在只有一个单独的映像，可以在联网安装期间选择桌面环境和要安装的工具。这意味着没有Xfce、GNOME、KDE、MATE或LXDE桌面的单独镜像下载链接。”因此不联网安装，只有纯文本命令行界面。</p>
+<p>正常安装后登录</p>
+<ol>
+<li><p>登录普通用户后，启用root用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo passwd root</span><br><span class="line"></span><br><span class="line">我们信任您已经从系统管理员那里了解了日常注意事项。</span><br><span class="line"></span><br><span class="line">总结起来无外乎这三点：</span><br><span class="line"></span><br><span class="line">#1) 尊重别人的隐私。</span><br><span class="line"></span><br><span class="line">#2) 输入前要先考虑(后果和风险)。</span><br><span class="line"></span><br><span class="line">#3) 权力越大，责任越大。</span><br><span class="line"></span><br><span class="line">[sudo] lingyun 的密码：</span><br><span class="line"></span><br><span class="line">新的 密码：</span><br><span class="line"></span><br><span class="line">重新输入新的 密码：</span><br><span class="line"></span><br><span class="line">passwd：已成功更新密码</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>需要输入三次密码，分别是当前用户密码，root密码和root密码确认。输入密码时，密码是不可见的。</p>
+</li>
+<li><p>切换到root用户</p>
+<p><code>su - root</code></p>
+</li>
+<li><p>更改apt源为国内源（同上述源），保存并退出</p>
+</li>
+</ol>
+<p><code>vi /etc/apt/sources.list</code></p>
+<ol start="4">
+<li><p>更新系统</p>
+<p><code>sudo apt update &amp;&amp; apt upgrade &amp;&amp; apt dist-upgrade</code></p>
+<p><code>sudo apt-get clean</code></p>
+</li>
+</ol>
+<img src="Kali/media/image59.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image60.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image61.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<ol start="5">
+<li><p>安装xorg（xfce4环境必备）</p>
+<p><code>sudo apt-get install xorg</code></p>
+</li>
+<li><p>安装Xfce4桌面环境</p>
+<p><code>sudo apt-get install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies</code></p>
+</li>
+<li><p>解决中文乱码问题</p>
+<p><code>sudo apt install ttf-wqy-zenhei</code></p>
+</li>
+<li><p>重启计算机，之后便可正常使用图形界面</p>
+<p><code>reboot</code></p>
+</li>
+<li><p>个性化设置（主题风格、屏幕分辩率）</p>
+</li>
+</ol>
+<img src="Kali/media/image62.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<img src="Kali/media/image63.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<p>要先将VirtualBox的窗口拉大再向高分辨率调整，否则会概率失败</p>
+<img src="Kali/media/image64.png" width="70%" style="clear: both; display: block; margin: auto;">
+
+<h6 id="推荐联网安装2020-4"><a href="#推荐联网安装2020-4" class="headerlink" title="推荐联网安装2020.4"></a>推荐联网安装2020.4</h6><p>映像名：kali-linux-2020.4-installer-amd64</p>
+<p>下载：<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/kali-images/kali-2020.4/">https://mirrors.aliyun.com/kali-images/kali-2020.4/</a></p>
+<p>联网状态下选择默认配置安装 无上述中文乱码及无图形化界面问题，且集成安装多数常用软件</p>
+<h5 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h5><p><a target="_blank" rel="noopener" href="https://www.pianshen.com/article/49721031770/">https://www.pianshen.com/article/49721031770/</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/milkway2013/article/details/103371811">https://blog.csdn.net/milkway2013/article/details/103371811</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45907620/article/details/106835152">https://blog.csdn.net/weixin_45907620/article/details/106835152</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42514956/article/details/104561883">https://blog.csdn.net/qq_42514956/article/details/104561883</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011672712/article/details/103393297">https://blog.csdn.net/u011672712/article/details/103393297</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/rise-home/p/12529651.html">https://www.cnblogs.com/rise-home/p/12529651.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/kali">https://developer.aliyun.com/mirror/kali</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.51cto.com/1inux/2048278">https://blog.51cto.com/1inux/2048278</a></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>VirtualBox中各版本Kali Linux的安装</p><p><a href="http://example.com/2021/10/28/Kali/">http://example.com/2021/10/28/Kali/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>苒</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2021-10-28</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2021-11-09</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/10/29/SwitchyOmega/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">SwitchyOmega安装使用</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/03/01/Resource-Summary/"><span class="level-item">Resource Summary</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="苒"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">苒</p><p class="is-size-6 is-block">It is written.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>UJN</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">8</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/QinMoMeak/QinMoMeak.github.io"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#安装教程"><span class="level-left"><span class="level-item">1</span><span class="level-item">安装教程</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#1-打开virtualbox，点击新建"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">1.  打开virtualbox，点击新建</span></span></a></li><li><a class="level is-mobile" href="#2-名称随意，文件夹路径选个大点的盘，类型版本如图（名称和路径尽量全英文）"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">2.  名称随意，文件夹路径选个大点的盘，类型版本如图（名称和路径尽量全英文）</span></span></a></li><li><a class="level is-mobile" href="#3-加载-kali-的-iso-镜像文件"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">3.  加载 kali 的 iso 镜像文件</span></span></a></li><li><a class="level is-mobile" href="#4-设置"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">4.  设置</span></span></a></li><li><a class="level is-mobile" href="#5-启动"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">5.  启动</span></span></a></li><li><a class="level is-mobile" href="#6-网络配置"><span class="level-left"><span class="level-item">1.6</span><span class="level-item">6.  网络配置</span></span></a></li><li><a class="level is-mobile" href="#7-中文乱码（没有中文字体）"><span class="level-left"><span class="level-item">1.7</span><span class="level-item">7.  中文乱码（没有中文字体）</span></span></a></li><li><a class="level is-mobile" href="#2021版Kali安装后无图形化界面"><span class="level-left"><span class="level-item">1.8</span><span class="level-item">2021版Kali安装后无图形化界面</span></span></a></li><li><a class="level is-mobile" href="#推荐联网安装2020-4"><span class="level-left"><span class="level-item">1.9</span><span class="level-item">推荐联网安装2020.4</span></span></a></li></ul></li><li><a class="level is-mobile" href="#参考："><span class="level-left"><span class="level-item">2</span><span class="level-item">参考：</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/A-SOUL/"><span class="level-start"><span class="level-item">A-SOUL</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Learn/"><span class="level-start"><span class="level-item">Learn</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/Life/"><span class="level-start"><span class="level-item">Life</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Literal/"><span class="level-start"><span class="level-item">Literal</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Misc/"><span class="level-start"><span class="level-item">Misc</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/UJN/"><span class="level-start"><span class="level-item">UJN</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-01T15:45:38.181Z">2023-07-01</time></p><p class="title"><a href="/2023/07/01/%E5%BD%93%E4%BB%A3%E9%9D%92%E5%B9%B4%E7%A9%BF%E6%90%AD/">当代青年极简穿搭指南</a></p><p class="categories"><a href="/categories/Life/">Life</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-24T05:26:09.000Z">2023-06-24</time></p><p class="title"><a href="/2023/06/24/Eileen_data/">UID:672342685 动态留档</a></p><p class="categories"><a href="/categories/A-SOUL/">A-SOUL</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-30T06:29:17.000Z">2021-10-30</time></p><p class="title"><a href="/2021/10/30/Tips/">Tips</a></p><p class="categories"><a href="/categories/Learn/">Learn</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-29T13:57:05.000Z">2021-10-29</time></p><p class="title"><a href="/2021/10/29/SwitchyOmega/">SwitchyOmega安装使用</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-28T05:26:09.000Z">2021-10-28</time></p><p class="title"><a href="/2021/10/28/Kali/">VirtualBox中各版本Kali Linux的安装</a></p><p class="categories"><a href="/categories/Learn/">Learn</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/"><span class="level-start"><span class="level-item">2019</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Learn/"><span class="tag">Learn</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Literal/"><span class="tag">Literal</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Notes/"><span class="tag">Notes</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Probabilism/"><span class="tag">Probabilism</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Programming/"><span class="tag">Programming</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Spring/"><span class="tag">Spring</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SpringBoot/"><span class="tag">SpringBoot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/office/"><span class="tag">office</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="苒" height="28"></a><p class="is-size-7"><span>&copy; 2023 苒</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

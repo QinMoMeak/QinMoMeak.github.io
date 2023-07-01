@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Probabilism_notes - 苒</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="苒"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="苒"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="概率论笔记"><meta property="og:type" content="blog"><meta property="og:title" content="Probabilism_notes"><meta property="og:url" content="http://example.com/2020/12/27/Probabilism_notes/"><meta property="og:site_name" content="苒"><meta property="og:description" content="概率论笔记"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://img.mubu.com/document_image/24d78ecc-147f-42ca-8b92-4d1b0a5dd171-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0baca5c4-d965-44e1-a61c-115d31467ea6-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/22c38d29-abba-4356-8962-85765159a2c3-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/23fede65-b41a-43a4-95a6-dd42e4880a69-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3c6b52e9-2dd2-478c-b9df-260d8c0bddf9-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2b0f281d-2fa6-4750-a270-58f62988900a-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/362c862e-5056-48c5-9d35-702b696257e5-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/95793f1c-bd80-448a-931d-29209cb54739-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/634aa33d-686f-48c3-a84d-3fea54d8aee3-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/10c8f10d-7964-456d-b3dc-dfdf9eb47756-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/18f7d229-ce01-4e5f-b4ab-be3f35a40f22-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e58913b6-4bf0-46e2-bfc4-ca53c0d933f2-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2c4f76d5-7f4a-4300-a47b-ce3be6cdb55b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ad2bbed0-5624-4c14-b1e5-de9864dea445-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ee077a6c-4d2a-4c3a-8dc8-9864ddb9d21d-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ae09b7d0-6ac3-417b-9fe3-a76bdce2ef22-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/1f64b68e-72bf-4fc4-b265-97956e504699-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/762742d7-cbda-4169-82da-40e07e61ca9f-0.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/1952da79-cee7-4604-8b42-cd5fce23a883-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/9f2958f7-3d19-493a-81f4-63ec85713709-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6a5f823b-c688-4615-91f9-be702e4a0b5d-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/9ab0d7a3-bb86-4473-ab9e-d3f8c6bb3a37-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a57519df-c0be-406c-b3e3-b55adc77782a-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/17a6b169-1215-4092-9b28-1ac6bf8f778f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/4c013f90-82c3-499d-a6eb-9993bac0891f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/dcfe645c-5366-409e-b881-58999144c917-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/698f3996-5c26-4c77-8914-1e85f939cf34-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7f3832ae-02fe-47a7-aae2-5808f4e73082-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/dd0714ec-f4f6-41ec-9e7c-c2c8c4bca9ce-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a5d0ed58-14c2-48cc-8f6e-974f678b7e5f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c726c2f2-d595-4c4e-bef1-8d356c31e70c-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/87627df5-b023-426c-a4ae-f954e7d8cade-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6bb65be0-e958-4d8f-991b-3fedee9e6c52-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/027778d7-90ba-41a1-bc89-b3f8d9fb1627-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/5aa5b9fe-7a0b-4e9e-a5d6-cfa96bc56611-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/8599ab6b-3399-4961-993b-3ddcc2134e8c-0.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/57594c5b-3315-479d-8543-6f939512e5b6-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/f5bac03d-45cb-4382-a3eb-2b147aad6cd1-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/04ce3ab5-1d16-4739-8ced-678acbc3efbe-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/96d5f538-4ec1-4794-9caf-14836f1b0f9a-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c860ef14-d13a-4967-b8a9-3b8c4c8db5ab-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/faac00a0-0127-4e00-a1cb-d55eadaa8b22-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2e37ee64-d2fe-481a-8c20-bc063c904312-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e7941351-b716-48ba-959f-195727402a7b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b5b4463a-1e22-48b5-9541-99ef2249aaf9-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/5f50955c-5bb5-4458-9f69-8d25999749c3-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/15fd8ae6-f81d-4a97-8693-e2fa53b76520-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/5eaa305c-5e32-4311-978e-4232d0187e35-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/57627b12-48ea-4524-b6bb-46c303e79005-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e565efef-eb22-4ba3-a0f5-326a0bd15f02-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/f1b31f6c-ff04-4990-a4d1-df9055f1f7ea-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6ee8c7f8-ca7c-4401-a8f5-ddf95a2f8bdc-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7e981a99-a358-4d43-bd5f-ac2b8dcfe40b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3f0ccf7b-e8c6-4bd5-964a-3b65422835fe-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/98337de4-ffe1-48c1-aced-7aaef0048127-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7f2041c0-7dce-437b-8466-aff474710b24-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3dfab8f4-2aa3-4d76-9362-2a025271211f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a8110775-9bca-466c-b386-e3585ef96004-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/03a7e698-a104-4132-a262-1884b077c805-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/08f3e3d0-e591-46e9-b14f-a010058e1855-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/57e04ce9-df8f-4770-a6a9-b7422e96393f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/9870d868-0f75-42fd-a09b-8b0941ef5933-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c3c338de-93e5-4996-9f29-ee92ad3d3d5a-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/50a5674a-57d5-48f7-b2a4-19489e6f185f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/19f8bb27-d324-4fb9-8206-42315dc01e80-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/26d7e10f-76d7-4bcd-b1cb-79d2553d4f8c-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/33d21813-0984-407d-8ae9-29e484097bc9-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/5ecd86a8-ce9f-4c68-bd2e-5e6fe372eab8-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a4915f42-3ad2-409c-9543-c8a79a46ca65-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7ecdadd2-ec15-4d0d-9a79-39b8a438d198-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b80f1530-0cef-45d4-87ca-122d351acc66-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/807db67b-0a10-40b6-b990-0ce24d4a52ca-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6fa20468-56b3-4a7f-b0c3-899ea310d377-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/aee1f136-371a-4258-ac84-de98ff10eab1-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/885e8241-d828-4c4f-b57e-52cc1082544c-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b001963e-feb5-4b4a-9c18-cc10632c6bca-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/06ea3a14-da00-4510-afa2-444f22106abc-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/63b9580a-9789-4c57-8417-db73af3859cc-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/29942f0f-a160-4038-a4c9-ad82298026e6-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7bb639cb-caaa-4e20-99d4-bde552adda09-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/bafcd8a6-1f7b-42f0-b315-1d33301f679d-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b1757902-0423-4547-8d4f-1dc278b3f317-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3601bd10-f383-4249-bdde-1f9c97047a8b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b51a880c-583e-456a-92b3-547b63497114-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/96757343-8420-4a0b-beee-24eb03b84033-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/f26738bb-0a10-4126-9382-01b3c0422d47-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3fc44fa8-45ac-4393-949b-4557f7a521ee-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3aadc376-bb76-4b7f-9f41-d712e8c4987a-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c16306ea-941d-4363-b43f-8f44b593f3cb-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a0f1bbac-353a-438f-b484-d46a2e704213-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/526b3c0c-59d4-4a8c-90d9-ad2cb2d34946-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/4ebbee3e-863c-45f9-a4e3-ca3ccbc2f015-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0a500742-eab1-4369-9d55-137164863e69-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/36133982-ba08-4c24-aa61-ae40489f6ff7-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7bdad8e8-a0a7-43e7-a90b-5cfba6c856d3-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/81b71ccb-0194-489b-9584-c5228769e9d8-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2f1305c1-17a4-4913-b462-23fd4e3bafe5-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/bc5076dc-c15a-42cb-9ee2-5f3d9d3d2243-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0c9f5346-b037-4c36-88d8-27b974d5ce34-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/25331293-dee9-4d5b-ab6a-850be6d71e0f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/fb9bd11a-11b2-417f-a4a4-780ca225eeca-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a578ab40-4e45-4d11-9b06-5c40a06dc6cb-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/826c41ba-30df-48b7-9381-c609927a49ec-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/87376fce-84e7-4106-a1a8-f4a2044a1226-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2049335b-8464-451a-9bec-1cf8ea0376bb-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a6260757-6a02-476e-9b69-d676f74489b5-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7cca0731-7a20-47fd-965c-e8cfeb6d0626-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/54b46ba5-e9b9-42b4-8e26-bcc0b2c341e7-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/4b4a6c86-a12f-4b3e-b297-206d2209559b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7fedf979-122c-48cb-b5bf-30ac30cc85d2-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/80b24be5-829c-4a26-981a-9f28e89e9f6d-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d9ecf722-34e5-4a2a-8662-065b80a45f21-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b9379396-5f08-408a-a477-61ef6c792baa-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/8eb45b32-773b-4595-aa2a-bac51308b463-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/13fa246e-05b9-452b-92c9-d0ecbafd74bb-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/5faf3f2c-f617-421e-aa3e-d8d7dfd3a546-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/631cbd28-1ef4-45a0-a4a7-5442b86de5ed-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6145b26a-0191-4c9b-a11f-2820365084e6-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/062962d2-0f67-4100-9938-0f82c6eba4e6-0.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a23800d5-42f7-4d80-b64e-31f7d221cf12-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3e9c5c4e-d4d7-4393-bb9c-8fde20f9c083-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/8f103120-932e-4b31-9b0b-c1a4e8ff6cb4-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/80e1876b-43aa-4b90-a922-12761771bc36-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/9494e7e7-8f64-400d-b4ef-f663e5da7d0f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/275d02e6-31c2-4f42-ae19-5f119fd197b6-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0bd3c55c-291d-46e0-8c03-90d2290928ee-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/93972dfe-7869-42cc-9f8c-c6c455805c0b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0529267e-db79-4e2e-a313-e3c780ff9ae7-0.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/830383d5-6e19-444b-bd43-ff4ac788622b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/24c9a994-15ad-4f2d-b439-c84912587d7e-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c90858b7-77e7-408b-9252-226545b26eec-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/dfc9bf9a-f9c8-477e-be21-149fac7d8f8b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/38a6bf12-cb7c-4ccb-8039-2dc6f8fde5a5-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/92ddfc81-07f4-47ac-bc4a-e3f2c6a9d2f2-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a4dc7ed2-fc65-41d6-89e0-0f415e4b6edc-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/1b4e9717-825f-4b67-a52d-67ab4e4a005b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/12e0a3f2-bd2d-4d75-a1aa-b6d797e211d5-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3f0e419d-4a1d-4262-8552-4bc738a385be-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/9ab9b33b-d4ae-42f7-ba13-4f432da94008-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/fe2b9132-3de5-4545-8170-50845106da1f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ee01be1d-86c9-4ddb-b4d2-bd1cdc8985f4-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d1be1959-c931-44c4-bcb7-03ba298799eb-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/74607f77-a416-49aa-b66b-e2e98856e90a-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/21f77c06-85d1-4006-8949-ee382d706e4f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/eac22e22-3695-4dfc-9c47-7141a04c438d-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/35f43a15-f619-4c9c-a01f-fbfeb68f5195-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b247a2f3-1327-4bf7-bade-e4ee58919513-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b2d77c59-360d-4fc5-adf9-6e9630673975-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/561416b2-df55-46ff-a376-fee2acbc1f8a-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/73ab5110-db7e-4f05-9db0-fd19183780b6-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/70a951ed-1123-4978-b70e-0347d434fe70-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/5f6531d7-571a-47fb-8f9e-aa096a82b6b2-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c8203586-2bd7-43f6-8ade-5af005906df0-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/f8dd80ae-4f70-4a88-bb04-be1ba8f4b62f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d34307a8-a73a-4da2-892f-ec4baa19b7d2-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e416b787-1d22-4920-8464-a34cf69bc1a9-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d895bffe-005e-4b8c-bd56-03f0e52cd7b9-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0fa583c4-ab13-4c09-87d7-3a0232a25436-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/888fc5bd-34ff-4ba7-90b2-a27654ecf295-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/09499d2a-e8e1-468e-a10f-c1a26d030249-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/4913985a-b984-43bb-b82b-539b9a82c2ac-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/75c75df6-23f8-4a88-8bc7-5f01d195b34b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/f6c179c1-8089-47e1-b6f2-aef5c5c3d1f7-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d9b5176f-c62f-4fe3-93ea-5af26f9b4f8f-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e893a245-ed4d-46ec-b646-70f8a102146b-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/fdd35d70-14c5-4363-a543-7cc736d94d01-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d4b34d35-9363-4c6f-9eb0-6c9fef231944-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/94a0e744-dec9-445a-9f87-ac2340bf5555-430061.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/8c383e06-a931-4e80-8598-dbf252210679-430061.jpg"><meta property="article:published_time" content="2020-12-27T05:51:11.000Z"><meta property="article:modified_time" content="2021-01-26T09:38:32.520Z"><meta property="article:author" content="苒"><meta property="article:tag" content="Probabilism"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://img.mubu.com/document_image/24d78ecc-147f-42ca-8b92-4d1b0a5dd171-430061.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2020/12/27/Probabilism_notes/"},"headline":"Probabilism_notes","image":["https://img.mubu.com/document_image/24d78ecc-147f-42ca-8b92-4d1b0a5dd171-430061.jpg","https://img.mubu.com/document_image/0baca5c4-d965-44e1-a61c-115d31467ea6-430061.jpg","https://img.mubu.com/document_image/22c38d29-abba-4356-8962-85765159a2c3-430061.jpg","https://img.mubu.com/document_image/23fede65-b41a-43a4-95a6-dd42e4880a69-430061.jpg","https://img.mubu.com/document_image/3c6b52e9-2dd2-478c-b9df-260d8c0bddf9-430061.jpg","https://img.mubu.com/document_image/2b0f281d-2fa6-4750-a270-58f62988900a-430061.jpg","https://img.mubu.com/document_image/362c862e-5056-48c5-9d35-702b696257e5-430061.jpg","https://img.mubu.com/document_image/95793f1c-bd80-448a-931d-29209cb54739-430061.jpg","https://img.mubu.com/document_image/634aa33d-686f-48c3-a84d-3fea54d8aee3-430061.jpg","https://img.mubu.com/document_image/10c8f10d-7964-456d-b3dc-dfdf9eb47756-430061.jpg","https://img.mubu.com/document_image/18f7d229-ce01-4e5f-b4ab-be3f35a40f22-430061.jpg","https://img.mubu.com/document_image/e58913b6-4bf0-46e2-bfc4-ca53c0d933f2-430061.jpg","https://img.mubu.com/document_image/2c4f76d5-7f4a-4300-a47b-ce3be6cdb55b-430061.jpg","https://img.mubu.com/document_image/ad2bbed0-5624-4c14-b1e5-de9864dea445-430061.jpg","https://img.mubu.com/document_image/ee077a6c-4d2a-4c3a-8dc8-9864ddb9d21d-430061.jpg","https://img.mubu.com/document_image/ae09b7d0-6ac3-417b-9fe3-a76bdce2ef22-430061.jpg","https://img.mubu.com/document_image/1f64b68e-72bf-4fc4-b265-97956e504699-430061.jpg","https://img.mubu.com/document_image/762742d7-cbda-4169-82da-40e07e61ca9f-0.jpg","https://img.mubu.com/document_image/1952da79-cee7-4604-8b42-cd5fce23a883-430061.jpg","https://img.mubu.com/document_image/9f2958f7-3d19-493a-81f4-63ec85713709-430061.jpg","https://img.mubu.com/document_image/6a5f823b-c688-4615-91f9-be702e4a0b5d-430061.jpg","https://img.mubu.com/document_image/9ab0d7a3-bb86-4473-ab9e-d3f8c6bb3a37-430061.jpg","https://img.mubu.com/document_image/a57519df-c0be-406c-b3e3-b55adc77782a-430061.jpg","https://img.mubu.com/document_image/17a6b169-1215-4092-9b28-1ac6bf8f778f-430061.jpg","https://img.mubu.com/document_image/4c013f90-82c3-499d-a6eb-9993bac0891f-430061.jpg","https://img.mubu.com/document_image/dcfe645c-5366-409e-b881-58999144c917-430061.jpg","https://img.mubu.com/document_image/698f3996-5c26-4c77-8914-1e85f939cf34-430061.jpg","https://img.mubu.com/document_image/7f3832ae-02fe-47a7-aae2-5808f4e73082-430061.jpg","https://img.mubu.com/document_image/dd0714ec-f4f6-41ec-9e7c-c2c8c4bca9ce-430061.jpg","https://img.mubu.com/document_image/a5d0ed58-14c2-48cc-8f6e-974f678b7e5f-430061.jpg","https://img.mubu.com/document_image/c726c2f2-d595-4c4e-bef1-8d356c31e70c-430061.jpg","https://img.mubu.com/document_image/87627df5-b023-426c-a4ae-f954e7d8cade-430061.jpg","https://img.mubu.com/document_image/6bb65be0-e958-4d8f-991b-3fedee9e6c52-430061.jpg","https://img.mubu.com/document_image/027778d7-90ba-41a1-bc89-b3f8d9fb1627-430061.jpg","https://img.mubu.com/document_image/5aa5b9fe-7a0b-4e9e-a5d6-cfa96bc56611-430061.jpg","https://img.mubu.com/document_image/8599ab6b-3399-4961-993b-3ddcc2134e8c-0.jpg","https://img.mubu.com/document_image/57594c5b-3315-479d-8543-6f939512e5b6-430061.jpg","https://img.mubu.com/document_image/f5bac03d-45cb-4382-a3eb-2b147aad6cd1-430061.jpg","https://img.mubu.com/document_image/04ce3ab5-1d16-4739-8ced-678acbc3efbe-430061.jpg","https://img.mubu.com/document_image/96d5f538-4ec1-4794-9caf-14836f1b0f9a-430061.jpg","https://img.mubu.com/document_image/c860ef14-d13a-4967-b8a9-3b8c4c8db5ab-430061.jpg","https://img.mubu.com/document_image/faac00a0-0127-4e00-a1cb-d55eadaa8b22-430061.jpg","https://img.mubu.com/document_image/2e37ee64-d2fe-481a-8c20-bc063c904312-430061.jpg","https://img.mubu.com/document_image/e7941351-b716-48ba-959f-195727402a7b-430061.jpg","https://img.mubu.com/document_image/b5b4463a-1e22-48b5-9541-99ef2249aaf9-430061.jpg","https://img.mubu.com/document_image/5f50955c-5bb5-4458-9f69-8d25999749c3-430061.jpg","https://img.mubu.com/document_image/15fd8ae6-f81d-4a97-8693-e2fa53b76520-430061.jpg","https://img.mubu.com/document_image/5eaa305c-5e32-4311-978e-4232d0187e35-430061.jpg","https://img.mubu.com/document_image/57627b12-48ea-4524-b6bb-46c303e79005-430061.jpg","https://img.mubu.com/document_image/e565efef-eb22-4ba3-a0f5-326a0bd15f02-430061.jpg","https://img.mubu.com/document_image/f1b31f6c-ff04-4990-a4d1-df9055f1f7ea-430061.jpg","https://img.mubu.com/document_image/6ee8c7f8-ca7c-4401-a8f5-ddf95a2f8bdc-430061.jpg","https://img.mubu.com/document_image/7e981a99-a358-4d43-bd5f-ac2b8dcfe40b-430061.jpg","https://img.mubu.com/document_image/3f0ccf7b-e8c6-4bd5-964a-3b65422835fe-430061.jpg","https://img.mubu.com/document_image/98337de4-ffe1-48c1-aced-7aaef0048127-430061.jpg","https://img.mubu.com/document_image/7f2041c0-7dce-437b-8466-aff474710b24-430061.jpg","https://img.mubu.com/document_image/3dfab8f4-2aa3-4d76-9362-2a025271211f-430061.jpg","https://img.mubu.com/document_image/a8110775-9bca-466c-b386-e3585ef96004-430061.jpg","https://img.mubu.com/document_image/03a7e698-a104-4132-a262-1884b077c805-430061.jpg","https://img.mubu.com/document_image/08f3e3d0-e591-46e9-b14f-a010058e1855-430061.jpg","https://img.mubu.com/document_image/57e04ce9-df8f-4770-a6a9-b7422e96393f-430061.jpg","https://img.mubu.com/document_image/9870d868-0f75-42fd-a09b-8b0941ef5933-430061.jpg","https://img.mubu.com/document_image/c3c338de-93e5-4996-9f29-ee92ad3d3d5a-430061.jpg","https://img.mubu.com/document_image/50a5674a-57d5-48f7-b2a4-19489e6f185f-430061.jpg","https://img.mubu.com/document_image/19f8bb27-d324-4fb9-8206-42315dc01e80-430061.jpg","https://img.mubu.com/document_image/26d7e10f-76d7-4bcd-b1cb-79d2553d4f8c-430061.jpg","https://img.mubu.com/document_image/33d21813-0984-407d-8ae9-29e484097bc9-430061.jpg","https://img.mubu.com/document_image/5ecd86a8-ce9f-4c68-bd2e-5e6fe372eab8-430061.jpg","https://img.mubu.com/document_image/a4915f42-3ad2-409c-9543-c8a79a46ca65-430061.jpg","https://img.mubu.com/document_image/7ecdadd2-ec15-4d0d-9a79-39b8a438d198-430061.jpg","https://img.mubu.com/document_image/b80f1530-0cef-45d4-87ca-122d351acc66-430061.jpg","https://img.mubu.com/document_image/807db67b-0a10-40b6-b990-0ce24d4a52ca-430061.jpg","https://img.mubu.com/document_image/6fa20468-56b3-4a7f-b0c3-899ea310d377-430061.jpg","https://img.mubu.com/document_image/aee1f136-371a-4258-ac84-de98ff10eab1-430061.jpg","https://img.mubu.com/document_image/885e8241-d828-4c4f-b57e-52cc1082544c-430061.jpg","https://img.mubu.com/document_image/b001963e-feb5-4b4a-9c18-cc10632c6bca-430061.jpg","https://img.mubu.com/document_image/06ea3a14-da00-4510-afa2-444f22106abc-430061.jpg","https://img.mubu.com/document_image/63b9580a-9789-4c57-8417-db73af3859cc-430061.jpg","https://img.mubu.com/document_image/29942f0f-a160-4038-a4c9-ad82298026e6-430061.jpg","https://img.mubu.com/document_image/7bb639cb-caaa-4e20-99d4-bde552adda09-430061.jpg","https://img.mubu.com/document_image/bafcd8a6-1f7b-42f0-b315-1d33301f679d-430061.jpg","https://img.mubu.com/document_image/b1757902-0423-4547-8d4f-1dc278b3f317-430061.jpg","https://img.mubu.com/document_image/3601bd10-f383-4249-bdde-1f9c97047a8b-430061.jpg","https://img.mubu.com/document_image/b51a880c-583e-456a-92b3-547b63497114-430061.jpg","https://img.mubu.com/document_image/96757343-8420-4a0b-beee-24eb03b84033-430061.jpg","https://img.mubu.com/document_image/f26738bb-0a10-4126-9382-01b3c0422d47-430061.jpg","https://img.mubu.com/document_image/3fc44fa8-45ac-4393-949b-4557f7a521ee-430061.jpg","https://img.mubu.com/document_image/3aadc376-bb76-4b7f-9f41-d712e8c4987a-430061.jpg","https://img.mubu.com/document_image/c16306ea-941d-4363-b43f-8f44b593f3cb-430061.jpg","https://img.mubu.com/document_image/a0f1bbac-353a-438f-b484-d46a2e704213-430061.jpg","https://img.mubu.com/document_image/526b3c0c-59d4-4a8c-90d9-ad2cb2d34946-430061.jpg","https://img.mubu.com/document_image/4ebbee3e-863c-45f9-a4e3-ca3ccbc2f015-430061.jpg","https://img.mubu.com/document_image/0a500742-eab1-4369-9d55-137164863e69-430061.jpg","https://img.mubu.com/document_image/36133982-ba08-4c24-aa61-ae40489f6ff7-430061.jpg","https://img.mubu.com/document_image/7bdad8e8-a0a7-43e7-a90b-5cfba6c856d3-430061.jpg","https://img.mubu.com/document_image/81b71ccb-0194-489b-9584-c5228769e9d8-430061.jpg","https://img.mubu.com/document_image/2f1305c1-17a4-4913-b462-23fd4e3bafe5-430061.jpg","https://img.mubu.com/document_image/bc5076dc-c15a-42cb-9ee2-5f3d9d3d2243-430061.jpg","https://img.mubu.com/document_image/0c9f5346-b037-4c36-88d8-27b974d5ce34-430061.jpg","https://img.mubu.com/document_image/25331293-dee9-4d5b-ab6a-850be6d71e0f-430061.jpg","https://img.mubu.com/document_image/fb9bd11a-11b2-417f-a4a4-780ca225eeca-430061.jpg","https://img.mubu.com/document_image/a578ab40-4e45-4d11-9b06-5c40a06dc6cb-430061.jpg","https://img.mubu.com/document_image/826c41ba-30df-48b7-9381-c609927a49ec-430061.jpg","https://img.mubu.com/document_image/87376fce-84e7-4106-a1a8-f4a2044a1226-430061.jpg","https://img.mubu.com/document_image/2049335b-8464-451a-9bec-1cf8ea0376bb-430061.jpg","https://img.mubu.com/document_image/a6260757-6a02-476e-9b69-d676f74489b5-430061.jpg","https://img.mubu.com/document_image/7cca0731-7a20-47fd-965c-e8cfeb6d0626-430061.jpg","https://img.mubu.com/document_image/54b46ba5-e9b9-42b4-8e26-bcc0b2c341e7-430061.jpg","https://img.mubu.com/document_image/4b4a6c86-a12f-4b3e-b297-206d2209559b-430061.jpg","https://img.mubu.com/document_image/7fedf979-122c-48cb-b5bf-30ac30cc85d2-430061.jpg","https://img.mubu.com/document_image/80b24be5-829c-4a26-981a-9f28e89e9f6d-430061.jpg","https://img.mubu.com/document_image/d9ecf722-34e5-4a2a-8662-065b80a45f21-430061.jpg","https://img.mubu.com/document_image/b9379396-5f08-408a-a477-61ef6c792baa-430061.jpg","https://img.mubu.com/document_image/8eb45b32-773b-4595-aa2a-bac51308b463-430061.jpg","https://img.mubu.com/document_image/13fa246e-05b9-452b-92c9-d0ecbafd74bb-430061.jpg","https://img.mubu.com/document_image/5faf3f2c-f617-421e-aa3e-d8d7dfd3a546-430061.jpg","https://img.mubu.com/document_image/631cbd28-1ef4-45a0-a4a7-5442b86de5ed-430061.jpg","https://img.mubu.com/document_image/6145b26a-0191-4c9b-a11f-2820365084e6-430061.jpg","https://img.mubu.com/document_image/062962d2-0f67-4100-9938-0f82c6eba4e6-0.jpg","https://img.mubu.com/document_image/a23800d5-42f7-4d80-b64e-31f7d221cf12-430061.jpg","https://img.mubu.com/document_image/3e9c5c4e-d4d7-4393-bb9c-8fde20f9c083-430061.jpg","https://img.mubu.com/document_image/8f103120-932e-4b31-9b0b-c1a4e8ff6cb4-430061.jpg","https://img.mubu.com/document_image/80e1876b-43aa-4b90-a922-12761771bc36-430061.jpg","https://img.mubu.com/document_image/9494e7e7-8f64-400d-b4ef-f663e5da7d0f-430061.jpg","https://img.mubu.com/document_image/275d02e6-31c2-4f42-ae19-5f119fd197b6-430061.jpg","https://img.mubu.com/document_image/0bd3c55c-291d-46e0-8c03-90d2290928ee-430061.jpg","https://img.mubu.com/document_image/93972dfe-7869-42cc-9f8c-c6c455805c0b-430061.jpg","https://img.mubu.com/document_image/0529267e-db79-4e2e-a313-e3c780ff9ae7-0.jpg","https://img.mubu.com/document_image/830383d5-6e19-444b-bd43-ff4ac788622b-430061.jpg","https://img.mubu.com/document_image/24c9a994-15ad-4f2d-b439-c84912587d7e-430061.jpg","https://img.mubu.com/document_image/c90858b7-77e7-408b-9252-226545b26eec-430061.jpg","https://img.mubu.com/document_image/dfc9bf9a-f9c8-477e-be21-149fac7d8f8b-430061.jpg","https://img.mubu.com/document_image/38a6bf12-cb7c-4ccb-8039-2dc6f8fde5a5-430061.jpg","https://img.mubu.com/document_image/92ddfc81-07f4-47ac-bc4a-e3f2c6a9d2f2-430061.jpg","https://img.mubu.com/document_image/a4dc7ed2-fc65-41d6-89e0-0f415e4b6edc-430061.jpg","https://img.mubu.com/document_image/1b4e9717-825f-4b67-a52d-67ab4e4a005b-430061.jpg","https://img.mubu.com/document_image/12e0a3f2-bd2d-4d75-a1aa-b6d797e211d5-430061.jpg","https://img.mubu.com/document_image/3f0e419d-4a1d-4262-8552-4bc738a385be-430061.jpg","https://img.mubu.com/document_image/9ab9b33b-d4ae-42f7-ba13-4f432da94008-430061.jpg","https://img.mubu.com/document_image/fe2b9132-3de5-4545-8170-50845106da1f-430061.jpg","https://img.mubu.com/document_image/ee01be1d-86c9-4ddb-b4d2-bd1cdc8985f4-430061.jpg","https://img.mubu.com/document_image/d1be1959-c931-44c4-bcb7-03ba298799eb-430061.jpg","https://img.mubu.com/document_image/74607f77-a416-49aa-b66b-e2e98856e90a-430061.jpg","https://img.mubu.com/document_image/21f77c06-85d1-4006-8949-ee382d706e4f-430061.jpg","https://img.mubu.com/document_image/eac22e22-3695-4dfc-9c47-7141a04c438d-430061.jpg","https://img.mubu.com/document_image/35f43a15-f619-4c9c-a01f-fbfeb68f5195-430061.jpg","https://img.mubu.com/document_image/b247a2f3-1327-4bf7-bade-e4ee58919513-430061.jpg","https://img.mubu.com/document_image/b2d77c59-360d-4fc5-adf9-6e9630673975-430061.jpg","https://img.mubu.com/document_image/561416b2-df55-46ff-a376-fee2acbc1f8a-430061.jpg","https://img.mubu.com/document_image/73ab5110-db7e-4f05-9db0-fd19183780b6-430061.jpg","https://img.mubu.com/document_image/70a951ed-1123-4978-b70e-0347d434fe70-430061.jpg","https://img.mubu.com/document_image/5f6531d7-571a-47fb-8f9e-aa096a82b6b2-430061.jpg","https://img.mubu.com/document_image/c8203586-2bd7-43f6-8ade-5af005906df0-430061.jpg","https://img.mubu.com/document_image/f8dd80ae-4f70-4a88-bb04-be1ba8f4b62f-430061.jpg","https://img.mubu.com/document_image/d34307a8-a73a-4da2-892f-ec4baa19b7d2-430061.jpg","https://img.mubu.com/document_image/e416b787-1d22-4920-8464-a34cf69bc1a9-430061.jpg","https://img.mubu.com/document_image/d895bffe-005e-4b8c-bd56-03f0e52cd7b9-430061.jpg","https://img.mubu.com/document_image/0fa583c4-ab13-4c09-87d7-3a0232a25436-430061.jpg","https://img.mubu.com/document_image/888fc5bd-34ff-4ba7-90b2-a27654ecf295-430061.jpg","https://img.mubu.com/document_image/09499d2a-e8e1-468e-a10f-c1a26d030249-430061.jpg","https://img.mubu.com/document_image/4913985a-b984-43bb-b82b-539b9a82c2ac-430061.jpg","https://img.mubu.com/document_image/75c75df6-23f8-4a88-8bc7-5f01d195b34b-430061.jpg","https://img.mubu.com/document_image/f6c179c1-8089-47e1-b6f2-aef5c5c3d1f7-430061.jpg","https://img.mubu.com/document_image/d9b5176f-c62f-4fe3-93ea-5af26f9b4f8f-430061.jpg","https://img.mubu.com/document_image/e893a245-ed4d-46ec-b646-70f8a102146b-430061.jpg","https://img.mubu.com/document_image/fdd35d70-14c5-4363-a543-7cc736d94d01-430061.jpg","https://img.mubu.com/document_image/d4b34d35-9363-4c6f-9eb0-6c9fef231944-430061.jpg","https://img.mubu.com/document_image/94a0e744-dec9-445a-9f87-ac2340bf5555-430061.jpg","https://img.mubu.com/document_image/8c383e06-a931-4e80-8598-dbf252210679-430061.jpg"],"datePublished":"2020-12-27T05:51:11.000Z","dateModified":"2021-01-26T09:38:32.520Z","author":{"@type":"Person","name":"苒"},"publisher":{"@type":"Organization","name":"苒","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"概率论笔记"}</script><link rel="canonical" href="http://example.com/2020/12/27/Probabilism_notes/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="苒" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-12-27T05:51:11.000Z" title="2020/12/27 13:51:11">2020-12-27</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-01-26T09:38:32.520Z" title="2021/1/26 17:38:32">2021-01-26</time></span><span class="level-item"><a class="link-muted" href="/categories/Learn/">Learn</a></span><span class="level-item">an hour read (About 8964 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Probabilism_notes</h1><div class="content"><p>概率论笔记</p>
+<span id="more"></span>
+
+<p><a target="_blank" rel="noopener" href="https://www.momeak.ink/2021/01/26/Term Review/">Term Review</a></p>
+<h3 id="随机事件与概率"><a href="#随机事件与概率" class="headerlink" title="随机事件与概率"></a>随机事件与概率</h3><ul>
+<li><p>概率论基本概念</p>
+<ul>
+<li>随机试验</li>
+<li>样本空间（集合）、样本点</li>
+<li>随机事件：样本空间的子集</li>
+<li>事件间的关系<ul>
+<li>包含：A发发生一定导致B发生，则B包含A</li>
+<li>相等：A&#x3D;B,A包含B，B包含A</li>
+<li>互斥：AB不可能同时发生，A∩B&#x3D;∅</li>
+<li>对立一定互斥，互斥不一定对立</li>
+</ul>
+</li>
+<li>事件的运算<ul>
+<li>并：A、B至少发生一个</li>
+<li>交：A、B同时发生</li>
+<li>差：A-B，A发生B不发生</li>
+<li>对立事件：A不发生</li>
+</ul>
+</li>
+<li>德摩根律，A-B&#x3D;A-AB&#x3D;AB’差变交</li>
+</ul>
+</li>
+<li><p>概率</p>
+<ul>
+<li><p>公理化定义</p>
+<ul>
+<li>非负性</li>
+<li>规范性</li>
+<li>可列可加性（互不相容时）</li>
+</ul>
+</li>
+<li><p>性质</p>
+<ul>
+<li><p>P(A-B) &#x3D; P(A) - P(AB)</p>
+</li>
+<li><p><strong>若A⊂B,则P(A)≤P(B)</strong></p>
+</li>
+<li><p>P(A⋃B)&#x3D;P(A)+P(B)-P(AB)</p>
+</li>
+<li><p>𝑷(𝑨⋃𝑩⋃𝑪)&#x3D;𝑷(𝑨)+𝑷(𝑩)+𝑷(𝑪)−𝑷(𝑨𝑩)−𝑷(𝑨𝑪)−𝑷(𝑩𝑪)+𝑷(𝑨𝑩𝑪)， 推广</p>
+</li>
+<li><p>Boole不等式: (<strong>Union Bound</strong>) (非互不相容的事件集) 两种方法证明</p>
+<p><img src="https://img.mubu.com/document_image/24d78ecc-147f-42ca-8b92-4d1b0a5dd171-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>古典概型</p>
+<ul>
+<li><p>特点：样本空间的元素只有有限个; 每个样本点发生的可能性相同</p>
+</li>
+<li><p>定义：P(A)&#x3D;A包含样本点数&#x2F;Ω包含样本点数&#x3D;(|A|)&#x2F;(|Ω|)</p>
+</li>
+<li><p><strong>典型例题</strong></p>
+<ul>
+<li><p>男n女m，围成一圈，女生互不相邻的概率？</p>
+<p><img src="https://img.mubu.com/document_image/0baca5c4-d965-44e1-a61c-115d31467ea6-430061.jpg" alt="img"></p>
+</li>
+<li><p>抽签原理</p>
+</li>
+<li><p>随机取数（乘积能被10整除）：分解成两个事件的交——至少一个偶数，至少一个5</p>
+</li>
+<li><p>取铆钉：利用互斥性</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>几何概型</p>
+<ul>
+<li><p>特点：样本空间无限性；等可能性</p>
+</li>
+<li><p>定义：𝑷(𝑨)&#x3D;𝑨的几何测度&#x2F;𝛀的几何测度&#x3D;(𝝁(𝑨))&#x2F;(𝝁(𝛀))</p>
+</li>
+<li><p><strong>典型例题</strong></p>
+<ul>
+<li><p>约会问题：0&lt;&#x3D;x, y&lt;&#x3D;60, |x-y| &lt;&#x3D; 15, 面积</p>
+</li>
+<li><p>蒲丰投针</p>
+<p><img src="https://img.mubu.com/document_image/22c38d29-abba-4356-8962-85765159a2c3-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/23fede65-b41a-43a4-95a6-dd42e4880a69-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>条件概率</p>
+<ul>
+<li><p>定义：𝑷(𝑨│𝑩)&#x3D;𝑷(𝑨𝑩)&#x2F;𝑷(𝑩)</p>
+</li>
+<li><p>本质：缩减的样本空间</p>
+<p><img src="https://img.mubu.com/document_image/3c6b52e9-2dd2-478c-b9df-260d8c0bddf9-430061.jpg" alt="img"></p>
+</li>
+<li><p>乘法公式：</p>
+<ul>
+<li>𝑷(𝑨𝑩)&#x3D;𝑷(𝑨)𝑷(𝑩|𝑨)， 𝑷(𝑨𝑩)&#x3D;𝑷(𝑩)𝑷(𝑨|𝑩)，</li>
+<li>推广到多个事件：若𝑷(𝑨𝟏 𝑨𝟐⋯𝑨(𝒏−𝟏) )&gt;𝟎，则𝑷(𝑨𝟏 𝑨𝟐⋯𝑨𝒏 )&#x3D;𝑷(𝑨𝟏 )𝑷(𝑨𝟐│𝑨𝟏 )⋯𝑷(𝑨𝒏 |𝑨𝟏 𝑨𝟐⋯𝑨(𝒏−𝟏)）</li>
+</ul>
+</li>
+<li><p>全概率公式（求结果发生的概率（即求𝑷(𝑩))）</p>
+<p><img src="https://img.mubu.com/document_image/2b0f281d-2fa6-4750-a270-58f62988900a-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/362c862e-5056-48c5-9d35-702b696257e5-430061.jpg" alt="img"></p>
+<ul>
+<li><strong>应用：推迟决定原则</strong></li>
+</ul>
+</li>
+<li><p>贝叶斯公式：（已知事件𝑩发生，求𝑩由第𝒊个原因引起的概率（即求𝑷(𝑨𝒊 |𝑩)））</p>
+<p><img src="https://img.mubu.com/document_image/95793f1c-bd80-448a-931d-29209cb54739-430061.jpg" alt="img"></p>
+<ul>
+<li><strong>应用：患肝癌概率，三囚犯问题，三门问题</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>独立性： P(AB) &#x3D; P(A)P(B)</p>
+<ul>
+<li><p>性质：P(B|A) &#x3D; P(B), 概率为0或1的事件与任意事件独立，A,A’与B,B’都相互独立</p>
+</li>
+<li><p>独立与互不相容的关系：（P(A)、P(B)均大于0）若A、B相互独立，则不可能互不相容; 若A、B互不相容，则不可能相互独立（P(A)P(B) &gt; 0）</p>
+</li>
+<li><p>n个事件的独立性：n个事件独立 &#x3D;&gt;其中任意k个事件独立，反之不成立</p>
+</li>
+<li><p>分组独立性：</p>
+<p><img src="https://img.mubu.com/document_image/634aa33d-686f-48c3-a84d-3fea54d8aee3-430061.jpg" alt="img"></p>
+</li>
+<li><p>独立事件至少发生一次的概率：</p>
+<p><img src="https://img.mubu.com/document_image/10c8f10d-7964-456d-b3dc-dfdf9eb47756-430061.jpg" alt="img"></p>
+<ul>
+<li><strong>应用：系统可靠性，矩阵乘法验证</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="离散型随机变量"><a href="#离散型随机变量" class="headerlink" title="离散型随机变量"></a>离散型随机变量</h3><ul>
+<li><p>随机变量</p>
+<ul>
+<li>定义：把𝛀中的每一个样本点𝝎与一个实数𝑿(𝝎)相对应，称实值函数𝑿:𝛀→𝑹为随机变量，随机变量在某范围的取值表示随机事件</li>
+</ul>
+</li>
+<li><p>Y &#x3D; g(X)的分布：合并相同项</p>
+</li>
+<li><p>二维离散型随机变量(X, Y)</p>
+<ul>
+<li>联合分布律：𝒑𝒊𝒋&#x3D;𝑷(𝑿&#x3D;𝒙𝒊,𝒀&#x3D;𝒚𝒋 )（列表）</li>
+<li>边缘分布律：P{X &#x3D; xi} &#x3D; Pi·, P(Y &#x3D; yj) &#x3D; P·j</li>
+<li>两个离散型随机变量的独立性：对所有x, y, 𝑷(𝑿&#x3D;𝒙,𝒀&#x3D;𝒚)&#x3D;𝑷(𝑿&#x3D;𝒙)𝑷(𝒀&#x3D;𝒚), 则X, Y独立</li>
+<li>推广：多个离散型随机变量的独立性：对任意取值的x1, …, xn, P(X1&#x3D;x1, …, Xn &#x3D; xn) &#x3D; P(X1 &#x3D; x1)…P(Xn &#x3D; xn) (只要一个公式)</li>
+</ul>
+</li>
+<li><p>期望</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://img.mubu.com/document_image/18f7d229-ce01-4e5f-b4ab-be3f35a40f22-430061.jpg" alt="img"></p>
+</li>
+<li><p>有4个盒子，编号为1,2,3,4。现将3个球随机放入4只盒子。用𝑿表示有球盒子的最小号码，求𝑬(𝑿).</p>
+</li>
+<li><p>随机变量函数的期望：</p>
+<p><img src="https://img.mubu.com/document_image/e58913b6-4bf0-46e2-bfc4-ca53c0d933f2-430061.jpg" alt="img"></p>
+</li>
+<li><p>期望的线性性质：（**如何证明***）（不依赖于独立性）</p>
+<p><img src="https://img.mubu.com/document_image/2c4f76d5-7f4a-4300-a47b-ce3be6cdb55b-430061.jpg" alt="img"></p>
+<ul>
+<li>例：猴子打字</li>
+</ul>
+</li>
+<li><p>一般E(f(x)) !&#x3D; f(E(x)), 如E[x^2] &gt;&#x3D; E[x] ^2</p>
+</li>
+<li><p><strong>Jensen不等式：设f为下凸函数，则E[f(x)] &gt;&#x3D; f(E[x])</strong></p>
+</li>
+</ul>
+</li>
+<li><p>几个典型的离散型随机变量</p>
+<ul>
+<li><p>0-1分布（伯努利试验）：随机试验只有两个结果：A与A’，A发生则X&#x3D;1，否则X&#x3D;0，X为指示变量</p>
+<ul>
+<li>期望：E[X] &#x3D; p</li>
+<li>方差：D(X) &#x3D; p(1-p)</li>
+</ul>
+</li>
+<li><p>二项分布（n重伯努利试验, 每次实验结果相互独立， X为n次试验中A发生的次数）：</p>
+<ul>
+<li><p>定义：记为X~B(n, p)</p>
+<p><img src="https://img.mubu.com/document_image/ad2bbed0-5624-4c14-b1e5-de9864dea445-430061.jpg" alt="img"></p>
+</li>
+<li><p>期望：E(x) &#x3D; np（证明：<strong>公式*</strong> &#x2F; 期望的线性性质）</p>
+<ul>
+<li><p>二项式定理：</p>
+<p><img src="https://img.mubu.com/document_image/ee077a6c-4d2a-4c3a-8dc8-9864ddb9d21d-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>方差：D(X) &#x3D; np(1-p) (由0-1分布方差相加而来)</p>
+</li>
+<li><p>二项分布的最大值（**解法***）：(n+1)p-1&lt;&#x3D;k0&lt;&#x3D;(n+1)p (np附近)</p>
+</li>
+<li><p>泊松近似公式：(n&gt;&#x3D;20, p &lt;&#x3D; 0.1)时，P(X &#x3D; k)近似于</p>
+<p><img src="https://img.mubu.com/document_image/ae09b7d0-6ac3-417b-9fe3-a76bdce2ef22-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>泊松分布（大量实验中稀有事件出现的次数， λ意义：事件的平均发生次数）</p>
+<ul>
+<li><p>定义：<strong>（验证*）</strong></p>
+<p><img src="https://img.mubu.com/document_image/1f64b68e-72bf-4fc4-b265-97956e504699-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/762742d7-cbda-4169-82da-40e07e61ca9f-0.jpg" alt="img"></p>
+</li>
+<li><p>期望：E(X) &#x3D; λ<strong>（证明*）</strong></p>
+</li>
+<li><p>方差：D(X) &#x3D; λ （**证明***）</p>
+</li>
+<li><p><strong>泊松变量的和：仍是泊松变量：若𝑿∼𝑷(𝝀𝟏)，𝒀<del>𝑷(𝝀𝟐)且𝑿,𝒀<strong><strong>独立</strong></strong>，则𝑿+𝒀</del>𝑷(𝝀𝟏+𝝀𝟐)（证明*！）</strong></p>
+</li>
+<li><p><strong>例：昆虫卵的分布*（条件概率+全概率公式）</strong></p>
+</li>
+</ul>
+</li>
+<li><p>几何分布（多重伯努利试验，不断重复直至A发生所需次数）</p>
+<ul>
+<li><p>定义：</p>
+<p><img src="https://img.mubu.com/document_image/1952da79-cee7-4604-8b42-cd5fce23a883-430061.jpg" alt="img"></p>
+</li>
+<li><p>无记忆性（<strong>证明*， P(X&gt;t) &#x3D; q^t</strong>）：假设已经经历了𝒏次失败，则从当前起直至成功所需次数与𝒏无关。严格地，设𝑿~𝑮(𝒑)，则对于任意自然数𝒔,𝒕有𝑷(𝑿&gt;𝒔+𝒕│𝑿&gt;𝒔)&#x3D;𝑷(𝑿&gt;𝒕)，等价地，𝑷(𝑿&#x3D;𝒔+𝒕│𝑿&gt;𝒔)&#x3D;𝑷(𝑿&#x3D;𝒕)</p>
+</li>
+<li><p>期望：E(x) &#x3D; 1&#x2F;p(<strong>三种证明方法*：定义(注意求导、负号) &#x2F; 定理 &#x2F; 条件期望</strong>)</p>
+<p><img src="https://img.mubu.com/document_image/9f2958f7-3d19-493a-81f4-63ec85713709-430061.jpg" alt="img"></p>
+</li>
+<li><p>方差：D(x) &#x3D; (1-p)&#x2F;p^2 <strong>(证明*：两种算E[X^2]方法: 定义（求导、错位相减） &#x2F; 条件期望+无记忆性)</strong></p>
+</li>
+<li><p>典型例题：票券收集问题（调和级数H(n) &#x3D; lnn+θ(1)），快速排序比较次数X的期望</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>条件期望（常结合无记忆性）</p>
+<ul>
+<li><p>条件分布(某事件A发生的条件下X的分布)：P(X &#x3D; x | A)</p>
+</li>
+<li><p>条件期望</p>
+<p><img src="https://img.mubu.com/document_image/6a5f823b-c688-4615-91f9-be702e4a0b5d-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/9ab0d7a3-bb86-4473-ab9e-d3f8c6bb3a37-430061.jpg" alt="img"></p>
+</li>
+<li><p>全期望公式（**证明***）</p>
+<p><img src="https://img.mubu.com/document_image/a57519df-c0be-406c-b3e3-b55adc77782a-430061.jpg" alt="img"></p>
+<ul>
+<li><strong>应用：证明几何分布的期望（按第一次事件是否发生分情况，利用无记忆性）</strong></li>
+</ul>
+</li>
+<li><p>条件期望定义的随机变量：f(Y) &#x3D; E[X|Y] -&gt; Y的函数构成的随机变量</p>
+<ul>
+<li>性质：E[E[X|Y]] &#x3D; E[X](**证明*, 用全期望公式**)</li>
+<li>应用：分支过程（递归式）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>方差</p>
+<ul>
+<li><p>马尔可夫不等式（**证明*,引入变量I&lt;&#x3D;x&#x2F;a**） 只知道期望，且取值非负时使用 ，P(X&gt;&#x3D;cE[x]) &lt;&#x3D; 1&#x2F;c</p>
+<p><img src="https://img.mubu.com/document_image/17a6b169-1215-4092-9b28-1ac6bf8f778f-430061.jpg" alt="img"></p>
+</li>
+<li><p>方差（反应数据的离散程度）</p>
+<ul>
+<li>定义：D(X) &#x3D; E[(X-E[X])^2]</li>
+<li>简便计算：D(X) &#x3D; E[X^2] - E[X]^2</li>
+<li>性质：D(c) &#x3D; 0,D(cX) &#x3D; c^2D(X), D(-X) &#x3D; D(X) (无线性性质)</li>
+</ul>
+</li>
+<li><p>协方差</p>
+<ul>
+<li>定义：随机变量𝑿和𝒀间的协方差为𝐜𝐨𝐯(𝑿,𝒀)&#x3D;𝑬[(𝑿−𝑬[𝑿])(𝒀−𝑬[𝒀])]&#x3D;𝑬[𝑿𝒀]−𝑬[𝑿]⋅𝑬[𝒀].  特别地，𝐜𝐨𝐯(𝑿,𝑿)&#x3D;𝑫(𝑿).</li>
+<li>𝑫(𝑿±𝒀)&#x3D;𝑫(𝑿)+𝑫(𝒀)±𝟐𝐜𝐨𝐯(𝑿,𝒀) （证明）</li>
+<li>性质<ul>
+<li>cov(X, c) &#x3D; 0</li>
+<li>cov(aX, bY) &#x3D; ab·cov(X, Y)</li>
+<li>cov(X1+X2, Y) &#x3D; cov(X1, Y) + cov(X2, Y)</li>
+<li>若X与Y<strong>独立</strong>，则cov(X, Y) &#x3D; 0 (反之不成立),即E[XY] &#x3D; E[X]E[Y] , D(X+Y) &#x3D; <strong>D(X - Y)</strong>&#x3D; D(X) + D(Y)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>随机变量和的方差</p>
+<p><img src="https://img.mubu.com/document_image/4c013f90-82c3-499d-a6eb-9993bac0891f-430061.jpg" alt="img"></p>
+</li>
+<li><p>切比雪夫不等式（**证明***：利用马尔可夫）</p>
+<p><img src="https://img.mubu.com/document_image/dcfe645c-5366-409e-b881-58999144c917-430061.jpg" alt="img"></p>
+<ul>
+<li>例：抛硬币</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="连续型随机变量"><a href="#连续型随机变量" class="headerlink" title="连续型随机变量"></a>连续型随机变量</h3><ul>
+<li><p>一维连续型随机变量</p>
+<ul>
+<li><p>分布函数</p>
+<ul>
+<li><p>定义：F(x ) &#x3D; P(X &lt;&#x3D; x)</p>
+</li>
+<li><p>P(x1 &lt;&#x3D; X &lt;&#x3D; x2) &#x3D; F(x2) - F(x1)</p>
+</li>
+<li><p>性质（反之，任一有下列三个性质的函数都是某随机变量的分布函数）</p>
+<ul>
+<li><p>单调不减（证明）</p>
+</li>
+<li><p>F(-∞) &#x3D; 0， F(+∞) &#x3D; 1</p>
+</li>
+<li><p>F(x) 是<strong>右连续</strong>的（左闭右开）</p>
+<p><img src="https://img.mubu.com/document_image/698f3996-5c26-4c77-8914-1e85f939cf34-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>连续型随机变量</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://img.mubu.com/document_image/7f3832ae-02fe-47a7-aae2-5808f4e73082-430061.jpg" alt="img"></p>
+</li>
+<li><p>性质</p>
+<ul>
+<li>对任意x，p(x) &gt; 0</li>
+<li>∫(-∞,+∞) p(x)dx &#x3D; 1</li>
+<li>F(x)是连续函数</li>
+<li>P(x1 &lt;&#x3D; X &lt;&#x3D; x2) &#x3D; F(x2) - F(x1) &#x3D; ∫(x1,x2) p(x)dx</li>
+<li>P(x&#x3D;a) &#x3D; 0</li>
+<li>若p(x)在点x处连续，则F(x)’ &#x3D; p(x)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>连续型随机变量函数的分布计算</strong></p>
+<ul>
+<li><p>分布函数法</p>
+<p><img src="https://img.mubu.com/document_image/dd0714ec-f4f6-41ec-9e7c-c2c8c4bca9ce-430061.jpg" alt="img"></p>
+</li>
+<li><p><strong>定理（绕过积分）</strong></p>
+<p><img src="https://img.mubu.com/document_image/a5d0ed58-14c2-48cc-8f6e-974f678b7e5f-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>联合分布函数</p>
+<ul>
+<li>定义：F(x, y) &#x3D; P(X &lt; x, Y &lt; y) (几何意义：无穷矩形)</li>
+<li>性质<ul>
+<li>F(x,y)对每个变量单增不减</li>
+<li>F(-∞, y) &#x3D; 0, F(0, -∞) &#x3D; 0, F(-∞, -∞) &#x3D; 0, F(+∞, +∞) &#x3D; 1</li>
+<li>F(x, y)关于每个变量右连续</li>
+<li>边缘分布函数： FX(x) &#x3D; F(x, +∞) &#x3D; P(X &lt;&#x3D; x) , FY(y) &#x3D; F(+∞, y) &#x3D; P(Y &lt;&#x3D; y)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>随机变量的独立性</p>
+<ul>
+<li>定义：对任意x,y, P(X&lt;&#x3D;x, Y&lt;&#x3D;y) &#x3D; P(X&lt;&#x3D;x)P(Y&lt;&#x3D;y) &lt;&#x3D;&gt; F(x, y) &#x3D; FX(x)FY(y), 则随机变量X,Y相互独立</li>
+<li>定理：若X, Y独立， 则f(X), g(Y)也独立</li>
+</ul>
+</li>
+<li><p>期望（绝对收敛则存在）</p>
+<p><img src="https://img.mubu.com/document_image/c726c2f2-d595-4c4e-bef1-8d356c31e70c-430061.jpg" alt="img"></p>
+<ul>
+<li><p>性质</p>
+<p><img src="https://img.mubu.com/document_image/87627df5-b023-426c-a4ae-f954e7d8cade-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>方差、协方差：同连续型</p>
+</li>
+</ul>
+</li>
+<li><p>二维连续型随机变量</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://img.mubu.com/document_image/6bb65be0-e958-4d8f-991b-3fedee9e6c52-430061.jpg" alt="img"></p>
+</li>
+<li><p>性质</p>
+<ul>
+<li><p>p(x, y) &gt;&#x3D; 0</p>
+</li>
+<li><p>∫(-∞,+∞)∫(-∞,+∞)p(x, y)dxdy &#x3D; F(+∞, +∞) &#x3D; 1</p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/027778d7-90ba-41a1-bc89-b3f8d9fb1627-430061.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/5aa5b9fe-7a0b-4e9e-a5d6-cfa96bc56611-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>边缘密度：已知联合密度p(x, y)，求X, Y的密度函数</strong></p>
+<p><img src="https://img.mubu.com/document_image/8599ab6b-3399-4961-993b-3ddcc2134e8c-0.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/57594c5b-3315-479d-8543-6f939512e5b6-430061.jpg" alt="img"></p>
+</li>
+<li><p><strong>二维随机变量函数的分布：已知p(x, y), 求Z &#x3D; g(X, Y)的概率密度</strong></p>
+<ul>
+<li><p>分布函数法</p>
+<p><img src="https://img.mubu.com/document_image/f5bac03d-45cb-4382-a3eb-2b147aad6cd1-430061.jpg" alt="img"></p>
+</li>
+<li><p>卷积公式(<strong>Z&#x3D;X+Y</strong>)</p>
+<p><img src="https://img.mubu.com/document_image/04ce3ab5-1d16-4739-8ced-678acbc3efbe-430061.jpg" alt="img"></p>
+<ul>
+<li><p>不独立时</p>
+<p><img src="https://img.mubu.com/document_image/96d5f538-4ec1-4794-9caf-14836f1b0f9a-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>极大极小分布</strong></p>
+<p><img src="https://img.mubu.com/document_image/c860ef14-d13a-4967-b8a9-3b8c4c8db5ab-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>二维随机变量条件分布率</p>
+<ul>
+<li><p>二维连续型随机变量独立的条件：p(x, y) &#x3D; pX(x)·pY(y)</p>
+</li>
+<li><p>条件分布、条件密度</p>
+<p><img src="https://img.mubu.com/document_image/faac00a0-0127-4e00-a1cb-d55eadaa8b22-430061.jpg" alt="img"></p>
+</li>
+<li><p>乘法公式</p>
+<p><img src="https://img.mubu.com/document_image/2e37ee64-d2fe-481a-8c20-bc063c904312-430061.jpg" alt="img"></p>
+</li>
+<li><p>全概率公式</p>
+<p><img src="https://img.mubu.com/document_image/e7941351-b716-48ba-959f-195727402a7b-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>典型连续型随机变量的分布</p>
+<ul>
+<li><p>均匀分布</p>
+<ul>
+<li><p>密度函数</p>
+<p><img src="https://img.mubu.com/document_image/b5b4463a-1e22-48b5-9541-99ef2249aaf9-430061.jpg" alt="img"></p>
+</li>
+<li><p>分布函数</p>
+<p><img src="https://img.mubu.com/document_image/5f50955c-5bb5-4458-9f69-8d25999749c3-430061.jpg" alt="img"></p>
+</li>
+<li><p>期望，方差</p>
+<p><img src="https://img.mubu.com/document_image/15fd8ae6-f81d-4a97-8693-e2fa53b76520-430061.jpg" alt="img"></p>
+</li>
+<li><p><strong>定理(FY(y) &lt;&#x3D; y)</strong></p>
+<p><img src="https://img.mubu.com/document_image/5eaa305c-5e32-4311-978e-4232d0187e35-430061.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/57627b12-48ea-4524-b6bb-46c303e79005-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>指数分布</p>
+<ul>
+<li><p>密度函数</p>
+<p><img src="https://img.mubu.com/document_image/e565efef-eb22-4ba3-a0f5-326a0bd15f02-430061.jpg" alt="img"></p>
+</li>
+<li><p>分布函数</p>
+<p><img src="https://img.mubu.com/document_image/f1b31f6c-ff04-4990-a4d1-df9055f1f7ea-430061.jpg" alt="img"></p>
+</li>
+<li><p>期望，方差</p>
+<p><img src="https://img.mubu.com/document_image/6ee8c7f8-ca7c-4401-a8f5-ddf95a2f8bdc-430061.jpg" alt="img"></p>
+</li>
+<li><p>无记忆性</p>
+<p><img src="https://img.mubu.com/document_image/7e981a99-a358-4d43-bd5f-ac2b8dcfe40b-430061.jpg" alt="img"></p>
+</li>
+<li><p><strong>多个指数分布随机变量极小值的分布</strong></p>
+<p><img src="https://img.mubu.com/document_image/3f0ccf7b-e8c6-4bd5-964a-3b65422835fe-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>正态分布</p>
+<ul>
+<li><p>密度函数</p>
+<p><img src="https://img.mubu.com/document_image/98337de4-ffe1-48c1-aced-7aaef0048127-430061.jpg" alt="img"></p>
+</li>
+<li><p>几何特征</p>
+<p>- </p>
+<p>  <img src="https://img.mubu.com/document_image/7f2041c0-7dce-437b-8466-aff474710b24-430061.jpg" alt="img"></p>
+<ul>
+<li><p>曲线在𝒙&#x3D;𝝁±𝝈处有拐点</p>
+</li>
+<li><p>当固定𝝈,改变𝝁大小时，图形的形状不变，只是沿着横轴作平移变换</p>
+</li>
+<li><p>当固定𝝁,改变𝝈大小时，图形对称轴不变，但形状在改变；𝝈越小，图形越高越陡，反之图形越低越缓</p>
+</li>
+</ul>
+</li>
+<li><p>分布函数</p>
+<p><img src="https://img.mubu.com/document_image/3dfab8f4-2aa3-4d76-9362-2a025271211f-430061.jpg" alt="img"></p>
+</li>
+<li><p>期望，方差（<strong>证明*：换元，奇函数，σ&#x3D;1、μ&#x3D;1的正态分布积分&#x3D;1</strong>）</p>
+<p><img src="https://img.mubu.com/document_image/a8110775-9bca-466c-b386-e3585ef96004-430061.jpg" alt="img"></p>
+</li>
+<li><p>标准正态分布N(0,1)</p>
+<p><img src="https://img.mubu.com/document_image/03a7e698-a104-4132-a262-1884b077c805-430061.jpg" alt="img"></p>
+</li>
+<li><p>性质（随机变量函数公式证明*）</p>
+<p><img src="https://img.mubu.com/document_image/08f3e3d0-e591-46e9-b14f-a010058e1855-430061.jpg" alt="img"></p>
+</li>
+<li><p>一般正态分布的概率计算</p>
+<p><img src="https://img.mubu.com/document_image/57e04ce9-df8f-4770-a6a9-b7422e96393f-430061.jpg" alt="img"></p>
+</li>
+<li><p>独立正态分布随机变量的和</p>
+<p><img src="https://img.mubu.com/document_image/9870d868-0f75-42fd-a09b-8b0941ef5933-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>典型二维连续型随机变量分布</p>
+<ul>
+<li><p>二维均匀分布</p>
+<p><img src="https://img.mubu.com/document_image/c3c338de-93e5-4996-9f29-ee92ad3d3d5a-430061.jpg" alt="img"></p>
+</li>
+<li><p>二维正态分布</p>
+<p><img src="https://img.mubu.com/document_image/50a5674a-57d5-48f7-b2a4-19489e6f185f-430061.jpg" alt="img"></p>
+<ul>
+<li><p>边缘分布</p>
+<p><img src="https://img.mubu.com/document_image/19f8bb27-d324-4fb9-8206-42315dc01e80-430061.jpg" alt="img"></p>
+</li>
+<li><p>独立性：X,Y独立 &lt;&#x3D;&gt; ρ&#x3D;0</p>
+</li>
+<li><p>协方差：cov(X,Y) &#x3D; ρσ1σ2， cov(X*, Y*) &#x3D; ρ</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>相关系数</p>
+<ul>
+<li><p>标准化随机变量</p>
+<p><img src="https://img.mubu.com/document_image/26d7e10f-76d7-4bcd-b1cb-79d2553d4f8c-430061.jpg" alt="img"></p>
+</li>
+<li><p>相关系数</p>
+<p><img src="https://img.mubu.com/document_image/33d21813-0984-407d-8ae9-29e484097bc9-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/5ecd86a8-ce9f-4c68-bd2e-5e6fe372eab8-430061.jpg" alt="img"></p>
+</li>
+<li><p>相关系数性质</p>
+<ul>
+<li><p>柯西许瓦兹不等式</p>
+<p><img src="https://img.mubu.com/document_image/a4915f42-3ad2-409c-9543-c8a79a46ca65-430061.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/7ecdadd2-ec15-4d0d-9a79-39b8a438d198-430061.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/b80f1530-0cef-45d4-87ca-122d351acc66-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>不相关等价定义</strong></p>
+<p><img src="https://img.mubu.com/document_image/807db67b-0a10-40b6-b990-0ce24d4a52ca-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/6fa20468-56b3-4a7f-b0c3-899ea310d377-430061.jpg" alt="img"></p>
+</li>
+<li><p>相关性</p>
+<ul>
+<li>若|𝝆𝑿𝒀|&#x3D;𝟏，则称𝑿,𝒀线性相关<ul>
+<li>𝝆𝑿𝒀&#x3D;𝟏, 正相关</li>
+<li>𝝆𝑿𝒀&#x3D;−𝟏, 负相关</li>
+</ul>
+</li>
+<li>𝝆𝑿𝒀表示𝑿与𝒀存在线性关系的强弱程度。<ul>
+<li>|𝝆𝑿𝒀|越大， 𝑿与𝒀线性关系越强，反之越弱</li>
+<li>|𝝆𝑿𝒀|&#x3D;𝟎表示𝑿与𝒀不存在线性关系，称为不相关。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="极限理论"><a href="#极限理论" class="headerlink" title="极限理论"></a>极限理论</h3><ul>
+<li><p>大数定律（研究随机变量序列的均值收敛问题）</p>
+<ul>
+<li><p>实例：如果工件的测量值真值为𝒂，第𝒏次测量值为𝑿𝒏,则{𝑿𝒏}就是一个独立同分布，均值为𝒂的随机变量序列。当𝒏充分大时，𝒏次测量的平均值应该和真值𝒂很接近。大量测量值的算术平均值具有稳定性，这就是大数定律的反映。</p>
+</li>
+<li><p>依概率收敛</p>
+<p><img src="https://img.mubu.com/document_image/aee1f136-371a-4258-ac84-de98ff10eab1-430061.jpg" alt="img"></p>
+<ul>
+<li>区别于数列的收敛：对于给定的ε，Yn和a的距离可能会大于或等于ε，只是当n趋向于无穷时，这个取值偏差较大的概率将趋于0</li>
+</ul>
+</li>
+<li><p>连续映射定理（依概率收敛的随机变量的函数也依概率收敛）（<strong>证明</strong>）</p>
+<p><img src="https://img.mubu.com/document_image/885e8241-d828-4c4f-b57e-52cc1082544c-430061.jpg" alt="img"></p>
+</li>
+<li><p>大数定律</p>
+<ul>
+<li><p>定义：随机变量的平均值<strong>依概率趋向于</strong>它们数学期望的平均值.</p>
+<p><img src="https://img.mubu.com/document_image/b001963e-feb5-4b4a-9c18-cc10632c6bca-430061.jpg" alt="img"></p>
+</li>
+<li><p>马尔可夫大数定律（利用切比雪夫不等式）</p>
+<p><img src="https://img.mubu.com/document_image/06ea3a14-da00-4510-afa2-444f22106abc-430061.jpg" alt="img"></p>
+</li>
+<li><p>切比雪夫大数定律（<strong>两两互不相关</strong>）</p>
+<p><img src="https://img.mubu.com/document_image/63b9580a-9789-4c57-8417-db73af3859cc-430061.jpg" alt="img"></p>
+</li>
+<li><p>独立同分布大数定律（切比雪夫大数定律的特殊情形）</p>
+<p><img src="https://img.mubu.com/document_image/29942f0f-a160-4038-a4c9-ad82298026e6-430061.jpg" alt="img"></p>
+<ul>
+<li>该定理条件𝑫(𝑿𝒌 )&#x3D;𝝈^𝟐可以省去，即只需期望存在。（被称为<strong>辛钦大数定律</strong>）</li>
+</ul>
+</li>
+<li><p>伯努利大数定律（频率稳定性的严格数学定义）</p>
+<p><img src="https://img.mubu.com/document_image/7bb639cb-caaa-4e20-99d4-bde552adda09-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>中心极限定理（随机变量和的正态分布）</p>
+<ul>
+<li><p>定义（<strong>Zn的极限分布为标准正态分布</strong>）</p>
+<p><img src="https://img.mubu.com/document_image/bafcd8a6-1f7b-42f0-b315-1d33301f679d-430061.jpg" alt="img"></p>
+</li>
+<li><p>独立同分布情形中心极限定理（本质上∑Xk服从正态分布，从而标准化后服从标准正态分布）</p>
+<p><img src="https://img.mubu.com/document_image/b1757902-0423-4547-8d4f-1dc278b3f317-430061.jpg" alt="img"></p>
+<ul>
+<li>对于独立同分布的随机变量序列{𝑿_𝒏}<ul>
+<li>大数定律描述了其均值（或和）在𝒏→∞的趋势</li>
+<li>中心极限定理则能给出给定n与x时的具体概率近似(也可以知道概率与x，求n；或者知道概率与n，求x)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>伯努利情形中心极限定理</p>
+<p><img src="https://img.mubu.com/document_image/3601bd10-f383-4249-bdde-1f9c97047a8b-430061.jpg" alt="img"></p>
+<ul>
+<li><p>推论（n较大时二项分布的概率计算方法）n较大时，μn~N(np, np(1-p))</p>
+<p><img src="https://img.mubu.com/document_image/b51a880c-583e-456a-92b3-547b63497114-430061.jpg" alt="img"></p>
+</li>
+<li><p>用频率估计概率时误差的估计</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="统计量与抽样分布"><a href="#统计量与抽样分布" class="headerlink" title="统计量与抽样分布"></a>统计量与抽样分布</h3><ul>
+<li><p>基本概念</p>
+<ul>
+<li><p>总体、个体</p>
+<ul>
+<li>总体：研究对象的某项数量指标的值的全体。</li>
+<li>个体：总体中的每个元素为个体。</li>
+<li>研究对象的数量指标𝑿的取值在客观上有一定的分布，因此，可将其看做随机变量，它的分布称为<strong>总体分布</strong>。</li>
+</ul>
+</li>
+<li><p>样本</p>
+<ul>
+<li><p>样本的二重性：</p>
+<ul>
+<li>就一次具体观察而言，样本值是确定的数</li>
+<li>在不同的抽样下，样本值会发生变化，因此可看做是随机变量</li>
+</ul>
+</li>
+<li><p>样本定义</p>
+<p><img src="https://img.mubu.com/document_image/96757343-8420-4a0b-beee-24eb03b84033-430061.jpg" alt="img"></p>
+</li>
+<li><p>特点</p>
+<ul>
+<li>代表性：样本的每个分量𝑿𝒊与总体𝑿具有相同的分布</li>
+<li>独立性：𝑿𝟏,𝑿𝟐,…,𝑿𝒏相互独立。</li>
+</ul>
+</li>
+<li><p>样本联合分布&#x2F;密度</p>
+<p><img src="https://img.mubu.com/document_image/f26738bb-0a10-4126-9382-01b3c0422d47-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>统计量（是随机变量）</p>
+<p><img src="https://img.mubu.com/document_image/3fc44fa8-45ac-4393-949b-4557f7a521ee-430061.jpg" alt="img"></p>
+<ul>
+<li><p>常用统计量</p>
+<ul>
+<li><p>样本均值</p>
+<p><img src="https://img.mubu.com/document_image/3aadc376-bb76-4b7f-9f41-d712e8c4987a-430061.jpg" alt="img"></p>
+</li>
+<li><p><strong>样本方差</strong></p>
+<p><img src="https://img.mubu.com/document_image/c16306ea-941d-4363-b43f-8f44b593f3cb-430061.jpg" alt="img"></p>
+</li>
+<li><p>修正样本方差</p>
+<p><img src="https://img.mubu.com/document_image/a0f1bbac-353a-438f-b484-d46a2e704213-430061.jpg" alt="img"></p>
+<ul>
+<li><p>二者关系</p>
+<p><img src="https://img.mubu.com/document_image/526b3c0c-59d4-4a8c-90d9-ad2cb2d34946-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/4ebbee3e-863c-45f9-a4e3-ca3ccbc2f015-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>样本标准差</p>
+<p><img src="https://img.mubu.com/document_image/0a500742-eab1-4369-9d55-137164863e69-430061.jpg" alt="img"></p>
+</li>
+<li><p>样本k阶原点矩</p>
+<p><img src="https://img.mubu.com/document_image/36133982-ba08-4c24-aa61-ae40489f6ff7-430061.jpg" alt="img"></p>
+</li>
+<li><p>样本k阶中心距</p>
+<p><img src="https://img.mubu.com/document_image/7bdad8e8-a0a7-43e7-a90b-5cfba6c856d3-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>结论1：样本均值的均值和方差</p>
+<p><img src="https://img.mubu.com/document_image/81b71ccb-0194-489b-9584-c5228769e9d8-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>正态总体的抽样分布</p>
+<ul>
+<li><p>正态总体样本的<strong>线性函数</strong>的分布</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://img.mubu.com/document_image/2f1305c1-17a4-4913-b462-23fd4e3bafe5-430061.jpg" alt="img"></p>
+<ul>
+<li>特别地，若取a&#x3D;1&#x2F;n，则U &#x3D; X¯~N(μ，σ²&#x2F;n)</li>
+</ul>
+</li>
+<li><p>标准正态分布的上α分位点</p>
+<p><img src="https://img.mubu.com/document_image/bc5076dc-c15a-42cb-9ee2-5f3d9d3d2243-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/0c9f5346-b037-4c36-88d8-27b974d5ce34-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>χ²分布（独立+**N(0,1)!**）</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://img.mubu.com/document_image/25331293-dee9-4d5b-ab6a-850be6d71e0f-430061.jpg" alt="img"></p>
+</li>
+<li><p>性质</p>
+<ul>
+<li><p>1、可加性：设X1<del>χ²(n1), X2</del>χ²(n2),且 X1, X2相互<strong>独立</strong>，则X1+X2 ~χ²(n1+n2)</p>
+</li>
+<li><p>2、若X~χ²(n) , <strong>则E(X)&#x3D;n, D(X)&#x3D;2n. (证明)</strong></p>
+<p><img src="https://img.mubu.com/document_image/fb9bd11a-11b2-417f-a4a4-780ca225eeca-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>χ²分布的上α分位点</p>
+<p><img src="https://img.mubu.com/document_image/a578ab40-4e45-4d11-9b06-5c40a06dc6cb-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>t分布</p>
+<ul>
+<li><p>定义（二者独立！）</p>
+<p><img src="https://img.mubu.com/document_image/826c41ba-30df-48b7-9381-c609927a49ec-430061.jpg" alt="img"></p>
+</li>
+<li><p>t分布的上α分位点</p>
+<p><img src="https://img.mubu.com/document_image/87376fce-84e7-4106-a1a8-f4a2044a1226-430061.jpg" alt="img"></p>
+<ul>
+<li><p>性质</p>
+<p><img src="https://img.mubu.com/document_image/2049335b-8464-451a-9bec-1cf8ea0376bb-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>F分布</p>
+<ul>
+<li><p>定义（独立！）</p>
+<p><img src="https://img.mubu.com/document_image/a6260757-6a02-476e-9b69-d676f74489b5-430061.jpg" alt="img"></p>
+</li>
+<li><p>F分布的上α分位点</p>
+<p><img src="https://img.mubu.com/document_image/7cca0731-7a20-47fd-965c-e8cfeb6d0626-430061.jpg" alt="img"></p>
+</li>
+<li><p>性质</p>
+<p>- </p>
+<p>  <img src="https://img.mubu.com/document_image/54b46ba5-e9b9-42b4-8e26-bcc0b2c341e7-430061.jpg" alt="img"></p>
+<p>- </p>
+<p>  <img src="https://img.mubu.com/document_image/4b4a6c86-a12f-4b3e-b297-206d2209559b-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关于正态总体抽样分布的四个定理</p>
+<ul>
+<li><p>1、样本<strong>均值</strong>的分布（X¯~N(μ，σ²&#x2F;n)）</p>
+<p><img src="https://img.mubu.com/document_image/7fedf979-122c-48cb-b5bf-30ac30cc85d2-430061.jpg" alt="img"></p>
+</li>
+<li><p>2、样本<strong>方差</strong>的分布（χ²分布）（独立*）</p>
+<p><img src="https://img.mubu.com/document_image/80b24be5-829c-4a26-981a-9f28e89e9f6d-430061.jpg" alt="img"></p>
+</li>
+<li><p>3、由1和2推论（t分布）</p>
+<p><img src="https://img.mubu.com/document_image/d9ecf722-34e5-4a2a-8662-065b80a45f21-430061.jpg" alt="img"></p>
+</li>
+<li><p>4、两正态总体，样本方差比(S1²&#x2F;S2²)**(F分布)<strong>、样本均值差(X¯-Y¯)的分布(<strong>t分布</strong>)（</strong>证明***）</p>
+<p><img src="https://img.mubu.com/document_image/b9379396-5f08-408a-a477-61ef6c792baa-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/8eb45b32-773b-4595-aa2a-bac51308b463-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h3><ul>
+<li><p>点估计（构造1个统计量）</p>
+<ul>
+<li><p>矩估计</p>
+<ul>
+<li><p>原则：以样本矩作为总体矩的估计，从而得到参数的估计量。</p>
+</li>
+<li><p>矩的定义</p>
+<ul>
+<li>k阶原点矩：E[X^k]</li>
+<li>k阶中心距：E[(X-EX)^k]</li>
+<li>期望是1阶矩，方差是2阶中心距</li>
+</ul>
+</li>
+<li><p>矩估计定义</p>
+<p><img src="https://img.mubu.com/document_image/13fa246e-05b9-452b-92c9-d0ecbafd74bb-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/5faf3f2c-f617-421e-aa3e-d8d7dfd3a546-430061.jpg" alt="img"></p>
+</li>
+<li><p>方法</p>
+<ul>
+<li><p>一个未知参数时（用X¯代替EX）</p>
+<p><img src="https://img.mubu.com/document_image/631cbd28-1ef4-45a0-a4a7-5442b86de5ed-430061.jpg" alt="img"></p>
+</li>
+<li><p>两个未知参数时</p>
+<p><img src="https://img.mubu.com/document_image/6145b26a-0191-4c9b-a11f-2820365084e6-430061.jpg" alt="img"></p>
+</li>
+<li><p><strong>注意：Sn有两种形式！</strong></p>
+<p><img src="https://img.mubu.com/document_image/062962d2-0f67-4100-9938-0f82c6eba4e6-0.jpg" alt="img"></p>
+</li>
+<li><p><strong>结论</strong></p>
+<p><img src="https://img.mubu.com/document_image/a23800d5-42f7-4d80-b64e-31f7d221cf12-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>极大似然估计</p>
+<ul>
+<li><p>原则：选取估计值使得观测值出现的概率最大</p>
+</li>
+<li><p>离散情况：似然函数</p>
+<p><img src="https://img.mubu.com/document_image/3e9c5c4e-d4d7-4393-bb9c-8fde20f9c083-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/8f103120-932e-4b31-9b0b-c1a4e8ff6cb4-430061.jpg" alt="img"></p>
+</li>
+<li><p>连续情况：似然函数</p>
+<p><img src="https://img.mubu.com/document_image/80e1876b-43aa-4b90-a922-12761771bc36-430061.jpg" alt="img"></p>
+</li>
+<li><p>单参数情况求最大值：</p>
+<p><img src="https://img.mubu.com/document_image/9494e7e7-8f64-400d-b4ef-f663e5da7d0f-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/275d02e6-31c2-4f42-ae19-5f119fd197b6-430061.jpg" alt="img"></p>
+</li>
+<li><p>多参数情况求最大值：</p>
+<p><img src="https://img.mubu.com/document_image/0bd3c55c-291d-46e0-8c03-90d2290928ee-430061.jpg" alt="img"></p>
+</li>
+<li><p>没有极值时，从似然函数本身考虑最大值</p>
+</li>
+<li><p>正态分布的极大似然估计量：μ &#x3D; 样本均值，σ^2&#x3D;样本方差</p>
+</li>
+<li><p>极大似然估计的<strong>不变性</strong></p>
+<p><img src="https://img.mubu.com/document_image/93972dfe-7869-42cc-9f8c-c6c455805c0b-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>估计量的评选标准</p>
+<ul>
+<li><p>无偏性</p>
+<ul>
+<li><p>定义</p>
+<p><img src="https://img.mubu.com/document_image/0529267e-db79-4e2e-a313-e3c780ff9ae7-0.jpg" alt="img"></p>
+</li>
+<li><p>k阶样本矩一定是k阶总体矩的<strong>无偏且一致</strong>估计量</p>
+<p><img src="https://img.mubu.com/document_image/830383d5-6e19-444b-bd43-ff4ac788622b-430061.jpg" alt="img"></p>
+<ul>
+<li><p>特别地</p>
+<p><img src="https://img.mubu.com/document_image/24c9a994-15ad-4f2d-b439-c84912587d7e-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>样本方差Sn^2是有偏的！（**证明***）修正样本方差S^2是无偏的！</p>
+</li>
+<li><p>注意</p>
+<p><img src="https://img.mubu.com/document_image/c90858b7-77e7-408b-9252-226545b26eec-430061.jpg" alt="img"></p>
+<ul>
+<li>特别地，虽然S^2是σ^2的无偏估计量，但S不是σ的无偏估计量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>有效性</p>
+<ul>
+<li><p>多个估计量都无偏时，以方差小为好</p>
+</li>
+<li><p>定义：</p>
+<p><img src="https://img.mubu.com/document_image/dfc9bf9a-f9c8-477e-be21-149fac7d8f8b-430061.jpg" alt="img"></p>
+</li>
+<li><p>算术均值比加权均值更有效.</p>
+</li>
+</ul>
+</li>
+<li><p>一致性</p>
+<ul>
+<li><p>无偏性与有效性都研究固定样本量的情况</p>
+</li>
+<li><p>一致性关注样本量n-&gt;∞的情况</p>
+</li>
+<li><p>定义</p>
+<p><img src="https://img.mubu.com/document_image/38a6bf12-cb7c-4ccb-8039-2dc6f8fde5a5-430061.jpg" alt="img"></p>
+</li>
+<li><p>证明一致性的两个常用结论</p>
+<ul>
+<li><p>k阶矩</p>
+<p><img src="https://img.mubu.com/document_image/92ddfc81-07f4-47ac-bc4a-e3f2c6a9d2f2-430061.jpg" alt="img"></p>
+</li>
+<li><p>已知是无偏估计量时</p>
+<p><img src="https://img.mubu.com/document_image/a4dc7ed2-fc65-41d6-89e0-0f415e4b6edc-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>区间估计（构造两个统计量作为一个区间）</p>
+<ul>
+<li><p>基本概念</p>
+<ul>
+<li><p>区间估计</p>
+<p><img src="https://img.mubu.com/document_image/1b4e9717-825f-4b67-a52d-67ab4e4a005b-430061.jpg" alt="img"></p>
+</li>
+<li><p>置信区间：[θ1^,θ2^]</p>
+</li>
+<li><p>置信度：1-α</p>
+</li>
+<li><p>说明</p>
+<ul>
+<li>置信区间长度L反映了估计精度，L越小，估计精度越高</li>
+<li>α反映了估计的可靠度，α越小，1-α越大，估计的可靠度越高，但此时L往往增大，估计精度降低</li>
+<li>α确定后，置信区间的选取方法不唯一，常选长度最小的一个</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>枢轴变量法</p>
+<p><img src="https://img.mubu.com/document_image/12e0a3f2-bd2d-4d75-a1aa-b6d797e211d5-430061.jpg" alt="img"></p>
+</li>
+<li><p>单正态总体情形</p>
+<ul>
+<li><p>均值μ的区间估计</p>
+<ul>
+<li><p><strong>已知方差，估计均值（样本均值的正态分布：定理1）</strong></p>
+<p><img src="https://img.mubu.com/document_image/3f0e419d-4a1d-4262-8552-4bc738a385be-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/9ab9b33b-d4ae-42f7-ba13-4f432da94008-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/fe2b9132-3de5-4545-8170-50845106da1f-430061.jpg" alt="img"></p>
+</li>
+<li><p><strong>未知方差，估计均值（定理3）</strong></p>
+<p><img src="https://img.mubu.com/document_image/ee01be1d-86c9-4ddb-b4d2-bd1cdc8985f4-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/d1be1959-c931-44c4-bcb7-03ba298799eb-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/74607f77-a416-49aa-b66b-e2e98856e90a-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>未知均值，估计方差σ²（定理2）</strong></p>
+<p><img src="https://img.mubu.com/document_image/21f77c06-85d1-4006-8949-ee382d706e4f-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/eac22e22-3695-4dfc-9c47-7141a04c438d-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/35f43a15-f619-4c9c-a01f-fbfeb68f5195-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>双正态总体情形</p>
+<ul>
+<li><p>已知方差σ1²、σ2²，估计均值差μ1-μ2（样本均值差服从正态分布）</p>
+<p><img src="https://img.mubu.com/document_image/b247a2f3-1327-4bf7-bade-e4ee58919513-430061.jpg" alt="img"></p>
+</li>
+<li><p>未知均值，估计方差比（定理4(1),F分布）</p>
+<p><img src="https://img.mubu.com/document_image/b2d77c59-360d-4fc5-adf9-6e9630673975-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>单侧置信区间：只关心置信区间的上限或下限</p>
+<ul>
+<li><p>单侧置信下限</p>
+<p><img src="https://img.mubu.com/document_image/561416b2-df55-46ff-a376-fee2acbc1f8a-430061.jpg" alt="img"></p>
+</li>
+<li><p>单侧置信上限</p>
+<p><img src="https://img.mubu.com/document_image/73ab5110-db7e-4f05-9db0-fd19183780b6-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>非正态总体：均值的区间估计（大样本法）</p>
+<ul>
+<li><p>大样本法：若样本量较大，可利用极限定理求出枢轴变量的近似分布，再求出未知参数的区间估计。</p>
+<p><img src="https://img.mubu.com/document_image/70a951ed-1123-4978-b70e-0347d434fe70-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a>假设检验</h3><ul>
+<li><p>基本概念</p>
+<ul>
+<li>假设：假设是指施加于一个或多个总体的概率分布或参数的假设. 所作假设可以被接受或被拒绝.</li>
+<li>反证法思想：为判断所作的假设能否被接受, 先假设其成立, 然后从总体中抽取样本, 根据样本的取值看是否有不合理的现象出现, 最后作出接受或拒绝所作假设的决定.</li>
+<li>不合理：小概率事件在一次试验中几乎不会发生</li>
+<li>本检验方法是 概率意义下的反证法，故拒绝原假设是有说服力的, 而接受原假设是没有说服力的. 因此应把希望否定的假设作为原假设</li>
+<li>主要内容<ul>
+<li>参数检验<ul>
+<li>总体均值、方差的检验</li>
+<li>双正态总体均值差、方差比的检验</li>
+</ul>
+</li>
+<li>非参数检验<ul>
+<li>拟合优度检验</li>
+<li>独立性检验</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>显著水平α<ul>
+<li>假设检验中，我们需要对小概率的说法给出统一界定，通常给出一个上限α，当一个事件发生的概率小于α，我们认为这是小概率事件。</li>
+<li>α常见取值 0.01, 0.05, 0.1</li>
+<li>在假定 H0成立下，若根据样本提供的信息判断出某“异常”现象(发生概率p &lt;&#x3D;α)发生，则认为H0错误显著。称α为显著水平。</li>
+</ul>
+</li>
+<li>假设检验步骤<ul>
+<li>\1. 根据实际问题，提出原假设H0和备择假设H1；</li>
+<li>\2. 确定检验统计量</li>
+<li>\3. 根据显著水平α，确定拒绝域</li>
+<li>\4. 由样本计算统计量值</li>
+<li>\5. 做出判断是否接受H0</li>
+</ul>
+</li>
+<li>两类错误<ul>
+<li>第一类错误： 为真时，我们仍有可能拒绝 ，此时犯了“弃真”错误</li>
+<li>第二类错误： 不成立时，我们仍有可能接受  ，此时犯了“存伪”错误</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>正态总体<strong>均值</strong>的假设检验</p>
+<ul>
+<li><p>单正态总体</p>
+<ul>
+<li><p>σ²已知（正态分布检验）</p>
+<p><img src="https://img.mubu.com/document_image/5f6531d7-571a-47fb-8f9e-aa096a82b6b2-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/c8203586-2bd7-43f6-8ade-5af005906df0-430061.jpg" alt="img"></p>
+</li>
+<li><p>σ²未知（t检验）</p>
+<p><img src="https://img.mubu.com/document_image/f8dd80ae-4f70-4a88-bb04-be1ba8f4b62f-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/d34307a8-a73a-4da2-892f-ec4baa19b7d2-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>双正态总体</p>
+<ul>
+<li><p>σ1²,σ2²已知，检验均值差（正态分布检验）</p>
+<p><img src="https://img.mubu.com/document_image/e416b787-1d22-4920-8464-a34cf69bc1a9-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/d895bffe-005e-4b8c-bd56-03f0e52cd7b9-430061.jpg" alt="img"></p>
+</li>
+<li><p>σ1²,σ2²未知但相等（定理4(2)）</p>
+<p><img src="https://img.mubu.com/document_image/0fa583c4-ab13-4c09-87d7-3a0232a25436-430061.jpg" alt="img"></p>
+</li>
+<li><p>成对数据</p>
+<ul>
+<li><p>之前均假设X与Y的独立性；现实中，X和Y可能来源于同一个总体的重复测量称为block数据)</p>
+<p><img src="https://img.mubu.com/document_image/888fc5bd-34ff-4ba7-90b2-a27654ecf295-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/09499d2a-e8e1-468e-a10f-c1a26d030249-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>正态总体<strong>方差</strong>的假设检验</p>
+<ul>
+<li><p>单正态总体（μ未知，χ²分布检验，定理2）</p>
+<p><img src="https://img.mubu.com/document_image/4913985a-b984-43bb-b82b-539b9a82c2ac-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/75c75df6-23f8-4a88-8bc7-5f01d195b34b-430061.jpg" alt="img"></p>
+</li>
+<li><p>双正态总体，检验方差比</p>
+<p><img src="https://img.mubu.com/document_image/f6c179c1-8089-47e1-b6f2-aef5c5c3d1f7-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/d9b5176f-c62f-4fe3-93ea-5af26f9b4f8f-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>二项分布的检验</p>
+<ul>
+<li>对于伯努利分布中p的检验（大样本法）</li>
+</ul>
+</li>
+<li><p>总结</p>
+<ul>
+<li><p>关于μ的检验</p>
+<p><img src="https://img.mubu.com/document_image/e893a245-ed4d-46ec-b646-70f8a102146b-430061.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/fdd35d70-14c5-4363-a543-7cc736d94d01-430061.jpg" alt="img"></p>
+</li>
+<li><p>关于σ²的检验</p>
+<p><img src="https://img.mubu.com/document_image/d4b34d35-9363-4c6f-9eb0-6c9fef231944-430061.jpg" alt="img"></p>
+</li>
+<li><p>双正态总体μ1&#x3D;μ2的检验</p>
+<p><img src="https://img.mubu.com/document_image/94a0e744-dec9-445a-9f87-ac2340bf5555-430061.jpg" alt="img"></p>
+</li>
+<li><p>双正态总体σ1&#x3D;σ2的检验</p>
+<p><img src="https://img.mubu.com/document_image/8c383e06-a931-4e80-8598-dbf252210679-430061.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul>
+<li>一致性关注n趋于无穷情况，可用连续映射定理，证明一致性两个常用定理<ul>
+<li>样本k阶矩是总体k阶矩的一致性估计量</li>
+<li>已知无偏时，方差趋于0</li>
+</ul>
+</li>
+<li>注意估计量是σ²还是σ</li>
+<li>连续型随机变量的函数均值，不用求密度函数，直接积分，与离散型相同</li>
+<li>max与min<ul>
+<li>P(min&lt;10) &#x3D; 1-P(min&gt;10) &#x3D; 1-P(x1&gt;10)···P(xn&gt;10)</li>
+<li>max、min的分布函数</li>
+<li>多个指数分布极小值的分布</li>
+</ul>
+</li>
+<li>碰到α最好先画个图，别弄反</li>
+<li>分部积分 注意正负号</li>
+<li>1&#x2F;θ求导时别忘了复合求导</li>
+<li>o.w.的情况</li>
+<li>独立时，E[XY] &#x3D; E[X]E[Y]而不是0</li>
+<li>非正态总体区间估计：中心极限定理，服从正态分布，若方差不知道则用样本方差代替</li>
+<li>χ²分布的期望和方差样本均值和样本方差独立</li>
+<li>求和的方差时，注意独立性！</li>
+<li>正态分布：X、Y不相关（cov &#x3D; 0） &lt;&#x3D;&gt; X、Y独立</li>
+<li>注意绝对值拆成两部分</li>
+<li><strong>求随机变量函数Z的密度，先看Z的取值范围</strong></li>
+<li>边缘密度的范围不应该带变量</li>
+<li>泊松分布的和仍是泊松变量，或反向分解成多个泊松变量</li>
+<li>独立时E[XY]&#x3D;E[X]E[Y]可扩展</li>
+<li>将事件A分解为等价的B交C</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Probabilism_notes</p><p><a href="http://example.com/2020/12/27/Probabilism_notes/">http://example.com/2020/12/27/Probabilism_notes/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>苒</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2020-12-27</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2021-01-26</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Probabilism/">Probabilism</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/12/27/Probabilism_summary/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Probabilism_summary</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/12/13/short%20sentence/"><span class="level-item">Short Sentence</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="苒"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">苒</p><p class="is-size-6 is-block">It is written.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>UJN</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">8</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/QinMoMeak/QinMoMeak.github.io"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#随机事件与概率"><span class="level-left"><span class="level-item">1</span><span class="level-item">随机事件与概率</span></span></a></li><li><a class="level is-mobile" href="#离散型随机变量"><span class="level-left"><span class="level-item">2</span><span class="level-item">离散型随机变量</span></span></a></li><li><a class="level is-mobile" href="#连续型随机变量"><span class="level-left"><span class="level-item">3</span><span class="level-item">连续型随机变量</span></span></a></li><li><a class="level is-mobile" href="#极限理论"><span class="level-left"><span class="level-item">4</span><span class="level-item">极限理论</span></span></a></li><li><a class="level is-mobile" href="#统计量与抽样分布"><span class="level-left"><span class="level-item">5</span><span class="level-item">统计量与抽样分布</span></span></a></li><li><a class="level is-mobile" href="#参数估计"><span class="level-left"><span class="level-item">6</span><span class="level-item">参数估计</span></span></a></li><li><a class="level is-mobile" href="#假设检验"><span class="level-left"><span class="level-item">7</span><span class="level-item">假设检验</span></span></a></li><li><a class="level is-mobile" href="#Tips"><span class="level-left"><span class="level-item">8</span><span class="level-item">Tips</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/A-SOUL/"><span class="level-start"><span class="level-item">A-SOUL</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Learn/"><span class="level-start"><span class="level-item">Learn</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/Life/"><span class="level-start"><span class="level-item">Life</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Literal/"><span class="level-start"><span class="level-item">Literal</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Misc/"><span class="level-start"><span class="level-item">Misc</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/UJN/"><span class="level-start"><span class="level-item">UJN</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-01T15:45:38.181Z">2023-07-01</time></p><p class="title"><a href="/2023/07/01/%E5%BD%93%E4%BB%A3%E9%9D%92%E5%B9%B4%E7%A9%BF%E6%90%AD/">当代青年极简穿搭指南</a></p><p class="categories"><a href="/categories/Life/">Life</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-24T05:26:09.000Z">2023-06-24</time></p><p class="title"><a href="/2023/06/24/Eileen_data/">UID:672342685 动态留档</a></p><p class="categories"><a href="/categories/A-SOUL/">A-SOUL</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-30T06:29:17.000Z">2021-10-30</time></p><p class="title"><a href="/2021/10/30/Tips/">Tips</a></p><p class="categories"><a href="/categories/Learn/">Learn</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-29T13:57:05.000Z">2021-10-29</time></p><p class="title"><a href="/2021/10/29/SwitchyOmega/">SwitchyOmega安装使用</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-28T05:26:09.000Z">2021-10-28</time></p><p class="title"><a href="/2021/10/28/Kali/">VirtualBox中各版本Kali Linux的安装</a></p><p class="categories"><a href="/categories/Learn/">Learn</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/"><span class="level-start"><span class="level-item">2019</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Learn/"><span class="tag">Learn</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Literal/"><span class="tag">Literal</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Notes/"><span class="tag">Notes</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Probabilism/"><span class="tag">Probabilism</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Programming/"><span class="tag">Programming</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Spring/"><span class="tag">Spring</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SpringBoot/"><span class="tag">SpringBoot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/office/"><span class="tag">office</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="苒" height="28"></a><p class="is-size-7"><span>&copy; 2023 苒</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

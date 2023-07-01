@@ -1,0 +1,2128 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Database - 苒</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="苒"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="苒"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="数据库知识点整理"><meta property="og:type" content="blog"><meta property="og:title" content="Database"><meta property="og:url" content="http://example.com/2020/02/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/"><meta property="og:site_name" content="苒"><meta property="og:description" content="数据库知识点整理"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://img.mubu.com/document_image/c3ced764-ba89-48f0-8d30-4c45bd1217db-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0a7e76b3-2b36-41f9-bacd-c96c3f6a1be0-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/054e0b68-87e2-4fad-a791-9752a50d6817-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/252ee7d5-b547-4f0a-b270-9a1e941567b8-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/160391ac-c995-4b18-9397-a135b197abbe-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/13bd206b-0751-4739-8579-06b5f0c784a4-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3653335d-df3f-4eb2-a4a3-f0d57863fd63-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6b7f2450-a9ed-440b-8d44-ca372cd9e3fe-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c2ee6e57-0822-4649-a734-88efde3f1c80-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c84f4445-c4dc-4b9c-ba1f-b832e3f162f2-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ede0107e-7c81-4793-bc39-6e23d2fb9024-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a82e0446-41c7-4e40-9008-97470d394466-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e88c4d2e-a4f7-441d-92ff-f4439c17e1a7-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/84727fbf-f17a-42aa-8c79-dac4160676e1-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e90d650c-c105-4d58-bb26-bf3f34d127ca-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ec87c38a-fd84-4397-9e57-cc180fc97c30-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6e1473d4-0642-4359-af27-39861bd9e20d-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/af4f317d-2c7e-4705-8f3d-65fbc73d199b-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/dd4afda0-502a-4767-83fb-925213d8fcc5-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/fd9b5bc7-94ab-4bae-a0f6-70fd945bd358-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/5e220a50-0aa1-4183-b30f-1d4c080f7e4b-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ac3d61fa-e6fe-44fe-b57e-b0f3ed814367-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/14776381-cd5c-41a5-9712-d2f6d5c8314e-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/1c0e2d60-17fa-42e6-8015-bab82535a523-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b37840d1-10c3-4f72-ba49-c52fb208f187-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/fc4f7a12-c13f-46c3-a553-499a3554142c-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/178aae4d-2444-4043-b2de-1949215ded17-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/8c2732ef-0b33-4ec2-ae0f-2811850f46f3-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a23b7a1a-24ef-4154-b0b6-ffc87f1877c0-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2d57d4c5-2430-45d1-b314-065cb740da9f-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/439e4b0c-6e6f-4aee-8210-251dc0b562ee-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/147b2a3b-024a-4b02-88f9-ab10208007ab-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/543f7114-7c43-4b92-87ab-9445c48c2ee4-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2facfd43-8150-44bc-94db-ef1489a22539-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/feac6eae-9413-4aad-986c-04e5718a3e3d-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/4fd84351-0fe8-45fe-9037-f042b158486b-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/30d707cd-7922-4351-a125-3a6d50626852-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/8e45239e-0eb5-424b-ae7d-35776036b0d3-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7134fe44-4642-4321-b7ac-8b5dbffee231-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/bc52eab0-1664-4a9d-a537-de7c2bd5d636-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/1d8b7160-c23f-44af-a474-63167d954e2d-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7200458f-c1fa-4cba-8d70-547cab41851f-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ac914d78-2bda-42aa-9195-3f574475c29e-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0cee1d78-dc3f-4d31-9b27-8eb64e49a53f-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/4c0fd6ab-a91a-42c2-a2e6-d2611f1ddfcb-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c060bb75-791d-4a43-b057-0a9a705cef62-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e85040e1-a288-4c65-8d1f-382b5c551d00-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6154a7df-e0b1-4515-acbb-0577c2599ec5-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/f203bf5b-2b05-4e5f-ad80-c79dbb97de2d-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/0c8145b5-8405-4835-b0a2-566dd4be0123-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/92095efc-2966-48bb-9135-1ae521590a24-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/c8543746-4bf3-4160-be1e-03ba815e1a57-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/67aae48f-a964-40da-8763-e7359043ab42-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/f35f4857-d6b1-4764-8f17-7a1f8735b56c-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a7bd4da6-8b2a-4ef2-b896-d3c51399b44b-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b5241c85-635c-44c1-8ea7-c8da4c7e939f-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/151d956a-1383-4cc3-8e27-d2d8b80e4def-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/85fe80ec-2841-4336-8f84-bcd3846a0288-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/260f7d2b-0e99-4779-9fb0-7d1248ceacdc-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2a722c83-9cc9-4baa-bced-91d30ad1f50c-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/312c7599-77a1-4b1c-82ac-0f25f713686f-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6a66478c-2a75-45bd-b509-91f777bf54b6-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a1dcd591-9478-46de-976b-802424eddd26-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/468f0ead-62af-4cf1-b43b-ce0512ada586-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/1689e60e-fe4f-41bf-a425-f635f0a2463a-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/adc894b2-ee93-4366-aa64-22b01bfce8ab-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/dc7c51e6-f2a6-4ed4-bc13-7e5006cc345c-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a8377e6d-3426-4b23-815e-86c1ad61e736-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/79f42250-368e-4abe-8418-dbf7d61628e1-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/61c6a218-e755-47b9-a687-e4524ad9d280-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/1a39709e-fdc7-4873-a7bd-6c741a1ce77b-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ed51babd-c721-41dc-a64f-cd562753f6d2-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e47ecfb5-69da-4842-91ae-2a1b625a6352-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/32e1bef4-38f6-40ee-952d-be63d2105ae7-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/bf743107-f903-45fa-b1d4-43eb60936340-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/edeb1bd2-cb18-4467-a80b-73ac86c32cee-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/42639225-6fe3-4b9b-96b0-b34a698eecd1-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/8ff30f58-986b-4c4b-96d5-9d35001b94b7-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/63132184-2547-4524-beab-35519fc51514-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/11d3aac8-f49e-43e1-8883-e72437bbbdfb-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/48cccaca-8f6a-4c39-9b67-433251a00e64-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/e09a8ff4-82c3-4865-9303-37ce88fe72fa-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/a7bfb95e-bf53-4a42-a30c-25bb41d5429b-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/7cf5df24-036e-4fef-92dc-b5b9a5a6fee6-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/6cf9412e-167f-43e4-a8c0-23a656601043-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/b39e62a4-dca8-4b31-805e-d8d9e45aa5ac-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/8be65d85-cb55-4792-a66f-9de58c9001a0-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d7973db6-e781-4b4a-96c8-e63918b5be8b-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/19748bd2-b810-4b52-84e7-264a1896cd41-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/29fd8602-6c7d-4658-917f-d300407f0cb8-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/dcee18ec-a066-4768-9c12-ff88c966b1fe-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/99029c2a-8674-4f79-a003-d11d2e2098cc-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/61136e43-13d8-41ba-aab7-006c9ce3722e-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ff04f076-cfed-4cb6-83a9-f1b90c29b75b-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ffa85e9f-902d-4d22-b06c-92b0ff051d80-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/4d10fb57-f58d-40a7-a625-b8c8352f3efc-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/3289483f-a5b0-4970-b1ef-ad38bfbfac42-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/2c6b7509-60af-4565-9af3-ad367140f217-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d4be91e8-3690-44fa-897e-9433e16326fb-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ec774999-e813-49e4-8008-a724911fac95-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/ea4161de-1fcd-4f5b-858e-63263a19687a-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/299fdfd5-99b4-48e8-b8fe-1b75aebe3fac-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/d9ed33d4-16e9-46ee-9d75-c2d0d8d7019c-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/f0f109a2-6c9f-40b9-baa7-ba93031637e0-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/bb7a3bb2-03d7-46c7-9a2a-c150d17893a0-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/171e65db-49c0-44c1-aeb1-696e443549fe-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/fdda5f19-419d-45a3-834e-785ac1f684b0-2893733.jpg"><meta property="og:image" content="https://img.mubu.com/document_image/de194d0c-1343-4038-a988-00b6678051ef-2893733.jpg"><meta property="article:published_time" content="2020-02-09T03:13:33.000Z"><meta property="article:modified_time" content="2021-01-26T09:38:46.470Z"><meta property="article:author" content="苒"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://img.mubu.com/document_image/c3ced764-ba89-48f0-8d30-4c45bd1217db-2893733.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2020/02/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/"},"headline":"Database","image":["https://img.mubu.com/document_image/c3ced764-ba89-48f0-8d30-4c45bd1217db-2893733.jpg","https://img.mubu.com/document_image/0a7e76b3-2b36-41f9-bacd-c96c3f6a1be0-2893733.jpg","https://img.mubu.com/document_image/054e0b68-87e2-4fad-a791-9752a50d6817-2893733.jpg","https://img.mubu.com/document_image/252ee7d5-b547-4f0a-b270-9a1e941567b8-2893733.jpg","https://img.mubu.com/document_image/160391ac-c995-4b18-9397-a135b197abbe-2893733.jpg","https://img.mubu.com/document_image/13bd206b-0751-4739-8579-06b5f0c784a4-2893733.jpg","https://img.mubu.com/document_image/3653335d-df3f-4eb2-a4a3-f0d57863fd63-2893733.jpg","https://img.mubu.com/document_image/6b7f2450-a9ed-440b-8d44-ca372cd9e3fe-2893733.jpg","https://img.mubu.com/document_image/c2ee6e57-0822-4649-a734-88efde3f1c80-2893733.jpg","https://img.mubu.com/document_image/c84f4445-c4dc-4b9c-ba1f-b832e3f162f2-2893733.jpg","https://img.mubu.com/document_image/ede0107e-7c81-4793-bc39-6e23d2fb9024-2893733.jpg","https://img.mubu.com/document_image/a82e0446-41c7-4e40-9008-97470d394466-2893733.jpg","https://img.mubu.com/document_image/e88c4d2e-a4f7-441d-92ff-f4439c17e1a7-2893733.jpg","https://img.mubu.com/document_image/84727fbf-f17a-42aa-8c79-dac4160676e1-2893733.jpg","https://img.mubu.com/document_image/e90d650c-c105-4d58-bb26-bf3f34d127ca-2893733.jpg","https://img.mubu.com/document_image/ec87c38a-fd84-4397-9e57-cc180fc97c30-2893733.jpg","https://img.mubu.com/document_image/6e1473d4-0642-4359-af27-39861bd9e20d-2893733.jpg","https://img.mubu.com/document_image/af4f317d-2c7e-4705-8f3d-65fbc73d199b-2893733.jpg","https://img.mubu.com/document_image/dd4afda0-502a-4767-83fb-925213d8fcc5-2893733.jpg","https://img.mubu.com/document_image/fd9b5bc7-94ab-4bae-a0f6-70fd945bd358-2893733.jpg","https://img.mubu.com/document_image/5e220a50-0aa1-4183-b30f-1d4c080f7e4b-2893733.jpg","https://img.mubu.com/document_image/ac3d61fa-e6fe-44fe-b57e-b0f3ed814367-2893733.jpg","https://img.mubu.com/document_image/14776381-cd5c-41a5-9712-d2f6d5c8314e-2893733.jpg","https://img.mubu.com/document_image/1c0e2d60-17fa-42e6-8015-bab82535a523-2893733.jpg","https://img.mubu.com/document_image/b37840d1-10c3-4f72-ba49-c52fb208f187-2893733.jpg","https://img.mubu.com/document_image/fc4f7a12-c13f-46c3-a553-499a3554142c-2893733.jpg","https://img.mubu.com/document_image/178aae4d-2444-4043-b2de-1949215ded17-2893733.jpg","https://img.mubu.com/document_image/8c2732ef-0b33-4ec2-ae0f-2811850f46f3-2893733.jpg","https://img.mubu.com/document_image/a23b7a1a-24ef-4154-b0b6-ffc87f1877c0-2893733.jpg","https://img.mubu.com/document_image/2d57d4c5-2430-45d1-b314-065cb740da9f-2893733.jpg","https://img.mubu.com/document_image/439e4b0c-6e6f-4aee-8210-251dc0b562ee-2893733.jpg","https://img.mubu.com/document_image/147b2a3b-024a-4b02-88f9-ab10208007ab-2893733.jpg","https://img.mubu.com/document_image/543f7114-7c43-4b92-87ab-9445c48c2ee4-2893733.jpg","https://img.mubu.com/document_image/2facfd43-8150-44bc-94db-ef1489a22539-2893733.jpg","https://img.mubu.com/document_image/feac6eae-9413-4aad-986c-04e5718a3e3d-2893733.jpg","https://img.mubu.com/document_image/4fd84351-0fe8-45fe-9037-f042b158486b-2893733.jpg","https://img.mubu.com/document_image/30d707cd-7922-4351-a125-3a6d50626852-2893733.jpg","https://img.mubu.com/document_image/8e45239e-0eb5-424b-ae7d-35776036b0d3-2893733.jpg","https://img.mubu.com/document_image/7134fe44-4642-4321-b7ac-8b5dbffee231-2893733.jpg","https://img.mubu.com/document_image/bc52eab0-1664-4a9d-a537-de7c2bd5d636-2893733.jpg","https://img.mubu.com/document_image/1d8b7160-c23f-44af-a474-63167d954e2d-2893733.jpg","https://img.mubu.com/document_image/7200458f-c1fa-4cba-8d70-547cab41851f-2893733.jpg","https://img.mubu.com/document_image/ac914d78-2bda-42aa-9195-3f574475c29e-2893733.jpg","https://img.mubu.com/document_image/0cee1d78-dc3f-4d31-9b27-8eb64e49a53f-2893733.jpg","https://img.mubu.com/document_image/4c0fd6ab-a91a-42c2-a2e6-d2611f1ddfcb-2893733.jpg","https://img.mubu.com/document_image/c060bb75-791d-4a43-b057-0a9a705cef62-2893733.jpg","https://img.mubu.com/document_image/e85040e1-a288-4c65-8d1f-382b5c551d00-2893733.jpg","https://img.mubu.com/document_image/6154a7df-e0b1-4515-acbb-0577c2599ec5-2893733.jpg","https://img.mubu.com/document_image/f203bf5b-2b05-4e5f-ad80-c79dbb97de2d-2893733.jpg","https://img.mubu.com/document_image/0c8145b5-8405-4835-b0a2-566dd4be0123-2893733.jpg","https://img.mubu.com/document_image/92095efc-2966-48bb-9135-1ae521590a24-2893733.jpg","https://img.mubu.com/document_image/c8543746-4bf3-4160-be1e-03ba815e1a57-2893733.jpg","https://img.mubu.com/document_image/67aae48f-a964-40da-8763-e7359043ab42-2893733.jpg","https://img.mubu.com/document_image/f35f4857-d6b1-4764-8f17-7a1f8735b56c-2893733.jpg","https://img.mubu.com/document_image/a7bd4da6-8b2a-4ef2-b896-d3c51399b44b-2893733.jpg","https://img.mubu.com/document_image/b5241c85-635c-44c1-8ea7-c8da4c7e939f-2893733.jpg","https://img.mubu.com/document_image/151d956a-1383-4cc3-8e27-d2d8b80e4def-2893733.jpg","https://img.mubu.com/document_image/85fe80ec-2841-4336-8f84-bcd3846a0288-2893733.jpg","https://img.mubu.com/document_image/260f7d2b-0e99-4779-9fb0-7d1248ceacdc-2893733.jpg","https://img.mubu.com/document_image/2a722c83-9cc9-4baa-bced-91d30ad1f50c-2893733.jpg","https://img.mubu.com/document_image/312c7599-77a1-4b1c-82ac-0f25f713686f-2893733.jpg","https://img.mubu.com/document_image/6a66478c-2a75-45bd-b509-91f777bf54b6-2893733.jpg","https://img.mubu.com/document_image/a1dcd591-9478-46de-976b-802424eddd26-2893733.jpg","https://img.mubu.com/document_image/468f0ead-62af-4cf1-b43b-ce0512ada586-2893733.jpg","https://img.mubu.com/document_image/1689e60e-fe4f-41bf-a425-f635f0a2463a-2893733.jpg","https://img.mubu.com/document_image/adc894b2-ee93-4366-aa64-22b01bfce8ab-2893733.jpg","https://img.mubu.com/document_image/dc7c51e6-f2a6-4ed4-bc13-7e5006cc345c-2893733.jpg","https://img.mubu.com/document_image/a8377e6d-3426-4b23-815e-86c1ad61e736-2893733.jpg","https://img.mubu.com/document_image/79f42250-368e-4abe-8418-dbf7d61628e1-2893733.jpg","https://img.mubu.com/document_image/61c6a218-e755-47b9-a687-e4524ad9d280-2893733.jpg","https://img.mubu.com/document_image/1a39709e-fdc7-4873-a7bd-6c741a1ce77b-2893733.jpg","https://img.mubu.com/document_image/ed51babd-c721-41dc-a64f-cd562753f6d2-2893733.jpg","https://img.mubu.com/document_image/e47ecfb5-69da-4842-91ae-2a1b625a6352-2893733.jpg","https://img.mubu.com/document_image/32e1bef4-38f6-40ee-952d-be63d2105ae7-2893733.jpg","https://img.mubu.com/document_image/bf743107-f903-45fa-b1d4-43eb60936340-2893733.jpg","https://img.mubu.com/document_image/edeb1bd2-cb18-4467-a80b-73ac86c32cee-2893733.jpg","https://img.mubu.com/document_image/42639225-6fe3-4b9b-96b0-b34a698eecd1-2893733.jpg","https://img.mubu.com/document_image/8ff30f58-986b-4c4b-96d5-9d35001b94b7-2893733.jpg","https://img.mubu.com/document_image/63132184-2547-4524-beab-35519fc51514-2893733.jpg","https://img.mubu.com/document_image/11d3aac8-f49e-43e1-8883-e72437bbbdfb-2893733.jpg","https://img.mubu.com/document_image/48cccaca-8f6a-4c39-9b67-433251a00e64-2893733.jpg","https://img.mubu.com/document_image/e09a8ff4-82c3-4865-9303-37ce88fe72fa-2893733.jpg","https://img.mubu.com/document_image/a7bfb95e-bf53-4a42-a30c-25bb41d5429b-2893733.jpg","https://img.mubu.com/document_image/7cf5df24-036e-4fef-92dc-b5b9a5a6fee6-2893733.jpg","https://img.mubu.com/document_image/6cf9412e-167f-43e4-a8c0-23a656601043-2893733.jpg","https://img.mubu.com/document_image/b39e62a4-dca8-4b31-805e-d8d9e45aa5ac-2893733.jpg","https://img.mubu.com/document_image/8be65d85-cb55-4792-a66f-9de58c9001a0-2893733.jpg","https://img.mubu.com/document_image/d7973db6-e781-4b4a-96c8-e63918b5be8b-2893733.jpg","https://img.mubu.com/document_image/19748bd2-b810-4b52-84e7-264a1896cd41-2893733.jpg","https://img.mubu.com/document_image/29fd8602-6c7d-4658-917f-d300407f0cb8-2893733.jpg","https://img.mubu.com/document_image/dcee18ec-a066-4768-9c12-ff88c966b1fe-2893733.jpg","https://img.mubu.com/document_image/99029c2a-8674-4f79-a003-d11d2e2098cc-2893733.jpg","https://img.mubu.com/document_image/61136e43-13d8-41ba-aab7-006c9ce3722e-2893733.jpg","https://img.mubu.com/document_image/ff04f076-cfed-4cb6-83a9-f1b90c29b75b-2893733.jpg","https://img.mubu.com/document_image/ffa85e9f-902d-4d22-b06c-92b0ff051d80-2893733.jpg","https://img.mubu.com/document_image/4d10fb57-f58d-40a7-a625-b8c8352f3efc-2893733.jpg","https://img.mubu.com/document_image/3289483f-a5b0-4970-b1ef-ad38bfbfac42-2893733.jpg","https://img.mubu.com/document_image/2c6b7509-60af-4565-9af3-ad367140f217-2893733.jpg","https://img.mubu.com/document_image/d4be91e8-3690-44fa-897e-9433e16326fb-2893733.jpg","https://img.mubu.com/document_image/ec774999-e813-49e4-8008-a724911fac95-2893733.jpg","https://img.mubu.com/document_image/ea4161de-1fcd-4f5b-858e-63263a19687a-2893733.jpg","https://img.mubu.com/document_image/299fdfd5-99b4-48e8-b8fe-1b75aebe3fac-2893733.jpg","https://img.mubu.com/document_image/d9ed33d4-16e9-46ee-9d75-c2d0d8d7019c-2893733.jpg","https://img.mubu.com/document_image/f0f109a2-6c9f-40b9-baa7-ba93031637e0-2893733.jpg","https://img.mubu.com/document_image/bb7a3bb2-03d7-46c7-9a2a-c150d17893a0-2893733.jpg","https://img.mubu.com/document_image/171e65db-49c0-44c1-aeb1-696e443549fe-2893733.jpg","https://img.mubu.com/document_image/fdda5f19-419d-45a3-834e-785ac1f684b0-2893733.jpg","https://img.mubu.com/document_image/de194d0c-1343-4038-a988-00b6678051ef-2893733.jpg"],"datePublished":"2020-02-09T03:13:33.000Z","dateModified":"2021-01-26T09:38:46.470Z","author":{"@type":"Person","name":"苒"},"publisher":{"@type":"Organization","name":"苒","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":"数据库知识点整理"}</script><link rel="canonical" href="http://example.com/2020/02/09/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="苒" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-02-09T03:13:33.000Z" title="2020/2/9 11:13:33">2020-02-09</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-01-26T09:38:46.470Z" title="2021/1/26 17:38:46">2021-01-26</time></span><span class="level-item"><a class="link-muted" href="/categories/Learn/">Learn</a></span><span class="level-item">4 hours read (About 34508 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Database</h1><div class="content"><p>数据库知识点整理</p>
+<span id="more"></span>
+
+<p><a target="_blank" rel="noopener" href="https://www.momeak.ink/2021/01/26/Term Review/">Term Review</a></p>
+<h3 id="第1章-绪论"><a href="#第1章-绪论" class="headerlink" title="第1章 绪论"></a>第1章 绪论</h3><ul>
+<li>了解<ul>
+<li>数据管理技术的产生和发展过程</li>
+<li>数据库系统优点</li>
+<li>层次数据模型及网状数据模型基本概念</li>
+<li>数据库系统的组成</li>
+<li>数据库管理员（DBA）的职责</li>
+</ul>
+</li>
+<li>掌握<ul>
+<li>概念模型的基本概念</li>
+<li>关系数据模型的相关概念</li>
+<li>数据库系统三级模式和两级映像的体系结构</li>
+<li>数据库系统的逻辑独立性和物理独立性</li>
+</ul>
+</li>
+<li>知识点<ul>
+<li><strong>数据、数据库、数据库管理系统、数据库系统</strong><ul>
+<li>数据（Data）：描述事物的符号记录称为数据。数据与其语义是不可分的</li>
+<li>数据库（Data Base）：数据库是长期储存在计算机内的、有组织的、可共享的数据集合。数据库中的数据按一定的数据模型组织、描述和储存，具有较小的冗余度、较高的数据独立性和易扩展性，并可为各种用户共享。</li>
+<li>数据库系统（Data Base System）：在计算机系统中引入数据库后的系统构成。一般由数据库、数据库管理系统（及其开发工具）、应用系统、数据库管理员构成。</li>
+<li>数据库管理系统（DataBase Management System）：数据库管理系统是位于用户与操作系统之间的一层数据管理软件，用于科学地组织和存储数据、高效地获取和维护数据。DBMS主要功能包括数据定义功能、数据操纵功能、数据库的运行管理功能、数据库的建立和维护功能。</li>
+<li>数据库的数据具有【永久储存】、【有组织】、【可共享】三个基本特点</li>
+<li>DBS包括DB、DBMS、DBA</li>
+</ul>
+</li>
+<li><strong>使用数据库系统的好处</strong><ul>
+<li>使用数据库系统的好处是由数据库管理系统的特点或优点决定的</li>
+<li>可以大大提高应用开发的效率</li>
+<li>当数据的逻辑结构需要改变时，开发人员不必修改应用程序，或者只需要修改很少的应用程序</li>
+<li>可以减轻DBA维护系统的负担</li>
+<li>便于数据的集中管理、控制数据冗余、提高数据的利用率和一致性，又有利于应用程序的开发和维护</li>
+</ul>
+</li>
+<li><strong>文件系统与数据库系统的区别和联系</strong><ul>
+<li>区别<ul>
+<li>文件系统面向某一应用程序、共享性差、冗余度大、数据独立性差、记录内有结构、整体无结构、由应用程序自己控制</li>
+<li>数据库系统面向现实世界、共享度高、冗余度小、具有较高物理独立性和一定的逻辑独立性、整体结构化、用数据模型描述、由数据库管理系统提供数据的安全性、完整性、并发控制和恢复能力</li>
+</ul>
+</li>
+<li>联系<ul>
+<li>都是计算机系统中管理数据的软件</li>
+<li>文件系统是操作系统的重要组成部分，而DBMS是独立于操作系统的软件。但是DBMS是在操作系统的基础上实现的，数据库中的数据的组织和存储是通过操作系统中的文件系统来实现的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>适用于文件系统或数据库系统的例子</strong><ul>
+<li>适用于文件系统：数据的备份、软件或应用程序使用过程中的临时数据存储；早期功能比较简单、比较固定的应用系统（照片、短信、微信）</li>
+<li>适用于数据库系统：企业或部门的信息系统（人事管理系统、学生管理系统）</li>
+</ul>
+</li>
+<li><strong>数据库系统特点</strong><ul>
+<li>数据结构化（数据库系统与文件系统的本质区别）</li>
+<li>数据共享性高，冗余度低，易扩充</li>
+<li>数据独立性高<ul>
+<li>数据独立性包括数据的【物理独立性】和数据的【逻辑独立性】<ul>
+<li>【物理独立性】：用户的应用程序与数据库中数据的物理存储是相互独立的</li>
+<li>【逻辑独立性】：用户的应用程序与数据库的逻辑结构是相互独立的</li>
+</ul>
+</li>
+<li>数据库管理系统的模式结构和二级映像功能保证了数据库中的数据具有很高的物理独立性和逻辑独立性。</li>
+</ul>
+</li>
+<li>数据由DBMS统一管理和控制。提供统一的数据控制功能<ul>
+<li>数据的安全性保护：保护数据以防止不合法的使用造成的数据的泄密和破坏</li>
+<li>数据的完整性检查：将数据控制在有效的范围内或保证数据之间满足一定的关系</li>
+<li>并发控制：对多用户的并发操作加以控制和协调，保证并发操作的正确性</li>
+<li>数据库恢复：当计算机系统发生硬件故障、软件故障，或者由于操作员的失误以及故意的破坏影响数据库中数据的正确性，甚至造成数据库部分或全部数据的丢失时，能将数据库从错误状态恢复到某一已知的正确状态（亦称为完整状态或一致状态）</li>
+<li>什么是数据库<ul>
+<li>数据库是长期存储在计算机内有组织的大量的共享的数据集合。它可以供各种用户共享，具有最小冗余度和较高的数据独立性。</li>
+<li>DBMS在数据库建立、运用和维护时对数据库进行统一控制，以保证数据的完整性、安全性，并在多用户同时使用数据库时进行并发控制，在发生故障后对系统进行恢复。</li>
+<li>数据库系统的出现使信息系统从以加工数据的程序为中心转向围绕共享的数据库为中心的新阶段。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>DBMS的主要功能</strong><ul>
+<li>数据库定义功能</li>
+<li>数据组织、存储和管理功能</li>
+<li>数据操纵功能</li>
+<li>数据库的事务管理和运行管理</li>
+<li>数据库的建立和维护功能</li>
+<li>其他功能，如不同数据库之间的互访和互操作功能等</li>
+</ul>
+</li>
+<li><strong>概念模型、逻辑模型和物理模型</strong><ul>
+<li>概念模型实际上是现实世界到机器世界的一个中间层次。概念模型用于信息世界的建模，是现实世界到信息世界的第一层抽象，是数据库设计人员进行数据库设计的有力工具，也是数据库设计人员和用户之间进行交流的语言。</li>
+<li>概念模型强调语义表达能力，简单清晰易于用户理解</li>
+<li>逻辑模型（数据模型）：按计算机系统的观点对数据建模，用于数据库管理系统的实现。</li>
+<li>物理模型：是对数据最底层的抽象，描述数据在系统内部的表示方法和存取方法，或在磁盘或磁带上的存储方式和存取方法，是面向计算机系统的。</li>
+</ul>
+</li>
+<li><strong>实体、实体型、实体集、实体之间的联系、属性、码、实体联系图（E-R图）</strong><ul>
+<li>实体：客观存在并可相互区分的事物</li>
+<li>实体型：用实体名及其属性名集合来抽象和刻画同类实体</li>
+<li>实体集：同型实体的集合</li>
+<li>实体之间的联系<ul>
+<li>实体（型）内部的联系：组成实体的各属性之间的联系</li>
+<li>实体（型）之间联系：不同实体集之间的联系。一对一、一对多、多对多</li>
+</ul>
+</li>
+<li>属性：实体所具有的某一特性，一个实体可由若干个属性来刻画。</li>
+<li>码：唯一标识实体的属性集称为码。</li>
+<li>实体联系图（E-R图）：提供了表示实体型、属性和联系的方法<ul>
+<li>实体型：用矩形表示，矩形框内写明实体名。</li>
+<li>属性：用椭圆形表示，并用无向边将其与相应的实体连接起来。</li>
+<li>联系：用菱形表示，菱形框内写明联系名，并用无向边分别与有关实体连接起来，同时在无向边旁标上联系的类型（1 : 1，1 : n或m : n）。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>数据模型、数据模型的作用、数据模型三要素</strong><ul>
+<li>数据模型是数据库系统中最重要的概念之一。数据模型是数据库中用来对现实世界进行抽象的工具，是数据库中用于提供信息表示和操作手段的形式构架</li>
+<li>一般地讲，数据模型是严格定义的概念的集合。这些概念精确地描述系统的静态特性、动态特性和完整性约束条件。</li>
+<li>数据模型是数据库系统的基础。任何一个DBMS都以某一个数据模型为基础，或者说支持某一个数据模型</li>
+<li>数据模型通常由【数据结构】、【数据操作】、【完整性约束条件】三部分组成</li>
+</ul>
+</li>
+<li><strong>层次模型概念</strong><ul>
+<li>有且只有一个结点没有双亲结点，这个节点称为根节点</li>
+<li>根以外的其他结点有且只有一个双亲结点</li>
+</ul>
+</li>
+<li><strong>网状模型概念</strong><ul>
+<li>允许一个以上的结点无双亲</li>
+<li>一个结点可以有多于一个的双亲</li>
+</ul>
+</li>
+<li><strong>层次数据库、网状数据库的优缺点</strong><ul>
+<li>层次数据库<ul>
+<li>优点<ul>
+<li>层次模型数据结构简单清晰</li>
+<li>层次数据库查询效率高</li>
+<li>层次数据模型提供了良好的完整性支持</li>
+</ul>
+</li>
+<li>缺点：现实世界很多联系是非层次性的，层次模型不能自然地表示这类联系</li>
+</ul>
+</li>
+<li>网状数据库<ul>
+<li>优点<ul>
+<li>能够更为直接地描述现实世界</li>
+<li>具有良好的性能，存取效率较高</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>结构比较复杂，而且随着应用环境的扩大，数据库的结构就变得越来越复杂，不利于最终用户掌握。</li>
+<li>网状数据库的数据定义语言（DDL）、数据操纵语言（DML）比较复杂，要求用户掌握数据库结构和存取路径，不容易使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>关系、属性、域、元组、码、分量、关系模式</strong><ul>
+<li>关系模型由【关系数据结构】、【关系操作集合】、【关系完整性约束】三部分组成。在用户观点下，关系模型中数据的逻辑结构是一张二维表，它由行和列组成</li>
+<li>关系：一个关系对应通常说的一张表</li>
+<li>属性：表中的一列</li>
+<li>域：属性的取值范围</li>
+<li>元组：表中的一行</li>
+<li>码：表中的某个属性组，它可以唯一确定一个元组</li>
+<li>分量：元组中的一个属性值</li>
+<li>关系模式：对关系的描述，一般表示为 关系名（属性1，属性2，…，属性n）</li>
+</ul>
+</li>
+<li><strong>关系数据库的特点</strong><ul>
+<li>优点<ul>
+<li>关系模型与非关系模型不同，它具有严格的数学基础</li>
+<li>关系模型的概念单一</li>
+<li>关系模型的存取路径对用户透明，从而具有更高的数据独立性、更好的安全保密性，也简化了程序员的工作和数据库开发建立的工作。</li>
+</ul>
+</li>
+<li>缺点：存取路径对用户透明，查询效率往往不如非关系数据模型</li>
+</ul>
+</li>
+<li><strong>数据库系统三级模式、两级映像</strong><ul>
+<li>三级模式结构由外模式、模式、内模式组成</li>
+<li>外模式：亦称子模式或用户模式，局部数据的逻辑结构和特征的描述，是数据库用户的数据视图</li>
+<li>模式：亦称逻辑模式，是数据库中全体数据的逻辑结构和特性的描述，是所有用户的公共数据视图。模式描述的是数据的全局逻辑结构。外模式通常是模式的子集</li>
+<li>内模式：亦称存储模式，对数据的物理结构和存储方式的描述</li>
+<li>两级映像：外模式&#x2F;模式映像、模式&#x2F;内模式映像。在内部实现了三个抽象层次的联系和转换，保证了数据库系统中的数据能够具有较高的逻辑独立性和物理独立性</li>
+</ul>
+</li>
+<li><strong>数据定义语言、数据操纵语言</strong><ul>
+<li>数据定义语言：用来定义数据库模式、外模式和内模式的语言</li>
+<li>数据操纵语言：用来对数据库中的数据进行查询、插入、删除和修改的语句</li>
+</ul>
+</li>
+<li><strong>数据与程序的物理独立性、逻辑独立性</strong><ul>
+<li>【数据与程序的物理独立性】：当数据库的存储结构改变了，由数据库管理员对模式&#x2F;内模式映像作相应改变，可以使模式保持不变，从而应用程序也不必改变，这就是数据与程序的物理独立性，简称数据的物理独立性。</li>
+<li>【数据与程序的物理独立性】：当数据的逻辑结构即模式改变时，由数据库管理员对各个外模式&#x2F;模式的映像作相应改变，可以使外模式保持不变，从而应用程序不必修改，这就是数据与程序的逻辑独立性，简称数据的逻辑独立性。</li>
+<li>DBMS在三级模式之间提供的两级映像保证了数据库系统中的数据能够具有较高的逻辑独立性和物理独立性。</li>
+</ul>
+</li>
+<li><strong>数据库系统组成</strong><ul>
+<li>数据库系统一般由数据库、数据库管理系统（及其开发工具）、应用系统、数据库管理员构成。</li>
+</ul>
+</li>
+<li><strong>数据库管理员、系统分析师、数据库设计人员、应用程序员的职责</strong><ul>
+<li>数据库管理员：全面负责管理和控制数据库系统。具体职责包括:<ul>
+<li>决定数据库的信息内容和结构</li>
+<li>决定数据库的存储结构和存取策略</li>
+<li>定义数据的安全性要求和完整性约束条件</li>
+<li>监控数据库的使用和运行</li>
+<li>数据库系统的改进和重组重构</li>
+</ul>
+</li>
+<li>系统分析员：负责应用系统的需求分析和规范说明，他要和用户及DBA相结合，确定系统的硬件软件配置，并参与数据库系统的概要设计</li>
+<li>数据库设计人员：负责数据库中数据的确定和数据库各级模式的设计。参加用户需求调查和系统分析，然后进行数据库设计</li>
+<li>应用程序员：负责设计和编写应用程序的程序模块，并进行调试和安装</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>补充<ul>
+<li>数据库的核心和基础是【数据模型】</li>
+<li>实现时将现实世界抽象为信息世界的是【概念模型】</li>
+<li>文件系统阶段比人工管理阶段的优势是【数据可以长期保存】</li>
+<li>保证数据库系统数据具有较高逻辑独立性的是【外模式&#x2F;模式映像】</li>
+<li>IBM公司的IMS数据库管理系统采用【层次模型】</li>
+<li>DBMS是一类系统软件，建立在【操作系统】之上</li>
+<li>网状数据库【一个结点可以由多于一个的双亲】</li>
+<li>从逻辑模型到物理模型的转换一般由DBMS完成</li>
+<li>长期存储在计算机内，有组织的、可共享的大量数据集合是【数据库】</li>
+<li>【人工管理阶段】需要应用程序管理数据</li>
+<li>通常情况下，外模式是模式的子集</li>
+<li>通常按照数据结构的类型来命名数据模型</li>
+<li>常用的数据模型有：层次模型、网状模型、关系模型、面向对象数据模型、对象关系数据模型、半结构化数据模型</li>
+<li>最经常使用的概念模型是【E-R图】</li>
+<li>数据库管理系统提供的数据控制方面的功能包括：数据的【安全性】保护、数据的【完整性】检查、【并发控制】、数据库恢复</li>
+<li>层次模型和网状模型中的单位是基本层次联系，这是指两个【记录(型)】以及它们之间的【一对多】（包括一对一）的联系</li>
+<li>数据模型的组成要素中描述系统的静态特性和动态特性的分别是【数据结构】和【数据操纵】</li>
+<li>试述数据管理的文件管理阶段和数据库系统阶段“数据独立性”有何不同？<ul>
+<li>答：文件系统中数据被组织成相互独立的数据文件，程序按照文件名访问数据，“数据独立性”是一种“设备独立性”。数据库系统的“数据独立性”包括“物理独立性”和“逻辑独立性”，物理独立性是指用户的应用程序与存储在磁盘上的数据库中的数据是相互独立的；逻辑独立性是指用户的应用与数据库的逻辑结构是相互独立的。</li>
+</ul>
+</li>
+<li>文件系统管理数据的缺点：数据共享性差，冗余度大；数据独立性差</li>
+<li>三级模式中，描述数据库中全体数据的全局逻辑结构和特征的是【模式】</li>
+<li>层次模型不能直接表示【m:n关系】</li>
+<li>DBS是一个集合体，包含数据库、计算机硬件、软件和【数据库管理员】</li>
+<li>数据库（DB），数据库系统（DBS）和数据库管理系统（DBMS）之间的关系是【DBS包括DB和DBMS】</li>
+<li>【人工管理阶段】没有专门的软件对数据进行管理</li>
+<li>【数据冗余度高】不属于数据库系统特点</li>
+<li>数据库系统的数据独立性体现在【不会因为系统数据存储结构与数据逻辑结构的变化而影响应用程序】</li>
+<li>要保证数据库的数据独立性，需要修改的是【三层之间的两种映射】</li>
+<li>要保证数据库的逻辑数据独立性，需要修改的是【模式与外模式的映射】</li>
+<li>用户或应用程序看到的那部分局部逻辑结构和特征的描述是【子模式】，它是模式的逻辑子集</li>
+<li>【数据库管理系统设计】不是DBA数据库管理员的职责</li>
+<li>给出三个实际部门的E-R图，要求实体型之间具有一对一，一对多，多对多各种不同的联系</li>
+</ul>
+</li>
+</ul>
+<h3 id="第2章-关系数据库（重点）"><a href="#第2章-关系数据库（重点）" class="headerlink" title="第2章 关系数据库（重点）"></a>第2章 关系数据库（重点）</h3><ul>
+<li><p>了解：关系数据结构及形式化定义、关系操作、关系的完整性、关系代数</p>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>关系模型的三个组成部分及各部分所包括的主要内容</li>
+<li>关系数据结构及其形式化定义</li>
+<li>关系的三类完整性约束</li>
+<li>关系代数及其运算，包括并、交、差、选择、投影、连接、除、广义笛卡儿积</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>关系模型三个组成部分</strong></p>
+<ul>
+<li>关系数据结构</li>
+<li>关系操作集合</li>
+<li>关系完整性约束<ul>
+<li>实体完整性规则：若属性A是基本关系R的主属性，则属性A不能取空值</li>
+<li>参照完整性规则：若属性（或属性组）F是基本关系R的外码它与基本关系S的主码Ks相对应（基本关系R和S不一定是不同的关系），则对于R中每个元组在F上的值必须为：<ul>
+<li>或者取空值（F的每个属性值均为空值）</li>
+<li>或者等于S中某个元组的主码值</li>
+</ul>
+</li>
+<li>用户定义的完整性：针对某一具体关系数据库的约束条件，反映某一具体应用所涉及的数据必须满足的语义要求</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>关系数据语言的特点和分类</strong></p>
+<ul>
+<li>关系代数语言</li>
+<li>关系演算语言</li>
+<li>具有关系代数和关系演算双重特点的语言</li>
+</ul>
+</li>
+<li><p><strong>域、笛卡儿积、关系、元组、属性</strong></p>
+<ul>
+<li>域：域是一组具有相同数据类型的值的集合</li>
+<li>笛卡儿积：D1<em>D2</em>…*Dn&#x3D;{(d1,d2,…,dn)|di∈Di,i&#x3D;1,2,…,n}</li>
+<li>关系：在域D1，D2，…，Dn上笛卡儿积D1<em>D2</em>…*Dn的子集，表示为R(D1,D2,…,Dn)</li>
+<li>元组：关系中的每个元素是关系中的元组</li>
+<li>属性：关系也是一个二维表，表的每行对应一个元组，表的每列对应一个域。由于域可以相同，为了加以区分，对每列起一个名字，称为属性</li>
+</ul>
+</li>
+<li><p><strong>候选码、主码、外码</strong></p>
+<ul>
+<li>候选码：若关系中的某一属性组的值能唯一地标识一个元组，而其子集不能，则称该属性组为候选码（candidate key）</li>
+<li>主码：若一个关系有多个候选码，选定其中一个为主码（primary key）</li>
+<li>外码：设F是基本关系R的一个或一组属性，但不是关系R的码，如果F与基本关系S的主码Ks相对应，则称F是基本关系R的外部码（foreign key），简称外码</li>
+</ul>
+</li>
+<li><p><strong>关系模式、关系、关系数据库</strong></p>
+<ul>
+<li>关系模式：关系的描述称为关系模式（relation schema），</li>
+<li>关系模式形式化表示为R(U，D，DOM，F)。R为关系名，U为组成该关系的属性名集合，D为属性组U中属性来自的域，DOM为属性向域的映像集合，F为属性间数据的依赖关系集合</li>
+<li>关系：在域D1，D2，…，Dn上笛卡儿积D1<em>D2</em>…*Dn的子集，表示为R(D1,D2,…,Dn)<ul>
+<li>关系是关系模式在某一时刻的状态或内容</li>
+</ul>
+</li>
+<li>关系数据库：关系数据库也有型和值之分。<ul>
+<li>关系数据库的型：称为关系数据库模式，是对关系数据库的描述，它包括若干域的定义以及在这些域上定义的若干关系模式。</li>
+<li>关系数据库的值：是这些关系模式在某一时刻对应的关系的集合，通常就称为关系数据库。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>关系模式和关系的区别</strong></p>
+<ul>
+<li>关系模式是型；关系是值，是关系模式的实例</li>
+</ul>
+</li>
+<li><p><strong>关系模型的完整性规则</strong></p>
+<ul>
+<li>实体完整性规则：若属性A是基本关系R的主属性，则属性A不能取空值</li>
+<li>参照完整性规则：若属性（或属性组）F是基本关系R的外码它与基本关系S的主码Ks相对应（基本关系R和S不一定是不同的关系），则对于R中每个元组在F上的值必须为：<ul>
+<li>或者取空值（F的每个属性值均为空值）</li>
+<li>或者等于S中某个元组的主码值</li>
+</ul>
+</li>
+<li>用户定义的完整性：针对某一具体关系数据库的约束条件，反映某一具体应用所涉及的数据必须满足的语义要求</li>
+</ul>
+</li>
+<li><p><strong>用关系代数完成查询</strong></p>
+<p><img src="https://img.mubu.com/document_image/c3ced764-ba89-48f0-8d30-4c45bd1217db-2893733.jpg" alt="img"></p>
+<p>设有一个SPJ数据库，包括S，P，J，SPJ四个关系模式： 　　 S( SNO，SNAME，STATUS，CITY)； 　　 P(PNO，PNAME，COLOR，WEIGHT)； 　　 J(JNO，JNAME，CITY)； 　　 SPJ(SNO，PNO，JNO，QTY)； 　　供应商表S由供应商代码（SNO）、供应商姓名（SNAME）、供应商状态（STATUS）、供应商所在城市（CITY）组成；零件表P由零件代码（PNO）、零件名（PNAME）、颜色（COLOR）、重量（WEIGHT）组成；工程项目表J由工程项目代码（JNO）、工程项目名（JNAME）、工程项目所在城市（CITY）组成；供应情况表SPJ由供应商代码（SNO）、零件代码（PNO）、工程项目代码（JNO）、供应数量（QTY）组成，表示某供应商供应某种零件给某工程项目的数量为QTY。</p>
+<ul>
+<li><p>求供应工程J1零件的供应商号码SNO：</p>
+<p><img src="https://img.mubu.com/document_image/0a7e76b3-2b36-41f9-bacd-c96c3f6a1be0-2893733.jpg" alt="img"></p>
+</li>
+<li><p>求供应工程J1零件P1的供应商号码SNO：</p>
+<p><img src="https://img.mubu.com/document_image/054e0b68-87e2-4fad-a791-9752a50d6817-2893733.jpg" alt="img"></p>
+</li>
+<li><p>求供应工程J1零件为红色的供应商号码SNO：</p>
+<p><img src="https://img.mubu.com/document_image/252ee7d5-b547-4f0a-b270-9a1e941567b8-2893733.jpg" alt="img"></p>
+</li>
+<li><p>求没有使用天津供应商生产的红色零件的工程号JNO：</p>
+<p><img src="https://img.mubu.com/document_image/160391ac-c995-4b18-9397-a135b197abbe-2893733.jpg" alt="img"></p>
+</li>
+<li><p>求至少用了供应商S1所供应的全部零件的工程号JNO：</p>
+<p><img src="https://img.mubu.com/document_image/13bd206b-0751-4739-8579-06b5f0c784a4-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>等值连接与自然连接区别和联系</strong></p>
+<ul>
+<li>自然连接是一种特殊的等值连接，它要求两个关系中进行比较分量，即连接属性必须是相同的属性组，并且要在结果中去掉其中一个的重复属性</li>
+</ul>
+</li>
+<li><p><strong>代数运算，用基本运算表示其他运算</strong></p>
+<ul>
+<li><p>基本运算</p>
+<ul>
+<li>【并】：RUS仍为n目关系，由属于R或属于S的元组组成</li>
+<li>【差】：R-S仍为n目关系，由属于R而不属于S的所有元组组成</li>
+<li>【笛卡儿积】（全排列组合）：R<em>S列：（n+m）列元组的集合，元组的前n列是关系R的一个元组，后m列是关系S的一个元组，行：k1</em>k2各元组</li>
+<li>【投影】：从Ｒ中选择出若干属性列组成新的关系<ul>
+<li>πA(R) &#x3D; { t[A] | t∈R }</li>
+<li>例:查询学生的姓名和所在系，即求Student关系上学生姓名和所在系两个属性上的投影 πSname，Sdept(Student)</li>
+</ul>
+</li>
+<li>【选择】：在关系Ｒ中选择满足给定条件的诸元组<ul>
+<li>σF(R) &#x3D; {t|t∈R∧F(t)&#x3D; ‘真’}　F：选择条件，是一个</li>
+<li>例:查询信息系（IS系）全体学生 σSdept &#x3D; ‘IS’ (Student)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>其他运算</p>
+<ul>
+<li><p>【交】：RnS仍为n目关系，由既属于R又属于S的元组组成</p>
+<p><img src="https://img.mubu.com/document_image/3653335d-df3f-4eb2-a4a3-f0d57863fd63-2893733.jpg" alt="img"></p>
+</li>
+<li><p>【连接】：从两个关系的笛卡儿积中选取属性间满足一定条件的元组</p>
+<p><img src="https://img.mubu.com/document_image/6b7f2450-a9ed-440b-8d44-ca372cd9e3fe-2893733.jpg" alt="img"></p>
+</li>
+<li><p>【除】：给定关系R(X，Y) 和S(Y，Z)，其中X，Y，Z为属性组。R中的Y与S中的Y可以有不同的属性名，但必须出自相同的域集。R与S的除运算得到一个新的关系P(X)，P是R中满足下列条件的元组在 X 属性列上的投影：元组在X上分量值x的象集Yx包含S在Y上投影的集合，R÷S &#x3D; {tr[X] | tr∈R ∧ πY(S) 真包含于 Yx }</p>
+<p><img src="https://img.mubu.com/document_image/c2ee6e57-0822-4649-a734-88efde3f1c80-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>补充</p>
+<ul>
+<li><p>关于关系模型</p>
+<ul>
+<li>一个关系至少要有一个候选码</li>
+<li>行、列的次序可以任意交换</li>
+<li>一个列的值只能来自一个域</li>
+<li>不同的列应有不同的列名</li>
+<li>一个码是【可有多个或者一个其值能够唯一表示该关系模式中任何元组的属性组成】</li>
+<li>实体以及实体之间的联系都可以使用相同的结构类型来表示</li>
+<li>非主属性不可能出现在任何候选码中</li>
+</ul>
+</li>
+<li><p>候选码都可以唯一地标识一个元组</p>
+</li>
+<li><p>关系操作中，操作的对象和结果都是【集合】</p>
+</li>
+<li><p>“性别”属性要求只能取“男”&#x2F;“女”，这属于【用户定义的完整性】</p>
+</li>
+<li><p>两个关系R（A，B，C）和S（B，C，D）自然连接，得到结果包含【4】列</p>
+</li>
+<li><p>在左外连接中，保留的是左边关系中所有的元组</p>
+</li>
+<li><p>在关系模型中，关系操作包括【查询】【插入】【修改】【删除】</p>
+</li>
+<li><p>关系模型包括8种查询操作，【并】【笛卡儿积】【选择】【投影】【差】是基本操作</p>
+</li>
+<li><p>职工（[职工号]，姓名，年龄，部门号）和部门（[部门号]，部门名称）存在引用关系，其中【职工】是参照关系，【部门号】是外码</p>
+</li>
+<li><p>候选码和主码的关系</p>
+<ul>
+<li>若关系中的某一属性组的值能唯一标识一个元组，该属性组称为候选码</li>
+<li>如果一个关系有多个候选码，其中一个被选为主码</li>
+<li>候选码可以有多个，主码是其中的一个</li>
+</ul>
+</li>
+<li><p>什么是关系完备性？关系演算在语言表达能力上是完备的吗？</p>
+<ul>
+<li>关系完备性是指一个查询语言能够表示关系代数可以表示的所有查询。</li>
+<li>关系演算具有完备的表达能力</li>
+</ul>
+</li>
+<li><p>现有如下关系：患者（患者编号，患者姓名，性别，出生日起，所在单位）；医疗（患者编号，患者姓名，医生编号，医生姓名，诊断日期，诊断结果）其中，医疗关系中的外码是【医生编号和患者编号】</p>
+</li>
+<li><p>现有一个关系：借阅（书号，书名，库存数，读者号，借期，还期），假如同一本书允许一个读者多次借阅，但不能同时对一种书借多本，则该关系模式的外码是【书号+读者号+借期】</p>
+</li>
+<li><p>关系模型中实现实体间 N：M 联系是通过增加一个【关系】实现</p>
+</li>
+<li><p>关系代数运算是以【集合运算】为基础的运算</p>
+</li>
+<li><p>关系数据库管理系统应能实现的专门关系运算包括【选择、投影、连接】</p>
+</li>
+<li><p>五种基本关系代数运算是【∪ － × σ π】</p>
+</li>
+<li><p>关系代数表达式的优化策略中，首先要做的是【尽早执行选择运算】</p>
+</li>
+<li><p>关系数据库中的投影操作是指从关系中【抽出特定字段】</p>
+</li>
+<li><p>从一个数据库文件中取出满足某个条件的所有记录形成一个新的数据库文件的操作是【选择】操作</p>
+</li>
+<li><p>关系代数中的连接操作是由【选择和笛卡尔积】操作组合而成</p>
+</li>
+<li><p>自然连接是构成新关系的有效方法。一般情况下，当对关系R和S是用自然连接时，要求R和S含有一个或者多个共有的【属性】</p>
+</li>
+<li><p>假设有关系R和S，在下列的关系运算中，【R×S】运算不要求：“R和S具有相同的元数，且它们的对应属性的数据类型也相同”</p>
+</li>
+<li><p>假设有关系R和S，关系代数表达式R－（R－S）表示的是【R∩S】</p>
+</li>
+<li><p>有关系SC（S_ID，C_ID，AGE，SCORE），查找年龄大于22岁的学生的学号和分数，正确的关系代数表达式是【πS_ID，SCORE (σ age&gt;22 (SC) ) 】【πS_ID，SCORE (σ age&gt;22 (πS_ID，SCORE，AGE (SC) ) ) 】</p>
+</li>
+<li><p>下面四个关系表达式是等价的，是判别它们的执行效率【E3最快】<br>E1 &#x3D;πA (σ B&#x3D;C ∧ D&#x3D;E′ (R×S) )E2 &#x3D;πA (σ B&#x3D;C (R× σD&#x3D;E′ (S) )E3 &#x3D;πA (R∞B&#x3D;CσD&#x3D;E′(S) )E4 &#x3D;πA (σD&#x3D;E′ (R∞B&#x3D;C S) )</p>
+</li>
+<li><p>综合题</p>
+<p><img src="https://img.mubu.com/document_image/c84f4445-c4dc-4b9c-ba1f-b832e3f162f2-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/ede0107e-7c81-4793-bc39-6e23d2fb9024-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第3章-关系数据库标准语言SQL（重点）"><a href="#第3章-关系数据库标准语言SQL（重点）" class="headerlink" title="第3章 关系数据库标准语言SQL（重点）"></a>第3章 关系数据库标准语言SQL（重点）</h3><ul>
+<li><p>了解</p>
+<ul>
+<li>SQL语言发展过程</li>
+<li>关系数据库技术和关系数据库管理系统RDBMS产品的发展过程</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>SQL语言的特点和优点</li>
+<li>面向过程的语言和SQL语言的区别</li>
+<li>关系数据库系统为数据库应用系统的开发提供良好环境，减轻了用户负担，提高用户生产率的原因</li>
+<li>用SQL语言完成对数据库的增删改查，特别是各种查询</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>SQL的特点</strong></p>
+<ul>
+<li>综合统一。SQL语言集数据定义语言DDL、数据操纵语言DML、数据控制语言DCL的功能于一体</li>
+<li>高度非过程化。用 SQL 语言进行数据操作， 只要提出 “做什么”，而无需指明 “怎么做”，因此无需了解存取路径，存取路径的选择以及 SQL 语句的操作过程由系统自动完成。</li>
+<li>面向集合的操作方式。 SQL 语言采用集合操作方式，不仅操作对象、查找结果可以是元组的集合，而且一次插入、删除、更新操作的对象也可以是元组的集合。</li>
+<li>以同一种语法结构提供两种使用方式。 sQL 语言既是自含式语言，又是嵌入式语言。作为自含式语言， 它能够独立地用于联机交互的使用方式； 作为嵌入式语言， 它能够嵌入到高级语言程序中，供程序员设计程序时使用。</li>
+<li>语言简捷，易学易用。</li>
+</ul>
+</li>
+<li><p><strong>在DROP TABLE时，RESTRICT和CASCADE的区别</strong></p>
+<ul>
+<li>RESTRICT表示表的删除是有限制条件的。要删除的基本表不能被其他表的约束所引用，不能有视图，不能有触发器，不能有存储过程或函数等。如果存在这些依赖该表的对象，则表不能被删除</li>
+<li>CASCADE表示表的删除没有限制条件，在删除基本表的同时，相关的依赖对象（如视图）都将被删除</li>
+</ul>
+</li>
+<li><p><strong>有两个关系S（A，B，C，D）和T（C，D，E，F），写出与下列查询等价的SQL表达式</strong></p>
+<p><img src="https://img.mubu.com/document_image/a82e0446-41c7-4e40-9008-97470d394466-2893733.jpg" alt="img"></p>
+<ul>
+<li>(1)SELECT * FROM S WHERE A&#x3D;10</li>
+<li>(2)SELECT DISTINCT A,B FROM S</li>
+<li>(3)SELECT A,B,S.C,S.D,E,F FROM S,T WHERE S.C&#x3D;T.C AND S.D&#x3D;T.D</li>
+<li>(4)SELECT A,B,S.C,S.D,T.C,T.D,E,F FROM S,T WHERE S.C&#x3D;T.C</li>
+<li>(5)SLEECT A,B,S.C,S.D,T.C,T.D,E,F FROM S,T WHERE A&lt;E</li>
+<li>(6)SELECT S1.C,S1.D,T.C,T.D,E,F FROM T,(SELECT DISTINCT C,D FROM S) AS S1</li>
+</ul>
+</li>
+<li><p><strong>用SQL语句建立第2章习题6中的4个表，针对建立的4个表用SQL语言完成第2章习题6中的查询</strong></p>
+<ul>
+<li>建S表 S(SNO,SNAME,STATUS,CITY);<br>​CREATE TABLE S(SNO CHAR(3).​ SNAME CHAR(10), STATUS CHAR(2), CITY CHAR(10)​​​)​;</li>
+<li>建P表 P(PNO,PNAME,COLOR,WEIGHT);<br>CREATE TABLE P(PNO CHAR(3), PNAME CHAR(10), COLOR CHAR(4), WEIGHT INT​​​);​</li>
+<li>建J表 J(JNO,JNAME,CITY);<br>CREATE TABLE J(JNO CHAR(3), JNAME CHAR(10),CITY CHAR(10)​​);​</li>
+<li>建SPJ表 SPJ(SNO,PNO,JNO,QTY);<br>CREATE TABLE SPJ(SNO CHAR(3), PNO CHAR(3),JNO CHAR(3), QTY INT​​​);​</li>
+<li>求供应工程J1零件的供应商号码SNO<br>SELECT SNO​FROM SPJWHERE JNO&#x3D;’J1’;​</li>
+<li>求供应工程J1零件P1的供应商号码SNO<br>SELECT SNOFROM SPJWHERE JNO&#x3D;’J1’ AND PNO&#x3D;’P1’;​​</li>
+<li>求供应工程J1零件为红色的供应商号码SNO<br>SELECT SNOFROM SPJWHERE JNO&#x3D;’J1’ AND PNO IN (SELECT PNO FROM P WHERE COLCO&#x3D;‘红’​​);或SELECT SNOFROM SPJ,PWHERE JNO&#x3D;’J1’ AND SPJ.PNO&#x3D;P.PNO AND COLOR&#x3D;’红’;​​​​​​​​​</li>
+<li>求没有使用天津供应商生产的红色零件的工程号JNO<br>SELECT JNOFROM JWHERE NOT EXISTS (SELECT * ​FROM SPJ WHERE SPJ.JNO&#x3D;J.JNO AND SNO IN (SELECT SNO FROM S WHERE CITY&#x3D;’天津’​​) AND​ PNO IN (SELECT PNO FROM P WHERE COLOR&#x3D;’红’​​)​​​​);​​​或SELECT JNOFROM JWHERE NOT EXISTS (SELECT * FROM SPJ,S,P WHERE SPJ.JNO&#x3D;J.JNO AND SPJ.SNO&#x3D;S.SNO AND SPJ.PNO&#x3D;P.PNO AND S.CITY&#x3D;’天津’ AND P.COLOR&#x3D;’红’​​​);​​​​​</li>
+<li>求至少用了供应商S1所供应的全部零件的工程号JNO<br>SELECT DISTINCT JNOFROM SPJ SPJZWHERE NOT EXISTS (SELECT * ​FROM SPJ SPJX WHERE SNO&#x3D;’S1’​ AND NOT EXISTS​ (SELECT * FROM SPJ SPJY WHERE SPJY.PNO&#x3D;SPJX.PNO AND SPJY.JNO&#x3D;SPJZ.JNO​​​)​);​​​</li>
+</ul>
+</li>
+<li><p><strong>针对习题3中的4个表，用SQL语言完成以下各项操作</strong></p>
+<ul>
+<li>找出所有供应商的姓名和所在城市。<br>SELECT SNAME,CITY ​FROM S；</li>
+<li>找出所有零件的名称、颜色、重量。<br>SELECT PNAME,COLOR,WEIGHT ​FROM P；</li>
+<li>找出使用供应商 S1 所供应零件的工程号码。<br>SELECT DIST JNO ​FROM SPJ ​WHERE SNO&#x3D;’S1’；</li>
+<li>找出工程项目 J2 使用的各种零件的名称及其数量。<br>SELECT P.PNAME,SPJ.QTY ​FROM P,SPJWHERE P.PNO&#x3D;SPJ.PNO ​AND SPJ.JNO&#x3D;’J2’;​</li>
+<li>找出上海厂商供应的所有零件号码。<br>SELECT DISTINCT PNO ​FROM SPJ​WHERE SNO IN (SELECT SNO FROM S WHERE CITY&#x3D;’上海’​​);​</li>
+<li>找出使用上海产的零件的工程名称。<br>SELECT JNAME ​FROM SPJ,S,JWHERE S.SNO&#x3D;SPJ.SNO AND S.CITY&#x3D;’ 上海 ‘ AND J.JNO&#x3D;SPJ.JNO或​SELECT JNAME 　　 FROM J 　　 WHERE JNO IN 　　 (SELECT JNO 　　 FROM SPJ, S 　　 WHERE SPJ. SNO&#x3D;S.SNO 　　 AND S.CITY&#x3D;’上海’); </li>
+<li>找出没有使用天津产的零件的工程号码。<br>SELECT JNO FROM J WHERE NOT EXISTS 　　 (SELECT * 　　 FROM SPJ 　　 WHERE SPJ.JNO&#x3D;J.JNO AND SNO IN 　　 (SELECT SNO 　　 FROM S 　　 WHERE CITY&#x3D;‘天津’))； 或 SELECT JNO FROM J WHERE NOT EXISTS 　　 (SELECT *1 　　 FROM SPJ, S 　　 WHERE SPJ.JNO&#x3D;J.JNO AND SPJ.SNO&#x3D;S.SNO AND ​S.CITY&#x3D;‘天津’)；​</li>
+<li>把全部红色零件的颜色改成蓝色。<br>UPDATE P SET COLOR&#x3D;’蓝’ WHERE COLOR&#x3D;’红’ ; ​</li>
+<li>由S5供给J4的零件P6改为由S3供应，请作必要的修改。<br>UPDATE SPJ SET SNO&#x3D;’S3’ WHERE SNO&#x3D;’S5’ AND JNO&#x3D;’J4’ AND PNO&#x3D;’P6’; ​</li>
+<li>从供应商关系中删除S2的记录，并从供应情况关系中删除相应的记录。<br>DELETE FROM SPJ WHERE SNO&#x3D;’S2’; 或 DELETE FROM S WHERE SNO&#x3D;’S2’; ​注意删除顺序，应该先从SPJ表中删除供应商S2所供应零件的记录，然后从从S表中删除S2。</li>
+<li>请将 (S2，J6，P4，200) 插入供应情况关系。<br>INSERT INTOSPJ(SNO, JNO, PNO, QTY) VALUES (S2，J6，P4，200); 或 INSERT INTO SPJ VALUES (S2，P4，J6，200);</li>
+</ul>
+</li>
+<li><p><strong>基本表、视图，两者的区别和联系</strong></p>
+<ul>
+<li>基本表是本身独立存在的表，在SQL中一个关系就对应一个表。</li>
+<li>视图是从一个或几个基本表导出的表。视图本身不独立存储在数据库中，是一个虚表。即数据库中只存放视图的定义而不存放视图对应的数据，这些数据仍存放在导出视图的基本表中。视图在概念上与基本表等同，用户可以如同基本表那样使用视图，可以在视图上再定义视图。</li>
+</ul>
+</li>
+<li><p><strong>视图的优点</strong></p>
+<ul>
+<li>视图能够简化用户的操作。</li>
+<li>视图使用户能以多种角度看待同一数据。</li>
+<li>视图对重构数据库提供了一定程度的逻辑独立性。</li>
+<li>视图能够对机密数据提供安全保护。</li>
+</ul>
+</li>
+<li><p><strong>所有的视图是否都可以更新？为什么？</strong></p>
+<ul>
+<li>不是。视图是不实际存储数据的虚表，因此对视图的更新，最终要转换为对基本表的更新。因为有些视图的更新不能唯一地有意义地转换成对相应基本表的更新，所以，并不是所有的视图都是可更新的。如《概论》3.5.1中的视图S_G（学生的学号及他的平均成绩）<br>CREAT VIEW S_G(Sno，Gavg)AS SELECT Sno，AVG(Grade)FROM SCGROUP BY Sno；</li>
+<li>要修改平均成绩，必须修改各科成绩，而我们无法知道哪些课程成绩的变化导致了平均成绩的变化。</li>
+</ul>
+</li>
+<li><p><strong>哪类视图是可以更新的，哪类视图是不可更新的？ 各举一例说明</strong></p>
+<ul>
+<li>基本表的行列子集视图一般是可更新的。如《概论》3.5.3中的例1。</li>
+<li>若视图的属性来自集函数、表达式，则该视图肯定是不可以更新的。如《概论》3.5.3中的S_G视图。</li>
+</ul>
+</li>
+<li><p><strong>综合题</strong></p>
+<p>请为三建工程项目建立一个供应情况的视图，包括供应商代码（SNO）、零件代码（PNO）、供应数量（QTY）。针对该视图完成下列查询：（1）找出三建工程项目使用的各种零件代码及其数量。（2）找出供应商S1的供应情况。</p>
+<ul>
+<li>建视图<br>CREATE VIEW V_SPJ ASSELECT SNO, PNO, QTYFROM SPJWHERE JNO&#x3D;（SELECT JNOFROM JWHERE JNAME&#x3D;’三建’）;</li>
+<li>对该视图查询<br>(1) 找出三建工程项目使用的各种零件代码及其数量。SELECT PNO, QTYFROM V_SPJ;(2) 找出供应商S1的供应情况。SELECT PNO, QTY FROM V_SPJWHERE SNO&#x3D;’S1’;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>补充</p>
+<ul>
+<li><p>SQL是【非过程化】的语言，用户无须指定存取路径</p>
+</li>
+<li><p>对表中数据进行删除的操作是【DELECT】</p>
+</li>
+<li><p>数据库中建立索引的目的是为了【加快存取速度】</p>
+</li>
+<li><p>视图是数据库系统三级模式中的【外模式】</p>
+</li>
+<li><p>基本表和视图一样，都是关系</p>
+</li>
+<li><p>可以使用SQL对基本表和视图进行操作</p>
+</li>
+<li><p>可以从基本表或视图上定义视图，视图不仅可以从单个基本表导出，还可以从多个基本表导出</p>
+</li>
+<li><p>视图不存储数据</p>
+</li>
+<li><p>SELECT子句中的目标列可以是表中的属性列，也可以是表达式</p>
+</li>
+<li><p>使用ANY或ALL谓词时必须与比较运算符同时使用</p>
+</li>
+<li><p>SQL语言具有【数据定义】【数据查询】【数据操纵】【数据控制】的功能</p>
+</li>
+<li><p>SQL语句中用来消除重复的关键词是【DISTINCT】</p>
+</li>
+<li><p>若一个视图是从单个基本表导出的，并且只是去掉了基本表的某些行和列，但保留了主码，这类视图称为【行列子集视图】</p>
+</li>
+<li><p>SQL语言的数据定义功能包括【模式定义】【表定义】【视图定义】【索引定义】</p>
+</li>
+<li><p>在视图上不能完成的操作是【在视图上定义新的表】</p>
+</li>
+<li><p>CREATE、DROP、ALTER实现【数据定义】功能</p>
+</li>
+<li><p>删除一个视图的命令是【DROP】</p>
+</li>
+<li><p>删除表S的命令是【DROP TABLE S】</p>
+</li>
+<li><p>在基本表S中增加一列CN（课程名），可用【ALTER TABLE S ADD (CN CHAR(8))】</p>
+</li>
+<li><p>在基本表S中删除一个属性“年龄”，可用【ALTER TABLE S DROP Age】</p>
+</li>
+<li><p>有关系S（S＃，SNAME，SAGE），C（C＃，CNAME），SC（S＃，C＃，GRADE）。其中S＃是学生号，SNAME是学生姓名，SAGE是学生年龄， C＃是课程号，CNAME是课程名称。要查询选修“ACCESS”课的年龄不小于20的全体学生姓名的SQL语句是SELECT SNAME FROM S，C，SC WHERE子句。这里的WHERE子句的内容是【S.S# &#x3D; SC.S# and C.C# &#x3D; SC.C# and SAGE&gt;&#x3D;20 and CNAME&#x3D;‘ACCESS’】</p>
+</li>
+<li><p>设关系数据库中一个表S的结构为S（SN，CN，grade），其中SN为学生名，CN为课程名，二者均为字符型；grade为成绩，数值型，取值范围0－100。若要把“张二的化学成绩80分”插入S中，则可用【INSERT INTO S VALUES（’张二’，’化学’，80）】</p>
+</li>
+<li><p>设关系数据库中一个表S的结构为：S（SN，CN，grade），其中SN为学生名，CN为课程名，二者均为字符型；grade为成绩，数值型，取值范围0－100。若要更正王二的化学成绩为85分，则可用【UPDATE S SET grade＝85 WHERE SN＝’王二’ AND CN＝’化学’】</p>
+</li>
+<li><p>在SQL语言中，子查询是【嵌入到另一个查询语句之中的查询语句】</p>
+</li>
+<li><p>SQL是一种【关系数据库】语言</p>
+</li>
+<li><p>有关系S（S＃，SNAME，SEX），C（C＃，CNAME），SC（S＃，C＃，GRADE）。其中S＃是学生号，SNAME是学生姓名，SEX是性别， C＃是课程号，CNAME是课程名称。要查询选修“数据库”课的全体男生姓名的SQL语句是SELECT SNAME FROM S，C，SC WHERE子句。这里的WHERE子句的内容是【A.S.S# &#x3D; SC.S# and C.C# &#x3D; SC.C# and SEX&#x3D;’男’ and CNAME&#x3D;’数据库’】</p>
+</li>
+<li><p>CREATE TABLE SC （S# CHAR（6） NOT NULL，C# CHAR（3） NOT NULL，SCORE INTEGER，NOTE CHAR（20））；向SC表插入如下行时，【（’200823’，’101’，NULL，NULL）】行可以被插入</p>
+</li>
+<li><p>假设学生关系S（S＃，SNAME，SEX），课程关系C（C＃，CNAME），学生选课关系SC（S＃，C＃，GRADE）。要查询选修“Computer”课的男生姓名，将涉及到关系【S，C，SC】</p>
+</li>
+<li><p>【GRANT】不是数据定义语句</p>
+</li>
+<li><p>相关子查询和不相关子查询</p>
+<ul>
+<li>在嵌套查询中，如果子查询的查询条件不依赖于父查询，称为不相关子查询</li>
+<li>如果子查询的查询条件依赖于父查询，称为相关子查询</li>
+</ul>
+</li>
+<li><p>ANY和ALL谓词与聚集函数或IN谓词可能存在的等价转换关系</p>
+<p><img src="https://img.mubu.com/document_image/e88c4d2e-a4f7-441d-92ff-f4439c17e1a7-2893733.jpg" alt="img"></p>
+</li>
+<li><p>综合题</p>
+<ul>
+<li><p>关系R包含A、B、C三个属性，包含的数据如下</p>
+<p><img src="https://img.mubu.com/document_image/84727fbf-f17a-42aa-8c79-dac4160676e1-2893733.jpg" alt="img"></p>
+</li>
+<li><p>写出对查询语句SELECT * FROM R WHERE X；当X为下列条件时的查询结果</p>
+<ul>
+<li><p>A IS NULL<br>空的结果集</p>
+</li>
+<li><p>A&gt;8 AND B&lt;20<br>空的结果集</p>
+</li>
+<li><p>A&gt;10 OR B&lt;20</p>
+<p><img src="https://img.mubu.com/document_image/e90d650c-c105-4d58-bb26-bf3f34d127ca-2893733.jpg" alt="img"></p>
+</li>
+<li><p>C+10&gt;25</p>
+<p><img src="https://img.mubu.com/document_image/ec87c38a-fd84-4397-9e57-cc180fc97c30-2893733.jpg" alt="img"></p>
+</li>
+<li><p>EXISTS(SELECT B FROM R WHERE A&#x3D;10)</p>
+<p><img src="https://img.mubu.com/document_image/6e1473d4-0642-4359-af27-39861bd9e20d-2893733.jpg" alt="img"></p>
+</li>
+<li><p>C IN (SELECT B FROM R)<br>空的结果集</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第4章-数据库安全性"><a href="#第4章-数据库安全性" class="headerlink" title="第4章 数据库安全性"></a><strong>第4章 数据库安全性</strong></h3><ul>
+<li><p>了解</p>
+<ul>
+<li>计算机系统安全性问题</li>
+<li>数据库安全性问题</li>
+<li>威胁数据库安全性因素</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>TCSEC和CC标准的主要内容</li>
+<li>C2级DBMS、B1级DBMS的主要特征</li>
+<li>DBMS提供的安全措施<ul>
+<li>用户身份鉴别、自主存取控制、强制存取控制技术</li>
+<li>视图技术和审计技术</li>
+<li>数据加密存储和加密传输</li>
+</ul>
+</li>
+<li>使用SQL语言中的GRANT语句和REVOKE语句来实现自主存取控制</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>什么是数据库的安全性</strong></p>
+<ul>
+<li>数据库的安全性是指保护数据库以防止不合法的使用所造成的数据泄露、更改或破坏</li>
+</ul>
+</li>
+<li><p><strong>举例说明对数据库安全性产生威胁的因素</strong></p>
+<ul>
+<li>非授权用户对数据库的恶意存取和破坏</li>
+<li>数据库中重要或敏感的数据被泄露</li>
+<li>安全环境的脆弱性</li>
+</ul>
+</li>
+<li><p><strong>信息安全标准的发展历史，CC评估保证级划分的基本内容</strong></p>
+<ul>
+<li>TCSEC&#x2F;TDI 安全级别划分<ul>
+<li>安全级别 定义</li>
+<li>A1 验证设计（verified design）</li>
+<li>B3 安全域（security domains）</li>
+<li>B2 结构化保护（structural protection）</li>
+<li>B1 标记安全保护（labeled security protection）</li>
+<li>C2 受控的存取保护（controlled access protection）</li>
+<li>C1 自主安全保护（discretionary security protection）</li>
+<li>D 最小保护（minimal protection）</li>
+</ul>
+</li>
+<li>CC评估保证级（EAL）的划分<ul>
+<li>评估保证级 定义 TCSEC安全级别（近似相当）</li>
+<li>EAL1 功能测试（functionally tested）</li>
+<li>EAL2 结构测试（structurally tested） C1</li>
+<li>EAL3 系统地测试和检查（methodically tested and checked） C2</li>
+<li>EAL4 系统地设计、测试和复查（methodically designed，tested and reviewed） B1</li>
+<li>EAL5 半形式化设计和测试（semiformally designed and tested） B2</li>
+<li>EAL6 半形式化验证的设计和测试（semiformally verified design and tested） B3</li>
+<li>EAL7 形式化验证的设计和测试（formally verified design and tested） A1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>实现数据库安全性控制的常用方法和技术</strong></p>
+<ul>
+<li>用户身份鉴别<br>该方法由系统提供一定的方式让用户标识自己的名字或身份。每次用户要求进入系统时，由系统进行核对，通过鉴定后才提供系统的使用权。</li>
+<li>多层存取控制<br>通过用户权限定义和合法权检查确保只有合法权限的用户访问数据库，所有未被授权的人员无法存取数据。例如C2级中的自主存取控制（DAC），B1级中的强制存取控制（MAC）</li>
+<li>视图机制<br>为不同的用户定义视图，通过视图机制把要保密的数据对无权存取的用户隐藏起来，从而自动地对数据提供一定程度的安全保护</li>
+<li>审计<br>建立审计日志，把用户对数据库的所有操作自动记录下来放入审计日志中， DBA可以利用审计跟踪的信息，重现导致数据库现有状况的一系列事件，找出非法存取数据的人、时间和内容等</li>
+<li>数据加密<br>对存储和传输的数据进行加密处理，从而使得不知道解密算法的人无法获知数据的内容</li>
+</ul>
+</li>
+<li><p><strong>数据库自主存取控制方法和强制存取方法</strong></p>
+<ul>
+<li>自主存取控制方法：定义各个用户对不同数据对象的存取权限。当用户对数据库访问时首先检查用户的存取权限。防止不合法用户对数据库的存取。</li>
+<li>强制存取控制方法：每一个数据对象被（强制地）标以一定的密级，每一个用户也被（强制地）授予某一个级别的许可证。系统规定只有具有某一许可证级别的用户才能存取某一个密级的数据对象。</li>
+<li>自主存取控制中自主的含义是：用户可以将自己拥有的存取权限“自主”地授予别人。即用户具有一定的“自主”权。</li>
+</ul>
+</li>
+<li><p><strong>SQL语言中提供了哪些数据控制（自主存取控制）的语句？请试举几例说明它们的使用方法。</strong></p>
+<ul>
+<li>SQL中 的自主存取控制是通过GRANT 语句和 REVOKE 语句来实现的。如：<br>GRANT SELECT， INSERT ON Student TO 王平 WITH GRANT OPTION；</li>
+<li>就将Student表的SELECT和INSERT权限授予了用户王平，后面的“WITH GRANT OPTION”子句表示用户王平同时也获得了“授权”的权限，即可以把得到的权限继续授予其他用户。<br>REVOKE INSERT ON Student FROM 王平 CASCADE；</li>
+<li>就将Student表 的INSERT权限从用户王平处收回，选项 CASCADE 表示，如果用户王平将Student 的 INSERT 权限又转授给了其他用户，那么这些权限也将从其他用户处收回。</li>
+</ul>
+</li>
+<li><p><strong>使用GRANT完成下列授权功能</strong></p>
+<p>学生（学号，姓名，年龄，性别，家庭住址，班级号）班级（班级号，班级名，班主任，班长）</p>
+<ul>
+<li>授予用户U1拥有对两个表的所有权限，并可给其他用户授权<br>GRANT ALL PRIVILEGES ON TABLE 学生,班级 TO U1 WITH GRANT OPTION;</li>
+<li>授予用户U2对学生表具有查看权限，对家庭住址具有更新权限<br>GRANT SELECT,UPDATE(家庭住址) ON TABLE 学生 TO U2;</li>
+<li>将对班级表查看权限授予所有用户<br>GRANT SELECT ON TABLE 班级 TO PUBLIC;</li>
+<li>将对学生表的查询、更新权限授予角色R1<br>GRANT SELECT,UPDATE ON TABLE 学生 TO R1;</li>
+<li>将角色R1授予用户U1，并且U1可继续授权给其他角色<br>GRANT R1 TO U1 WITH ADMIN OPTION;</li>
+</ul>
+</li>
+<li><p><strong>用GRANT和REVOKE语句（加上视图机制）完成以下授权定义或存取控制功能以及权限撤销</strong></p>
+<p>职工（职工号，姓名，年龄，职务，工资，部门号）部门（部门号，名称，经理名，地址，电话号）</p>
+<ul>
+<li>用户王明对两个表有SELECT权限<br>GRANT SELECT ON TABLE 职工,部门 TO 王明;REVOKE SELECT ON TABLE 职工,部门 FROM 王明;</li>
+<li>用户李勇对两个表有INSERT和DELETE权限<br>GRANT INSERT,DELETE ON TABLE 职工,部门 TO 李勇;REVOKE INSERT,DELETE ON TABLE 职工,部门 FROM 李勇;​</li>
+<li>每个职工只对自己的记录有SELECT权限<br>GRANT SELECT ON TABLE 职工 WHEN USER()&#x3D;NAME TO ALL;&#x2F;<em>这里假定系统的GRANT语句支持WHEN子句和USER()的使用。用户将自己的名字作为ID。</em>&#x2F;​​REVOKE SELECT ON TABLE 职工 WHEN USER()&#x3D;NAME FROM ALL;</li>
+<li>用户刘星对职工表有SELECT权限，对工资字段具有更新权限<br>GRANT SELECT,UPDATE(工资) ON TABLE 职工 TO 刘星;REVOKE SELECT,UPDATE(工资) ON TABLE 职工 FROM 刘星;​</li>
+<li>用户张新具有修改这两个的结构的权限<br>GRANT ALTER TABLE ON TABLE 职工,部门 TO 张新;REVOKE ALTER TABLE ON TABLE 职工,部门 FROM 张新;​</li>
+<li>用户周平具有对两个表的所有权限（读，插、改、删数据），并具有给其他用户授权的权限<br>GRANT ALL PRIVILEGES ON TABLE 职工,部门 TO 周平 WITH GRANT OPTION;REVOKE ALL PRIVILEGES ON TABLE 职工,部门 FROM 周平;</li>
+<li>用户杨兰具有从每个部门职工中SELECT最高工资、最低工资、平均工资的权限，他不能查看每个人的工资<br>&#x2F;<em>首先建立一个视图，然后对这个视图定义杨兰的存取权限</em>&#x2F;GRANT VIEW 部门工资 ASSELECT 部门.名称,MAX(工资),MIN(工资),AVG(工资)FROM 职工,部门WHERE 职工.部门号&#x3D;部门.部门号GROUP BY 职工.部门号;GRANT SELECT ON TABLE 部门工资 TO 杨兰;​​​​​​​REVOKE SELECT ON TABLE 部门工资 FROM 杨兰;​​​​​​DROP VIEW 部门工资;​</li>
+</ul>
+</li>
+<li><p><strong>理解并解释MAC机制中主体、客体、敏感度标记的含义</strong></p>
+<ul>
+<li>主体是系统中的活动实体，既包括DBMS所管理的实际用户，也包括代表用户的各进程</li>
+<li>客体是系统中的被动实体，是受主体操纵的，包括文件、基本表、索引、视图等</li>
+<li>对于主体和客体，DBMS为它们每个实例（值）指派一个敏感度标记。敏感度标记被分成若干级别，如绝密、机密、可信、公开等。主体的敏感度标记称为许可证级别，客体的敏感度标记称为密级</li>
+</ul>
+</li>
+<li><p><strong>强制存取控制机制是如何确定主体能否存取客体</strong></p>
+<ul>
+<li><p>假设要对关系变量S进行强制存取控制，为简化起见，假设要控制存取的数据单元是元组，则每个元组标以密级，如下表所示（4&#x3D;绝密，3&#x3D;机密，2&#x3D;秘密）</p>
+<p><img src="https://img.mubu.com/document_image/af4f317d-2c7e-4705-8f3d-65fbc73d199b-2893733.jpg" alt="img"></p>
+</li>
+<li><p>假设系统的存取规则是</p>
+<ul>
+<li>仅当主体的许可证级别大于或等于客体的密级时才能读取相应的客体</li>
+<li>仅当主体的许可证级别小于或等于客体的密级时才能写相应的客体</li>
+</ul>
+</li>
+<li><p>假定用户U1和U2的许可证级别分别为3和2，则根据规则用户U1能读元组S1和S2，可修改元组S2；用户U2只能读元组S1，修改元组S1</p>
+</li>
+</ul>
+</li>
+<li><p><strong>什么是数据库的审计功能，为什么要提供审计功能</strong></p>
+<ul>
+<li>审计功能是指DBMS的审计模块在用户对数据库执行操作的同时，把所有操作自动记录到系统的审计日志中</li>
+<li>因为任何系统的安全保护措施都不是完美无缺的，蓄意盗窃破坏数据的人总可能存在。利用数据库的审计功能，审计员可以根据审计日志中记录的信息，分析和重现导致数据库现有状况的一系列事件，找出非法存取数据的人、时间和内容等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>补充</p>
+<ul>
+<li>强制存取控制策略是TCSEC&#x2F;TDI【B1】级安全级别的特色</li>
+<li>SQL的GRANT和REVOKE语句可以用来实现【自主存取控制】</li>
+<li>在强制存取控制机制中，当主体的许可证级别等于客体的密级时，主体可以对客体进行【读取、写入】</li>
+<li>数据库安全技术包括【用户身份鉴别】【自主存取控制和强制存取控制】【视图】【审计】【数据加密】</li>
+<li>在数据加密技术中，原始数据通过某种加密算法变换为不可直接识别的格式，称为【密文】</li>
+<li>数据库角色实际上是一组与数据库操作相关的各种【权限】</li>
+<li>在对用户授予列INSERT权限时，一定要包含对【主码】的INSERT权限，否则用户的插入会因为空值被拒绝。除了授权的列，其他列的值或者取【空值】，或者为【默认值】</li>
+<li>【出入机房登记和加锁】不属于实现数据库系统安全性主要技术和方法</li>
+<li>SQL中的视图提高了数据库系统的【安全性】</li>
+<li>SQL语言的GRANT和REMOVE语句主要是用来维护数据库的【安全性】</li>
+<li>在数据库的安全性控制中，授权的数据对象的【范围越小】，授权子系统就越灵活</li>
+</ul>
+</li>
+</ul>
+<h3 id="第5章-数据库完整性"><a href="#第5章-数据库完整性" class="headerlink" title="第5章 数据库完整性"></a>第5章 数据库完整性</h3><ul>
+<li><p>了解</p>
+<ul>
+<li>数据库的完整性约束条件</li>
+<li>完整性约束条件分类</li>
+<li>数据库完整性概念与数据库安全性概念的区别和联系</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>DBMS完整性控制机制的三个方面<ul>
+<li>完整性约束条件的定义</li>
+<li>完整性约束条件的检查和违约处理</li>
+<li>使用触发器实现数据库完整性的方法</li>
+</ul>
+</li>
+<li>用SQL语言定义关系模式的完整性约束条件<ul>
+<li>定义每个模式的主码</li>
+<li>定义参照完整性</li>
+<li>定义于应用有关的完整性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>什么是数据库的完整性</strong></p>
+<ul>
+<li>数据库的完整性是指数据的【正确性】和【相容性】</li>
+</ul>
+</li>
+<li><p><strong>数据库完整性概念与数据库安全性概念的区别和联系</strong></p>
+<ul>
+<li>数据库的完整性和安全性是两个不同的概念，但是有一定的联系</li>
+<li>前者是为了防止数据库中存在不符合语义的数据，防止错误信息的输入和输出，即所谓垃圾进垃圾出（Garbage In Garbage Out）所造成的无效操作和错误操作</li>
+<li>后者是保护数据库防止恶意的破坏和非法的存取。</li>
+<li>也就是说，安全性措施的防范对象是【非法用户和非法操作】，完整性措施的防范对象是【不合语义的数据】</li>
+</ul>
+</li>
+<li><p><strong>什么是数据库的完整性约束条件，分类</strong></p>
+<ul>
+<li>完整性约束条件是指数据库中的数据应该满足的语义约束条件</li>
+<li>一般可以分为六类<ul>
+<li>静态列级约束、静态元组约束、静态关系约束、动态列级约束、动态元组约束、动态关系约束。</li>
+<li>静态列级约束是对一个列的取值域的说明，包括以下几方面：<ul>
+<li>对数据类型的约束，包括数据的类型、长度、单位、精度等</li>
+<li>对数据格式的约束</li>
+<li>对取值范围或取值集合的约束。</li>
+<li>对空值的约束</li>
+<li>其他约束</li>
+</ul>
+</li>
+<li>静态元组约束就是规定组成一个元组的各个列之间的约束关系，静态元组约束只局限在单个元组上。</li>
+<li>静态关系约束是在一个关系的各个元组之间或者若干关系之间常常存在各种联系或约束。常见的静态关系约束有：<ul>
+<li>实体完整性约束。</li>
+<li>参照完整性约束。</li>
+<li>函数依赖约束。</li>
+</ul>
+</li>
+<li>动态列级约束是修改列定义或列值时应满足的约束条件，包括下面两方面：<ul>
+<li>修改列定义时的约束</li>
+<li>修改列值时的约束</li>
+</ul>
+</li>
+<li>动态元组约束是指修改某个元组的值时需要参照其旧值，并且新旧值之间需要满足某种约束条件。</li>
+<li>动态关系约束是加在关系变化前后状态上的限制条件，例如事务一致性、原子性等约束条件。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>DBMS的完整性控制机制应具有哪三个方面的功能</strong></p>
+<ul>
+<li>定义功能，即提供定义完整性约束条件的机制</li>
+<li>检查功能：即检查用户发出的操作请求是否违背了完整性约束条件</li>
+<li>违约处理功能：如果发现用户的操作请求使数据违背了完整性约束条件，则采取一定的动作来保证数据的完整性</li>
+</ul>
+</li>
+<li><p><strong>RDBMS在实现参照完整性时需要考虑哪些方面</strong></p>
+<ul>
+<li><p>RDBMS在实现参照完整性时需要考虑可能破坏完整性的各种情况以及用户违约后的处理策略</p>
+<p><img src="https://img.mubu.com/document_image/dd4afda0-502a-4767-83fb-925213d8fcc5-2893733.jpg" alt="img"></p>
+<ul>
+<li>外码是否可以接受空值</li>
+<li>删除被参照关系的元组时的考虑，这时系统可能采取的作法有三种<ul>
+<li>级联删除（CASCADES）</li>
+<li>受限删除（RESTRICTED）</li>
+<li>置空值删除（NULLIFIES）</li>
+</ul>
+</li>
+<li>在参照关系中插入元组时的问题，这时系统可能采取的作法有<ul>
+<li>受限插入</li>
+<li>递归插入</li>
+</ul>
+</li>
+<li>修改关系中主码的问题<ul>
+<li>一般是不能用UPDATE语句修改关系主码的。如果需要修改主码值，只能先删除该元组，然后再把具有新主码值的元组插入到关系中。</li>
+<li>如果允许修改主码，首先要保证主码的唯一性和非空，否则拒绝修改。然后要区分是参照关系还是被参照关系。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>用SQL语言定义这两个关系模式，要求在模式中完成以下完整性约束条件的定义</strong></p>
+<p>职工（[职工号]，姓名，年龄，职务，工资，部门号）部门（[部门号]，名称，经理名，电话）</p>
+<ul>
+<li>定义每个模式的主码</li>
+<li>定义参照完整性</li>
+<li>定义职工年龄不得超过60岁<br>CREATE TABLE DEPT (Deptno NUMBER(2) PRIMARY KEY, Deptname VARCHAR(10), Manager VARCHAR(10), PhoneNumber CHAR(12)​​​​)​;CREATE TABLE EMP (Empno NUMBER(4) PRIMARY KEY, Ename VARCHAR(10), Age NUMBER(2), Job VARCHAR(9), Sal NUMBER(7,2), Deptno NUMBER(2), CONSTRAINT C1 CHECK(Age&lt;&#x3D;60), CONSTRAINT FK_DEPTNO FOREIGN KEY(Deptno) REFERENCES DEPT(Deptno)​​​​​​​​);​​​</li>
+</ul>
+</li>
+<li><p><strong>在关系系统中，当操作违反实体完整性、参照完整性和用户定义的完整性约束条件时，一般是如何分别进行处理的</strong></p>
+<ul>
+<li>对于违反实体完整性和用户定义的完整性的操作，一般都采用拒绝执行的方式进行处理；</li>
+<li>而对于违反参照完整性的操作，并不都是简单地拒绝执行，有时要根据应用语义执行一些附加的操作，以保证数据库的正确性</li>
+</ul>
+</li>
+<li><p><strong>某单位想举行一个小型的联谊会，关系Male记录注册的男宾信息，关系Female记录注册的女宾信息。建立一个断言，将来宾的人数限制在50人以内</strong></p>
+<p><img src="https://img.mubu.com/document_image/fd9b5bc7-94ab-4bae-a0f6-70fd945bd358-2893733.jpg" alt="img"></p>
+<p>CREATE TABLE Male (SerialNumber SmallInt PRIMARY KEY, Name CHAR(8), Age SmallInt, Occuptation CHAR(20) );CREATE TABLE Female (SerialNumber SmallInt PRIMARY KEY, Name CHAR(8), Age SmallInt, Occuptation CHAR(20) );CREATE ASSERTION Party &#x2F;<em>建立断言PARTY</em>&#x2F;CHECK((SELECT COUNT(<em>) FROM Male)+(SELECT COUNT(</em>) FROM Female)&lt;&#x3D;50);</p>
+</li>
+</ul>
+</li>
+<li><p>补充</p>
+<ul>
+<li><p>定义关系的主码意味着主码属性【唯一且所有主码属性不为空】</p>
+</li>
+<li><p>关于语句CREATE TABLE R(no int,sum int CHECK(sum&gt;0))和CREATE TABLE R(no int,sum int,CHECK(sum&gt;0))，【两条语句都合法且约束效果一样】【前者定义了属性上的约束条件，后者定义了元组上的约束条件】【当sum属性改变时检查，上述两种CHECK约束都要被检查】</p>
+</li>
+<li><p>在CREATE TABLE时，用户定义的完整性可以通过【NOT NULL】【UNIQUE】【CHECK】等子句实现</p>
+</li>
+<li><p>关系R的属性A参照引用关系T的属性A，T的某条元组对应的A属性值在R中出现，当要删除T的这条元组时，系统可以采用的策略包括【拒绝执行】【级联删除】【设为空值】</p>
+</li>
+<li><p>定义数据库完整性一般是由SQL的【DDL】语句实现的</p>
+</li>
+<li><p>【GRANT】是SQL语言中的数据控制命令</p>
+</li>
+<li><p>【REFERENCES】允许用户定义新关系时，引用其他关系的主码作为外码</p>
+</li>
+<li><p>综合题</p>
+<p><img src="https://img.mubu.com/document_image/5e220a50-0aa1-4183-b30f-1d4c080f7e4b-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/ac3d61fa-e6fe-44fe-b57e-b0f3ed814367-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/14776381-cd5c-41a5-9712-d2f6d5c8314e-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/1c0e2d60-17fa-42e6-8015-bab82535a523-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第6章-关系数据理论（重点）"><a href="#第6章-关系数据理论（重点）" class="headerlink" title="第6章 关系数据理论（重点）"></a>第6章 关系数据理论（重点）</h3><ul>
+<li><p>了解</p>
+<ul>
+<li>“不好”的数据库模式</li>
+<li>模式的插入异常和删除异常</li>
+<li>规范化理论的重要意义</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>关系的形式化定义</li>
+<li>数据依赖的基本概念（函数依赖、平凡&#x2F;非平凡&#x2F;部分&#x2F;完全&#x2F;传递函数依赖，码、候选码、外码、多值依赖）</li>
+<li>范式的概念，1NF-4NF，规范化的含义和作用</li>
+<li>4个范式的理解与应用</li>
+<li>各个级别范式中存在的问题和解决方法（插入异常，删除异常，数据冗余）</li>
+<li>根据应用语义完整地写出关系模式的数据依赖集合，根据数据依赖分析某一个关系模式属于第几范式</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>函数依赖、部分函数依赖、完全函数依赖、传递依赖、候选码、主码、外码、全码、1NF、2NF、3NF、BCNF、多值依赖、4NF</strong></p>
+<ul>
+<li>函数依赖：设R (U)是一个关系模式，U是R的属性集合，X和Y是U的子集。对于R (U)的任意一个可能的关系r，如果r中不存在两个元组，它们在X上的属性值相同， 而在Y上的属性值不同， 则称”X函数确定Y”或”Y函数依赖于X”，记作X→Y<ul>
+<li>函数依赖是最基本的一种数据依赖，也是最重要的一种数据依赖。</li>
+<li>函数依赖是属性之间的一种联系，体现在属性值是否相等。由上面的定义可以知道，如果X→Y，则r中任意两个元组，若它们在X上的属性值相同，那么在Y上的属性值一定也相同。</li>
+<li>我们要从属性间实际存在的语义来确定他们之间的函数依赖，即函数依赖反映了（描述了）现实世界的一种语义。</li>
+<li>函数依赖不是指关系模式R的在某个时刻的关系（值）满足的约束条件，而是指R任何时刻的一切关系均要满足的约束条件</li>
+</ul>
+</li>
+<li>完全函数依赖、部分函数依赖：在R（U）中，如果X→Y，并且对于X的任何一个真子集X，都有X′→Y，则称Y对X完全函数依赖;若X→Y，但Y不完全函数依赖于X，则称Y对X部分函数依赖</li>
+<li>候选码、主码： 设K为R(U，F)中的属性或属性组合，若K → U则K为R的候选码。若候选码多于一个，则选定其中的一个为主码</li>
+<li>外码：关系模式R中属性或属性组X并非R的码，但X是另一个关系模式的码，则称X是R的外部码也称外码</li>
+<li>全码：整个属性组是码，称为全码（All-key）</li>
+<li>1NF：如果一个关系模式R的所有属性都是不可分的基本数据项，则R∈1NF<ul>
+<li>第一范式是对关系模式的最起码的要求。不满足第一范式的数据库模式不能称为关系数据库</li>
+</ul>
+</li>
+<li>2NF：若关系模式R∈1NF，并且每一个非主属性都完全依赖于R的码，则R∈2NF</li>
+<li>3NF：关系模式R&lt;U，F&gt;中若不存在这样的码X，属性组Y及非主属性Z（Z不包含于Y）使得X→ Y，（Y不→ X），Y→ Z成立，则称R&lt;U，F&gt;∈3NF</li>
+<li>BCNF：关系模式R&lt;U，F&gt;∈1NF.若X→ Y且（Y不包含于X）时X必含有码，则R&lt;U，F&gt;∈BCNF</li>
+<li>多值依赖：设R (U)是属性集U上的一个关系模式，X、Y、Z是U的子集，并且Z&#x3D;U-X-Y。关系模式R(U)中多值依赖X→ → Y成立，当且仅当对R(U)的任一关系r，给定的一对(x，z)值，有一组Y的值，这组值仅仅决定于x值而与z值无关</li>
+<li>4NF：关系模式R&lt;U，F&gt;∈1NF，如果对于R的每个非平凡多值依赖X→ → Y（Y不包含于X），X都含有码，则称R&lt;U，F&gt;∈4NF</li>
+</ul>
+</li>
+<li><p><strong>综合题</strong></p>
+<p>建立一个关于系、学生、班级、学会等诸信息的关系数据库。 　　描述学生的属性有：学号、姓名、出生年月、系名、班号、宿舍区。 　　描述班级的属性有：班号、专业名、系名、人数、入校年份。 　　描述系的属性有：系名、系号、系办公室地点、人数。 　　描述学会的属性有：学会名、成立年份、地点、人数。 　　有关语义如下：一个系有若干专业，每个专业每年只招一个班，每个班有若干学生。一个系的学生住在同一宿舍区。每个学生可参加若干学会，每个学会有若干学生。学生参加某学会有一个入会年份。 　　 请给出关系模式，写出每个关系模式的极小函数依赖集，指出是否存在传递函数依赖，对于函数依赖左部是多属性的情况讨论函数依赖是完全函数依赖，还是部分函数依赖。 　　 指出各关系的候选码、外部码，有没有全码存在？</p>
+<ul>
+<li>关系模式<ul>
+<li>学生S（S#，SN，SB，DN，C#，SA）<br>S#—学号，SN—姓名，SB—出生年月，SA—宿舍区</li>
+<li>班级C（C#，CS，DN，CNUM，CDATE）<br> C#—班号，CS—专业名，CNUM—班级人数，CDATE—入校年份</li>
+<li>系 D（D#，DN，DA，DNUM）<br>D#—系号，DN—系名，DA—系办公室地点，DNUM—系人数</li>
+<li>学会P（PN，DATE1，PA，PNUM）<br>PN—学会名，DATE1—成立年月，PA—地点，PNUM—学会人数</li>
+<li>学生–学会SP（S#，PN，DATE2）<br>DATE2—入会年份</li>
+</ul>
+</li>
+<li>每个关系模式的极小函数依赖集<ul>
+<li>S：S#→SN，S#→SB，S#→C#，C#→DN，DN→SA</li>
+<li>C：C#→CS，C#→CNUM，C#→CDATE，CS→DN，(CS,CDATE)→C#</li>
+<li>D：D#→DN，DN→D#，D#→DA，D#→DNUM</li>
+<li>P：PN→DATE1，PN→PA，PN→PNUM</li>
+<li>SP：（S#，PN）→DATE2</li>
+</ul>
+</li>
+<li>S中存在传递函数依赖<ul>
+<li>S#→DN, S#→SA, C#→SA</li>
+</ul>
+</li>
+<li>C中存在传递函数依赖<ul>
+<li>C#→DN</li>
+<li>（S#，PN）→DATE2</li>
+<li>（CS，CDATE）→C#</li>
+<li>均为SP中的函数依赖，是完全函数依赖</li>
+</ul>
+</li>
+<li>关系 候选码 外部码 全码<ul>
+<li>S S# C#，DN 无</li>
+<li>C C#，(CS,CDATE) DN 无</li>
+<li>D D#和DN 无 无</li>
+<li>P PN 无 无</li>
+<li>SP （S#，PN） S#，PN 无</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>试由Armostrong公理系统推导出下面三条推理规则</strong></p>
+<ul>
+<li>合并规则：若X→Z，X→Y，则有X→YZ<br>已知X→Z，由增广律知XY→YZ，又因为X→Y，可得XX→XY→YZ，最后根据传递律得X→YZ。</li>
+<li>伪传递规则：由X→Y，WY→Z有XW→Z<br>已知X→Y，据增广律得XW→WY，因为WY→Z，所以XW→WY→Z，通过传递律可知XW→Z。</li>
+<li>分解规则：X→Y，Z 包含于 Y，有X→Z<br>已知Z 包含于 Y，根据自反律知Y→Z，又因为X→Y，所以由传递律可得X→Z。</li>
+</ul>
+</li>
+<li><p><strong>试举出三个多值依赖的实例</strong></p>
+<ul>
+<li>关系模式MSC（M，S，C）中，M表示专业，S表示学生，C表示该专业的必修课。假设每个专业有多个学生，有一组必修课。设同专业内所有学生的选修的必修课相同，实例关系如下。按照语义对于M的每一个值M i，S有一个完整的集合与之对应而不问C取何值，所以M→→S。由于C与S的完全对称性，必然有M→→C成立。<br>M S CM 1 S1 C1M 1 S1 C2M 1 S2 C1M 1 S2 C2…… …… ……​</li>
+<li>关系模式ISA（I，S，A）中，I表示学生兴趣小组，S表示学生，A表示某兴趣小组的活动项目。假设每个兴趣小组有多个学生，有若干活动项目。每个学生必须参加所在兴趣小组的所有活动项目，每个活动项目要求该兴趣小组的所有学生参加。按照语义有I→→S，I→→A成立。</li>
+<li>关系模式RDP（R，D，P）中，R表示医院的病房，D表示责任医务人员，P表示病人。假设每个病房住有多个病人，有多个责任医务人员负责医治和护理该病房的所有病人。按照语义有R→→D，R→→P成立。</li>
+</ul>
+</li>
+<li><p><strong>辨析题</strong></p>
+<ul>
+<li>任何一个二目关系都是属于3NF的。√</li>
+<li>任何一个二目关系都是属于BCNF的。√</li>
+<li>任何一个二目关系都是属于4NF的。√</li>
+<li>当且仅当函数依赖A→B在R上成立，关系R(A，B，C)等于其投影R1(A，B)和R2(A，C)的连接 ×<br>当且仅当函数依赖A→→B在R上成立，关系R(A，B，C)等于其投影R1(A，B)和R2(A，C)的连接</li>
+<li>若R.A→R.B，R.B→R.C，则R.A→R.C √</li>
+<li>若R.A→R.B，R.A→R.C，则R.A→R.(B, C) √</li>
+<li>若R.B→R.A，R.C→R.A，则R.(B, C)→R.A √</li>
+<li>若R.(B, C)→R.A，则R.B→R.A，R.C→R.A ×<br>反例：关系模式 SC（S#，C#，G） （S#，C#）→G，但是S# → G，C#→G</li>
+</ul>
+</li>
+<li><p><strong>证明</strong></p>
+<p><img src="https://img.mubu.com/document_image/b37840d1-10c3-4f72-ba49-c52fb208f187-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/fc4f7a12-c13f-46c3-a553-499a3554142c-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>补充</p>
+<ul>
+<li><ol>
+<li></li>
+</ol>
+<p><img src="https://img.mubu.com/document_image/178aae4d-2444-4043-b2de-1949215ded17-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/8c2732ef-0b33-4ec2-ae0f-2811850f46f3-2893733.jpg" alt="img"></p>
+</li>
+<li><ol start="2">
+<li></li>
+</ol>
+<p><img src="https://img.mubu.com/document_image/a23b7a1a-24ef-4154-b0b6-ffc87f1877c0-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/2d57d4c5-2430-45d1-b314-065cb740da9f-2893733.jpg" alt="img"></p>
+</li>
+<li><ol start="3">
+<li></li>
+</ol>
+<p><img src="https://img.mubu.com/document_image/439e4b0c-6e6f-4aee-8210-251dc0b562ee-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/147b2a3b-024a-4b02-88f9-ab10208007ab-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/543f7114-7c43-4b92-87ab-9445c48c2ee4-2893733.jpg" alt="img"></p>
+</li>
+<li><ol start="4">
+<li></li>
+</ol>
+<p><img src="https://img.mubu.com/document_image/2facfd43-8150-44bc-94db-ef1489a22539-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/feac6eae-9413-4aad-986c-04e5718a3e3d-2893733.jpg" alt="img"></p>
+</li>
+<li><ol start="5">
+<li></li>
+</ol>
+<p><img src="https://img.mubu.com/document_image/4fd84351-0fe8-45fe-9037-f042b158486b-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/30d707cd-7922-4351-a125-3a6d50626852-2893733.jpg" alt="img"></p>
+</li>
+<li><ol start="6">
+<li></li>
+</ol>
+<p><img src="https://img.mubu.com/document_image/8e45239e-0eb5-424b-ae7d-35776036b0d3-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/7134fe44-4642-4321-b7ac-8b5dbffee231-2893733.jpg" alt="img"></p>
+</li>
+<li><ol start="7">
+<li></li>
+</ol>
+<p><img src="https://img.mubu.com/document_image/bc52eab0-1664-4a9d-a537-de7c2bd5d636-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/1d8b7160-c23f-44af-a474-63167d954e2d-2893733.jpg" alt="img"></p>
+</li>
+<li><p>为了设计出性能较优的关系模式，必须进行规范化，规范化主要的理论依据是【关系规范化理论】</p>
+</li>
+<li><p>规范化理论是关系数据库进行逻辑设计的理论依据，根据这个理论，关系数据库中的关系必须满足：每一个属性都是【不可分解的】</p>
+</li>
+<li><p>已知关系模式R（A，B，C，D，E）及其上的函数相关性集合F＝{A→D，B→C ，E→A }，该关系模式的候选关键字是【BE】</p>
+</li>
+<li><p>设学生关系S（SNO，SNAME，SSEX，SAGE，SDPART）的主键为SNO，学生选课关系SC（SNO，CNO，SCORE）的主键为SNO和CNO，则关系R（SNO，CNO，SSEX，SAGE，SDPART，SCORE）的主键为SNO和CNO，其满足【1NF】</p>
+</li>
+<li><p>设有关系模式W（C，P，S，G，T，R），其中各属性的含义是：C表示课程，P表示教师，S表示学生，G表示成绩，T表示时间，R表示教室，根据语义有如下数据依赖集：D&#x3D;{ C→P，（S，C）→G，（T，R）→C，（T，P）→R，（T，S）→R }，关系模式W的一个关键字是【（T，S）】</p>
+</li>
+<li><p>关系模式中，满足2NF的模式【必定是1NF】</p>
+</li>
+<li><p>关系模式R中的属性全是主属性，则R的最高范式必定是【3NF】</p>
+</li>
+<li><p>消除了部分函数依赖的1NF的关系模式，必定是【2NF】</p>
+</li>
+<li><p>如果A－&gt;B ,那么属性A和属性B的联系是【多对一】</p>
+</li>
+<li><p>关系模式的候选关键字可以有1个或多个，而主关键字有【1个】</p>
+</li>
+<li><p>候选关键字的属性可以有【1个或多个】</p>
+</li>
+<li><p>关系模式的任何属性【不可再分】</p>
+</li>
+<li><p>设有关系模式W（C，P，S，G，T，R），其中各属性的含义是：C表示课程，P表示教师，S表示学生，G表示成绩，T表示时间，R表示教室，根据语义有如下数据依赖集：D&#x3D;{ C→P，（S，C）→G，（T，R）→C，（T，P）→R，（T，S）→R }，若将关系模式W分解为三个关系模式W1（C，P），W2（S，C，G），W2（S，T，R，C），则W1的规范化程序最高达到【BCNF】</p>
+</li>
+<li><p>在关系数据库中，任何二元关系模式的最高范式必定是【BCNF】</p>
+</li>
+<li><p>在关系规范式中，分解关系的基本原则是【实现无损连接、保持原有的依赖关系】</p>
+</li>
+<li><p>不能使一个关系从第一范式转化为第二范式的条件是【每一个非属性都部分函数依赖主属性】</p>
+</li>
+<li><p>任何一个满足2NF但不满足3NF的关系模式都不存在【非主属性对键的传递依赖】</p>
+</li>
+<li><p>设数据库关系模式R＝（A，B，C，D，E），有下列函数依赖：A→BC，D→E，C→D；下述对R的分解中，哪些分解是R的无损连接分解【（A，B，C）（C，D，E） 】【（A，B）（A，C，D，E）】</p>
+</li>
+<li><p>设U是所有属性的集合，X、Y、Z都是U的子集，且Z＝U－X－Y。下面关于多值依赖的叙述中，不正确的是【若X→→Y，且Y′∈Y，则X→→Y′】 ,正确的是【若X→→Y，则X→→Z 】【若X→Y，则X→→Y 】【若Z＝∮，则X→→Y 】</p>
+</li>
+<li><p>若关系模式R（U，F）属于3NF，则【仍存在一定的插入和删除异常】</p>
+</li>
+<li><p>下列说法不正确的是【任何一个包含三个属性的关系模式一定满足3NF】</p>
+</li>
+<li><p>设关系模式R（A，B，C），F是R上成立的FD集，F＝{B→C}，则分解P＝{AB，BC}相对于F【是无损联接，也是保持FD的分解】</p>
+</li>
+<li><p>关系数据库规范化是为了解决关系数据库中【插入、删除和数据冗余】的问题而引入的。</p>
+</li>
+<li><p>关系的规范化中，各个范式之间的关系是【1NF∈2NF∈3NF】</p>
+</li>
+<li><p>数据库中的冗余数据是指可【由基本数据导出】的数据</p>
+</li>
+<li><p>学生表（id，name，sex，age，depart_id，depart_name），存在函数依赖是id→name，sex，age，depart_id；dept_id→dept_name，其满足【2NF】</p>
+</li>
+<li><p>设有关系模式R（S，D，M），其函数依赖集：F＝{S→D，D→M}，则关系模式R的规范化程度最高达到【2NF】</p>
+</li>
+<li><p>设有关系模式R（A，B，C，D），其数据依赖集：F＝{（A，B）→C，C→D}，则关系模式R的规范化程度最高达到【2NF】</p>
+</li>
+<li><p>下列关于函数依赖的叙述中，哪一条是不正确的【由X→YZ，则X→Y， Y→Z】，正确的是【由X→Y，Y→Z，则X→YZ】【由X→Y，WY→Z，则XW→Z 】【由X→Y，Z∈Y，则X→Z】</p>
+</li>
+<li><p>X→Y，当下列哪一条成立时，称为平凡的函数依赖【Y∈X】</p>
+</li>
+<li><p>关系数据库的规范化理论指出：关系数据库中的关系应该满足一定的要求，最起码的要求是达到1NF，即满足【每个属性都是不可分解的】</p>
+</li>
+<li><p>根据关系数据库规范化理论，关系数据库中的关系要满足第一范式，部门（部门号，部门名，部门成员，部门总经理）关系中，因哪个属性而使它不满足第一范式【部门成员】</p>
+</li>
+<li><p>有关系模式A（C，T，H，R，S），其中各属性的含义是：</p>
+</li>
+<li><p>C：课程 T：教员 H：上课时间 R：教室 S：学生</p>
+</li>
+<li><p>根据语义有如下函数依赖集：</p>
+</li>
+<li><p>F&#x3D;{C→T，（H，R）→C，（H，T）RC，（H，S）→R}</p>
+<ul>
+<li>关系模式A的码是【（H，S）】</li>
+<li>关系模式A的规范化程度最高达到【2NF】</li>
+<li>现将关系模式A分解为两个关系模式A1（C，T），A2（H，R，S），则其中A1的规范化程度达到【BCNF】</li>
+</ul>
+</li>
+<li><p>数据库外模式在【数据库逻辑结构设计】阶段设计</p>
+</li>
+<li><p>生成DBMS系统支持的数据模型在【数据库逻辑结构设计】阶段完成</p>
+</li>
+<li><p>根据应用需求建立索引在【数据库物理设计】阶段完成</p>
+</li>
+<li><p>员工性别取值“男”女”&#x2F;“1”“0”属于【属性冲突】</p>
+</li>
+<li><p>数据库设计方法包括【新奥尔良方法】【基于E-R模型的方法】【3NF的设计方法】【面向对象的设计方法】【统一建模语言（UML）方法】</p>
+</li>
+<li><p>数据库设计的基本步骤包括【需求分析】【概念结构设计】【逻辑结构设计】【物理结构设计】【数据库实施】【数据库运行和维护】</p>
+</li>
+<li><p>集成E-R图要分两个步骤【合并、修改】和【重构】</p>
+</li>
+<li><p>数据库常见存取方法【索引】【聚簇】【Hash方法】</p>
+</li>
+<li><p>在进行概念结构设计时，将事物作为属性的基本准则是什么</p>
+<ul>
+<li>作为属性，不能再具有需要描述的性质，属性必须是不可分的数据项，不能包含其他属性</li>
+<li>属性不能与其他实体具有联系，即E-R图中所表示的联系是实体之间的联系</li>
+</ul>
+</li>
+<li><p>将E-R图转换为关系模式时，可以如何处理实体型间的联系</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第7章-数据库设计"><a href="#第7章-数据库设计" class="headerlink" title="第7章 数据库设计"></a>第7章 数据库设计</h3><ul>
+<li><p>了解</p>
+<ul>
+<li>数据库设计的特点</li>
+<li>数据库物理设计的内容和评价</li>
+<li>数据库的实施和维护</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>数据库设计基本步骤</li>
+<li>数据库设计过程中数据字典的内容</li>
+<li>数据库设计各个阶段的具体设计内容、设计描述、设计方法</li>
+<li>E-R图的设计</li>
+<li>E-R图向关系模型的转换</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>数据库设计过程</strong></p>
+<p>这是一个完整的实际数据库及其应用系统的设计过程。不仅包括设计数据库本身，还包括数据库的实施、数据库运行和维护。</p>
+<ul>
+<li>需求分析<br>准确了解与分析用户需求（包括数据与处理）。</li>
+<li>概念结构设计<br>通过对用户需求进行综合、归纳与抽象，形成一个独立于具体DBMS的概念模型。</li>
+<li>逻辑结构设计<br>将概念结构转换为某个DBMS所支持的数据模型，并对其进行优化。</li>
+<li>数据库物理设计<br>为逻辑数据模型选取一个最适合应用环境的物理结构（包括存储结构和存取方法）</li>
+<li>数据库实施<br>设计人员运用DBMS提供的数据语言、工具及宿主语言，根据逻辑设计和物理设计的结果建立数据库，编制与调试应用程序，组织数据入库，并进行试运行。</li>
+<li>数据库运行和维护<br>在数据库系统运行过程中对其进行评价、调整与修改。</li>
+</ul>
+</li>
+<li><p><strong>试述数据库设计过程中形成的数据库的各级模式</strong></p>
+<ul>
+<li>在概念设计阶段形成独立于机器特点，独立于各个DBMS产品的概念模式，在本篇中就是E-R图</li>
+<li>在逻辑设计阶段将E-R图转换成具体的数据库产品支持的数据模型，如关系模型，形成数据库逻辑模式；然后在基本表的基础上再建立必要的视图(View)，形成数据的外模式</li>
+<li>在物理设计阶段，根据DBMS特点和处理的需要，进行物理存储安排，建立索引，形成数据库内模式。</li>
+</ul>
+</li>
+<li><p><strong>试述数据库设计的特点</strong></p>
+<ul>
+<li>数据库设计既是一项涉及多学科的综合性技术又是一项庞大的工程项目。其主要特点有：<ul>
+<li>数据库建设是硬件、软件和干件（技术与管理的界面）的结合。</li>
+<li>从软件设计的技术角度看，数据库设计应该和应用系统设计相结合，也就是说，整个设计过程中要把结构（数据）设计和行为（处理）设计密切结合起来。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>什么叫数据抽象？试举例说明。</strong></p>
+<ul>
+<li>数据抽象是对实际的人、物、事和概念进行人为处理，抽取所关心的共同特性，忽略非本质的细节，并把这些特性用各种概念精确地加以描述，这些概念组成了某种模型。</li>
+<li>如分类这种抽象是：定义某一类概念作为现实世界中一组对象的类型。这些对象具有某些共同的特性和行为。它抽象了对象值和型之间的“is member of”的语义。在E-R模型中，实体型就是这种抽象。例如在学校环境中，李英是老师，表示李英是教师类型中的一员，则教师是实体型，李英是教师实体型中的一个实体值，具有教师共同的特性和行为：在某个系某个专业教学，讲授某些课程，从事某个方向的科研。</li>
+</ul>
+</li>
+<li><p><strong>需求分析阶段的设计目标、调查内容</strong></p>
+<ul>
+<li>需求分析阶段的设计目标是通过详细调查现实世界要处理的对象（组织、部门、企业等），充分了解原系统（手工系统或计算机系统）工作概况，明确用户的各种需求，然后在此基础上确定新系统的功能。</li>
+<li>调查的内容是“数据”和“处理”，即获得用户对数据库的如下要求：<ul>
+<li>信息要求。指用户需要从数据库中获得信息的内容与性质。由信息要求可以导出数据要求，即在数据库中需要存储哪些数据。</li>
+<li>处理要求。指用户要完成什么处理功能，对处理的响应时间有什么要求，处理方式是批处理还是联机处理。</li>
+<li>安全性与完整性要求。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>数据字典的内容和作用</strong></p>
+<ul>
+<li>数据字典的内容通常包括：数据项、数据结构、数据流、数据存储、处理过程5个部分。其中数据项是数据的最小组成单位，若干个数据项可以组成一个数据结构。数据字典通过对数据项和数据结构的定义来描述数据流、数据存储的逻辑内容。</li>
+<li>数据字典的作用：数据字典是关于数据库中数据的描述，在需求分析阶段建立，是下一步进行概念设计的基础，并在数据库设计过程中不断修改、充实、完善。</li>
+</ul>
+</li>
+<li><p><strong>数据库的概念结构，特点和设计策略</strong></p>
+<ul>
+<li>概念结构是信息世界的结构，即概念模型，其主要特点是<ul>
+<li>能真实、充分地反映现实世界，包括事物和事物之间的联系，能满足用户对数据的处理要求。是对现实世界的一个真实模型。</li>
+<li>易于理解，从而可以用它和不熟悉计算机的用户交换意见，用户的积极参与是数据库的设计成功的关键。</li>
+<li>易于更改，当应用环境和应用要求改变时，容易对概念模型修改和扩充。</li>
+<li>易于向关系、网状、层次等各种数据模型转换。</li>
+</ul>
+</li>
+<li>概念结构的设计策略通常有四种<ul>
+<li>自顶向下。即首先定义全局概念结构的框架，然后逐步细化；</li>
+<li>自底向上。即首先定义各局部应用的概念结构，然后将它们集成起来，得到全局概念结构；</li>
+<li>逐步扩张。首先定义最重要的核心概念结构，然后向外扩充，以滚雪球的方式逐步生成其他概念结构，直至总体概念结构；</li>
+<li>混合策略。即将自顶向下和自底向上相结合，用自顶向下策略设计一个全局概念结构的框架，以它为骨架集成由自底向上策略中设计的各局部概念结构。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>试述数据库概念结构设计的重要性和设计步骤</strong></p>
+<ul>
+<li>重要性：数据库概念设计是整个数据库设计的关键，将在需求分析阶段所得到的应用需求首先抽象为概念结构，以此作为各种数据模型的共同基础，从而能更好地、更准确地用某一DBMS实现这些需求。</li>
+<li>设计步骤：概念结构的设计方法有多种，其中最经常采用的策略是自底向上方法，该方法的设计步骤通常分为两步：第1步是抽象数据并设计局部视图，第2步是集成局部视图，得到全局的概念结构</li>
+</ul>
+</li>
+<li><p><strong>为什么要视图集成？视图集成的方法是什么？</strong></p>
+<ul>
+<li>在对数据库系统进行概念结构设计时一般采用自底向上的设计方法，把繁杂的大系统分解子系统。首先设计各个子系统的局部视图，然后通过视图集成的方式将各子系统有机的融合起来，综合成一个系统的总视图。这样设计清晰，由简到繁。由于数据库系统是从整体角度看待和描述数据的，因此数据不再面向某个应用而是整个系统。因此必须进行视图集成，使得数据库能被全系统的多个用户、多个应用共享使用。</li>
+<li>一般说来，视图集成可以有两种方式：<ul>
+<li>多个分E-R图一次集成；</li>
+<li>逐步集成，用累加的方式一次集成两个分E-R图。</li>
+</ul>
+</li>
+<li>无论采用哪种方式，每次集成局部E-R图时都需要分两步走：<ul>
+<li>合并。解决各分E-R图之间的冲突，将各分E-R图合并起来生成初步E-R图。</li>
+<li>修改和重构。消除不必要的冗余，生成基本E-R图。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>什么是E-R图？构成E-R图的基本要素是什么？</strong></p>
+<ul>
+<li>E-R图为实体-联系图，提供了表示实体型、属性和联系的方法，用来描述现实世界的概念模型。</li>
+<li>构成E-R图的基本要素是实体型、属性和联系，其表示方法为：<ul>
+<li>实体型：用矩形表示，矩形框内写明实体名；</li>
+<li>属性：用椭圆形表示，并用无向边将其与相应的实体连接起来；</li>
+<li>联系：用菱形表示，菱形框内写明联系名，并用无向边分别与有关实体连接起来，同时在无向边旁标上联系的类型（1 : 1，1 : n或m : n）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>画E-R图</strong></p>
+<p><img src="https://img.mubu.com/document_image/7200458f-c1fa-4cba-8d70-547cab41851f-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/ac914d78-2bda-42aa-9195-3f574475c29e-2893733.jpg" alt="img"></p>
+</li>
+<li><p><strong>画E-R图</strong></p>
+<p><img src="https://img.mubu.com/document_image/0cee1d78-dc3f-4d31-9b27-8eb64e49a53f-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/4c0fd6ab-a91a-42c2-a2e6-d2611f1ddfcb-2893733.jpg" alt="img"></p>
+</li>
+<li><p><strong>数据库的逻辑结构设计，设计步骤。</strong></p>
+<ul>
+<li>数据库的逻辑结构设计就是把概念结构设计阶段设计好的基本E-R图转换为与选用的DBMS产品所支持的数据模型相符合的逻辑结构。</li>
+<li>设计步骤为：<ul>
+<li>将概念结构转换为一般的关系、网状、层次模型；</li>
+<li>将转换来的关系、网状、层次模型向特定DBMS支持下的数据模型转换；</li>
+<li>对数据模型进行优化。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>试述把E-R图转换为DBTG模型和关系模型的转换规则。</strong></p>
+<ul>
+<li>E-R图向DBTG模型的转换规则：<ul>
+<li>1)每个实体型转换为记录型，实体的属性转换为记录的数据项；</li>
+<li>2)实体型之间1：n（n≥1）的联系转换为一个系，没有任何联系的实体型转换为奇异系；</li>
+<li>3)K（K≥2）个实体型之间多对多的联系，引入一个连结记录，形成K个实体型和连结记录之间的K个系。连结记录的属性由诸首记录的码及联系属性所组成；</li>
+<li>4)同一实体型内的1：n，n：m联系，引入连结记录，转换为两个系。</li>
+</ul>
+</li>
+<li>E-R图向关系模型的转换规则：<ul>
+<li>一个实体型转换为一个关系模式。实体的属性就是关系的属性，实体的码就是关系的码。</li>
+<li>对于实体间的联系则有以下不同的情况：<ul>
+<li>一个1：1联系可以转换为一个独立的关系模式，也可以与任意一端对应的关系模式合并。如果转换为一个独立的关系模式，则与该联系相连的各实体的码以及联系本身的属性均转换为关系的属性，每个实体的码均是该关系的候选码。如果与某一端实体对应的关系模式合并，则需要在该关系模式的属性中加入另一个关系模式的码和联系本身的属性。</li>
+<li>一个1：n联系可以转换为一个独立的关系模式，也可以与n端对应的关系模式合并。如果转换为一个独立的关系模式，则与该联系相连的各实体的码以及联系本身的属性均转换为关系的属性，而关系的码为n端实体的码。</li>
+<li>一个m：n联系转换为一个关系模式。与该联系相连的各实体的码以及联系本身的属性均转换为关系的属性，各实体码的组合组成该关系的码，或码的一部分。</li>
+<li>三个或三个以上实体间的一个多元联系可以转换为一个关系模式。与该多元联系相连的各实体的码以及联系本身的属性均转换为关系的属性，而关系的码为各实体码的组合。</li>
+<li>具有相同码的关系模式可合并。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>由E-R图转换为IMS模型的转换规则</strong></p>
+<ul>
+<li>1)每个实体型转换为记录型，实体的属性转换为记录的数据项；</li>
+<li>2)实体型之间1：n（n≥1）的联系转换记录型之间的有向边；</li>
+<li>3)实体型之间m：n（m&gt;1，n&gt;1）的联系则分解成一对多联系，再根据2)转换；</li>
+<li>4)K（K≥2）个实体型之间多对多的联系，可先转换成多对两个实体型之间的联系，再根据3)转换。</li>
+</ul>
+</li>
+<li><p><strong>E-R转换关系模型</strong></p>
+<p><img src="https://img.mubu.com/document_image/c060bb75-791d-4a43-b057-0a9a705cef62-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/e85040e1-a288-4c65-8d1f-382b5c551d00-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/6154a7df-e0b1-4515-acbb-0577c2599ec5-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/f203bf5b-2b05-4e5f-ad80-c79dbb97de2d-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/0c8145b5-8405-4835-b0a2-566dd4be0123-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/92095efc-2966-48bb-9135-1ae521590a24-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/c8543746-4bf3-4160-be1e-03ba815e1a57-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/67aae48f-a964-40da-8763-e7359043ab42-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>补充</p>
+<ul>
+<li><p>数据流程图是用于描述结构化方法中【需求分析】阶段的工具。</p>
+</li>
+<li><p>数据库设计中，用E－R图赖描述信息结构但不涉及信息在计算机中的表示，这是数据库设计的【概念设计阶段】</p>
+</li>
+<li><p>在数据库设计中，将E-R图转换成关系数据模型的过程属于【逻辑设计阶段】</p>
+</li>
+<li><p>子模式DDL是用来描述【数据库的局部逻辑结构】</p>
+</li>
+<li><p>数据库设计的概念设计阶段，表示概念结构的常用方法和描述工具是【实体联系法和实体联系图】</p>
+</li>
+<li><p>在E－R模型向关系模型转换时，M：N的联系转换为关系模式时，其关键字是【M、N端实体的关键字组合】</p>
+</li>
+<li><p>某学校规定，每一个班级最多有50名学生，至少有10名学生；每一名学生必须属于一个班级。在班级与学生实体的联系中，学生实体的基数是【（1，1）】</p>
+</li>
+<li><p>在关系数据库设计中，设计关系模式是数据库设计中【逻辑设计阶段】阶段的任务</p>
+</li>
+<li><p>关系数据库的规范化理论主要解决的问题是【如何构造合适的数据逻辑结构】</p>
+</li>
+<li><p>数据库设计可划分为七个阶段，每个阶段都有自己的设计内容，“为哪些关系，在哪些属性上、键什么样的索引”这一设计内容应该属于【物理设计】设计阶段。</p>
+</li>
+<li><p>假设设计数据库性能用“开销”，即时间、空间及可能的费用来衡量，则在数据库应用系统生存期中存在很多开销。其中，对物理设计者来说，主要考虑的是【操作开销】</p>
+</li>
+<li><p>数据库物理设计完成后，进入数据库实施阶段，下述工作中，【扩充功能】一般不属于实施阶段的工作。</p>
+</li>
+<li><p>从ER图导出关系模型时，如果实体间的联系是M：N的，下列说法中正确的是【增加一个关系表示联系，其中纳入M方和N方的关键字】</p>
+</li>
+<li><p>在ER模型中，如果有3个不同的实体集，3个M：N联系，根据ER模型转换为关系模型的规则，转换为关系的数目是【6】</p>
+</li>
+<li><p>数据库外模式在【数据库逻辑结构设计】阶段设计</p>
+</li>
+<li><p>生成DBMS系统支持的数据模型在【数据库逻辑结构设计】阶段完成</p>
+</li>
+<li><p>根据应用需求建立索引在【数据库物理设计】阶段完成</p>
+</li>
+<li><p>员工性别取值“男”女”&#x2F;“1”“0”属于【属性冲突】</p>
+</li>
+<li><p>数据库设计方法包括【新奥尔良方法】【基于E-R模型的方法】【3NF的设计方法】【面向对象的设计方法】【统一建模语言（UML）方法】</p>
+</li>
+<li><p>数据库设计的基本步骤包括【需求分析】【概念结构设计】【逻辑结构设计】【物理结构设计】【数据库实施】【数据库运行和维护】</p>
+</li>
+<li><p>集成E-R图要分两个步骤【合并、修改】和【重构】</p>
+</li>
+<li><p>数据库常见存取方法【索引】【聚簇】【Hash方法】</p>
+</li>
+<li><p>在进行概念结构设计时，将事物作为属性的基本准则是什么</p>
+<ul>
+<li>作为属性，不能再具有需要描述的性质，属性必须是不可分的数据项，不能包含其他属性</li>
+<li>属性不能与其他实体具有联系，即E-R图中所表示的联系是实体之间的联系</li>
+</ul>
+</li>
+<li><p>将E-R图转换为关系模式时，可以如何处理实体型间的联系</p>
+<ul>
+<li>一个1：1联系可以转换为一个独立的关系模式，也可以与任意一端对应的关系模式合并。</li>
+<li>一个1：n联系可以转换为一个独立的关系模式，也可以与n端对应的关系模式合并。</li>
+<li>一个m：n联系转换为一个关系模式。</li>
+<li>三个或三个以上实体间的一个多元联系可以转换为一个关系模式。</li>
+<li>具有相同码的关系模式可合并。</li>
+</ul>
+</li>
+<li><p>综合题</p>
+<p><img src="https://img.mubu.com/document_image/f35f4857-d6b1-4764-8f17-7a1f8735b56c-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/a7bd4da6-8b2a-4ef2-b896-d3c51399b44b-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/b5241c85-635c-44c1-8ea7-c8da4c7e939f-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/151d956a-1383-4cc3-8e27-d2d8b80e4def-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/85fe80ec-2841-4336-8f84-bcd3846a0288-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/260f7d2b-0e99-4779-9fb0-7d1248ceacdc-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/2a722c83-9cc9-4baa-bced-91d30ad1f50c-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第8章-数据库编程"><a href="#第8章-数据库编程" class="headerlink" title="第8章 数据库编程"></a>第8章 数据库编程</h3><ul>
+<li><p>了解</p>
+<ul>
+<li>SQL编程技术可以有效客服SQL实现复杂应用方面的不足</li>
+<li>提高应用系统和RDBMS间的互操作性</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>嵌入SQL中游标的概念和使用方法</li>
+<li>PL&#x2F;SQL和存储过程的基本概念、基本结构、语句语法和用法</li>
+<li>ODBC开发应用系统的体系结构</li>
+<li>ODBC API和ODBC的应用程序的工作流程</li>
+<li>在实际安装的RDBMS上通过编程的方式开发应用程序，完成对数据库的各种操作</li>
+<li>使用ODBC进行数据库应用程序的设计，使设计的应用程序可移植性好，并且能同时访问不同的数据库，共享数据资源</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p>嵌入式SQL语言与主语言之间的通信</p>
+<ul>
+<li>向主语言传递SQL语句的执行状态信息，使主语言能够据此信息空值程序流程，主要用【SQL通信区】（SQL Communication Area，简称SQLCA）实现</li>
+<li>主语言向SQL语句提供参数，使用【主变量】（host variable）输入数据实现</li>
+<li>程序把SQL语句查询数据库的结果交主语言处理，用【主变量】和【游标】（cursor）向主语言输出数据</li>
+</ul>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/312c7599-77a1-4b1c-82ac-0f25f713686f-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/6a66478c-2a75-45bd-b509-91f777bf54b6-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/a1dcd591-9478-46de-976b-802424eddd26-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/468f0ead-62af-4cf1-b43b-ce0512ada586-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/1689e60e-fe4f-41bf-a425-f635f0a2463a-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/adc894b2-ee93-4366-aa64-22b01bfce8ab-2893733.jpg" alt="img"></p>
+</li>
+<li><p>嵌入式SQL语句为了和主语言语句进行区分，在SQL语句前加前缀【EXEC SQL】，以【分号;】结束</p>
+</li>
+<li><p>主变量可以附加一个指示变量，指示变量可以表示输入主变量是否为【空值】</p>
+</li>
+<li><p>SQL是面向集合的，主语言是面向记录的，可以使用【游标】解决这一问题</p>
+</li>
+<li><p>存储过程经过编译、优化之后存储在【数据库服务器中】</p>
+</li>
+<li><p>应用程序中访问和管理数据库的方法由【嵌入式SQL】【PL&#x2F;SQL】【ODBC】【JDBC】【OLEDB】</p>
+</li>
+<li><p>综合题</p>
+<p><img src="https://img.mubu.com/document_image/dc7c51e6-f2a6-4ed4-bc13-7e5006cc345c-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/a8377e6d-3426-4b23-815e-86c1ad61e736-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/79f42250-368e-4abe-8418-dbf7d61628e1-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/61c6a218-e755-47b9-a687-e4524ad9d280-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/1a39709e-fdc7-4873-a7bd-6c741a1ce77b-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/ed51babd-c721-41dc-a64f-cd562753f6d2-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第9章-关系查询处理和查询优化"><a href="#第9章-关系查询处理和查询优化" class="headerlink" title="第9章 关系查询处理和查询优化"></a>第9章 关系查询处理和查询优化</h3><ul>
+<li><p>了解</p>
+<ul>
+<li>查询处理的基本步骤（查询分析、查询检查、查询优化、查询执行）</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>什么是关系系统的查询优化，查询优化的方法</li>
+<li>画出查询的语法树以及优化后的语法树</li>
+<li>代数优化算法、物理优化算法</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>查询处理的基本步骤</strong></p>
+<ul>
+<li>查询分析</li>
+<li>查询检查</li>
+<li>查询优化</li>
+<li>查询执行</li>
+</ul>
+</li>
+<li><p><strong>查询优化在关系数据库系统中的重要性和可能性</strong></p>
+<ul>
+<li>重要性<ul>
+<li>关系系统的查询优化既是RDBMS实现的关键技术，又是关系系统的优点所在，它减轻了用户选择存取路径的负担，用户只要提出“干什么”，不必指出“这么干”</li>
+<li>查询优化的优点不仅在于用户不必考虑如何最好地表达查询以获得较好的效率，而且在于系统可以比用户程序的“优化”做得更好</li>
+</ul>
+</li>
+<li>可能性<ul>
+<li>优化器可以从数据字典中获取许多统计信息，例如各个关系中的元组数，关系中每个属性值的分布情况，这些属性上是否有索引，是什么索引（B+数索引、Hash索引、唯一索引、组合索引）等等。优化器可以根据这些信息选择有效的执行计划，而用户程序则难以获得这些信息</li>
+<li>如果数据库的物理统计信息改变了，系统可以自动对查询进行重新优化以选择相适应的执行计划。在非关系系统中必须重写程序，而重写程序在实际应用中往往是不太可能的</li>
+<li>优化器可以考虑数十甚至数百种不同的执行计划，从中选出较优的一个，而程序员一般只能考虑有限的几种可能性</li>
+<li>优化器中包括了很多复杂的优化技术，这些优化技术往往只有最好的程序员才能掌握。系统的自动优化相当于使得所有人都拥有这些优化技术</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/e47ecfb5-69da-4842-91ae-2a1b625a6352-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/32e1bef4-38f6-40ee-952d-be63d2105ae7-2893733.jpg" alt="img"></p>
+</li>
+<li><p><strong>语法树</strong></p>
+<p><img src="https://img.mubu.com/document_image/bf743107-f903-45fa-b1d4-43eb60936340-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/edeb1bd2-cb18-4467-a80b-73ac86c32cee-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/42639225-6fe3-4b9b-96b0-b34a698eecd1-2893733.jpg" alt="img"></p>
+</li>
+<li><p><strong>语法树</strong></p>
+<p><img src="https://img.mubu.com/document_image/8ff30f58-986b-4c4b-96d5-9d35001b94b7-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/63132184-2547-4524-beab-35519fc51514-2893733.jpg" alt="img"></p>
+</li>
+<li><p><strong>关系数据库管理系统查询优化的一般准则</strong></p>
+<ul>
+<li>代数优化策略<ul>
+<li>选择运算应尽可能先做</li>
+<li>把投影运算和选择运算同时进行</li>
+<li>把投影同其前或其后的双目运算结合起来执行</li>
+<li>把某些选择同在它前面要执行的笛卡儿积结合起来成为一个连接运算</li>
+<li>找出公共子表达式</li>
+</ul>
+</li>
+<li>物理优化<ul>
+<li>选取合适的连接算法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>关系数据库管理系统查询优化的一般步骤</strong></p>
+<ul>
+<li>把查询转换成某种内部表示，通常用的内部表示是语法树</li>
+<li>把语法树转换成标准（优化）形式，即利用优化算法把原始的语法树转换成优化的形式</li>
+<li>选择低层的存取路径</li>
+<li>生成查询计划，选择所需代价最小的计划加以执行</li>
+</ul>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/11d3aac8-f49e-43e1-8883-e72437bbbdfb-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/48cccaca-8f6a-4c39-9b67-433251a00e64-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第10章-数据库恢复技术"><a href="#第10章-数据库恢复技术" class="headerlink" title="第10章 数据库恢复技术"></a>第10章 数据库恢复技术</h3><ul>
+<li><p>了解</p>
+<ul>
+<li>数据库的一致性状态</li>
+<li>数据库运行中可能产生的故障类型，它们如何影响事务的正常执行，如何破坏数据库数据</li>
+<li>数据转储的概念及分类</li>
+<li>数据库的镜像功能</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>事务的基本概念和事务的ACID性质</li>
+<li>数据库恢复的实现技术</li>
+<li>日志文件的内容及作用</li>
+<li>登记日志文件所要遵循的原则</li>
+<li>具有检查点的恢复技术</li>
+<li>恢复的基本原理</li>
+<li>针对不同故障的恢复策略和方法</li>
+<li>日志文件的使用</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>事务的概念及事务的4个特性。恢复技术能保证事务的哪些特性</strong></p>
+<ul>
+<li>事务是用户定义的一个数据库操作序列，这些操作要么全做、要么全不，是一个不可分割的工作单位</li>
+<li>事务具有4个特性（也称ACID特性）<ul>
+<li>原子性（Atomicity）</li>
+<li>一致性（Consistency）</li>
+<li>隔离性（Isolation）</li>
+<li>持续性（Durability）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>为什么事务非正常结束时会影响数据库数据的正确性，举例说明</strong></p>
+<ul>
+<li>事务执行的结果必须是使数据库从一个一致性状态变到另一个一致性状态。如果数据库系统运行中发生故障，有些事务尚未完成就被迫中断，这些未完成事务对数据库所做的修改有一部分已写入物理数据库，这时数据库就处于一种不正确的状态，或者说是不一致的状态。</li>
+<li>例如某工厂的库存管理系统中，要把数量为Q的某种零件从仓库1移到仓库2存放。则可以定义一个事务T，T包括两个操作；Q1&#x3D;Q1-Q，Q2&#x3D;Q2+Q。如果T非正常终止时只做了第一个操作，则数据库就处于不一致性状态，库存量无缘无故少了Q。</li>
+</ul>
+</li>
+<li><p><strong>登记日志文件时为什么必须先写日志文件，后写数据库？</strong></p>
+<ul>
+<li>把对数据的修改写到数据库中和把表示这个修改的日志记录写到日志文件中是两个不同的操作。有可能在这两个操作之间发生故障，即这两个写操作只完成了一个。</li>
+<li>如果先写了数据库修改，而在运行记录中没有登记这个修改，则以后就无法恢复这个修改了。如果先写日志，但没有修改数据库，在恢复时只不过是多执行一次UNDO操作，并不会影响数据库的正确性。所以一定要先写日志文件，即首先把日志记录写到日志文件中，然后写数据库的修改。</li>
+</ul>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/e09a8ff4-82c3-4865-9303-37ce88fe72fa-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/a7bfb95e-bf53-4a42-a30c-25bb41d5429b-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/7cf5df24-036e-4fef-92dc-b5b9a5a6fee6-2893733.jpg" alt="img"></p>
+</li>
+<li><p><strong>针对不同的故障，试给出恢复的策略和方法（事务故障恢复&#x2F;系统故障恢复&#x2F;介质故障恢复）</strong></p>
+<ul>
+<li>事务故障的恢复步骤<ul>
+<li>反向扫描文件日志，查找该事务的更新操作。</li>
+<li>对该事务的更新操作执行逆操作。即将日志记录中“更新前的值”写入数据库。直至读到此事务的开始标记，该事务故障的恢复就完成了。</li>
+</ul>
+</li>
+<li>系统故障的恢复步骤<ul>
+<li>正向扫描日志文件，找出在故障发生前已经提交的事务队列（REDO队列）和未完成的事务队列（UNDO队列）。</li>
+<li>对未完成的事务队列中的各个事务进行UNDO处理。</li>
+<li>对已经提交的事务队列中的各个事务进行REDO处理</li>
+</ul>
+</li>
+<li>介质故障的恢复步骤<ul>
+<li>装入最新的数据库后备副本（离故障发生时刻最近的转储副本），使数据库恢复到转储时的一致性状态。</li>
+<li>装入转储结束时刻的日志文件副本</li>
+<li>启动系统恢复命令，由DBMS完成恢复功能，即重做已完成的事务。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>什么是检查点记录，包括哪些内容</strong></p>
+<ul>
+<li><p>检查点记录是一类新的日志纪录。它的内容包括</p>
+<ul>
+<li><p>建立检查点时刻所有正在执行的事务清单，如下图中的T1、T2</p>
+</li>
+<li><p>这些事务的最近一个日志记录的地址，如下图中的D1、D2</p>
+<p><img src="https://img.mubu.com/document_image/6cf9412e-167f-43e4-a8c0-23a656601043-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/b39e62a4-dca8-4b31-805e-d8d9e45aa5ac-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>具有检查点的恢复技术有什么优点？举例</strong></p>
+<ul>
+<li><p>利用日志技术进行数据库恢复时，恢复子系统必须搜索整个日志，这将耗费大量的时间。此外，需要REDO处理的事务实际上已经将它们的更新操作结果写到数据库中了，恢复子系统又重新执行了这些操作，浪费了大量时间。检查点技术就是为了解决这些问题。</p>
+</li>
+<li><p>例如</p>
+<p><img src="https://img.mubu.com/document_image/8be65d85-cb55-4792-a66f-9de58c9001a0-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>使用检查点方法进行恢复的步骤。</strong></p>
+<ul>
+<li>① 从重新开始文件中找到最后一个检查点记录在日志文件中的地址，由该地址在日志文件中找到最后一个检查点记录。</li>
+<li>② 由该检查点记录得到检查点建立时刻所有正在执行的事务清单ACTIVE-LIST。<ul>
+<li>这里建立两个事务队列:<ul>
+<li>UNDO-LIST: 需要执行undo操作的事务集合</li>
+<li>REDO-LIST: 需要执行redo操作的事务集合</li>
+</ul>
+</li>
+<li>把ACTIVE-LIST暂时放入UNDO-LIST队列，REDO队列暂为空。</li>
+</ul>
+</li>
+<li>③ 从检查点开始正向扫描日志文件<ul>
+<li>如有新开始的事务Ti，把Ti暂时放入UNDO-LIST队列</li>
+<li>如有提交的事务Tj，把Tj从UNDO-LIST队列移到REDO-LIST队列，直到日志文件结束</li>
+</ul>
+</li>
+<li>④ 对UNDO-LIST中的每个事务执行UNDO操作, 对REDO-LIST中的每个事务执行REDO操作</li>
+</ul>
+</li>
+<li><p><strong>什么是数据库镜像？它有什么用途？</strong></p>
+<ul>
+<li>数据库镜像即根据DBA的要求，自动把整个数据库或者其中的部分关键数据复制到另一个磁盘上。每当主数据库更新时，DBMS自动把更新后的数据复制过去，即DBMS自动保证镜像数据与主数据的一致性。</li>
+<li>数据库镜像的用途<ul>
+<li>用于数据库恢复。当出现介质故障时，镜像磁盘可继续使用，同时DBMS自动利用镜像磁盘数据进行数据库的恢复，不需要关闭系统和重装数据库副本。</li>
+<li>提高数据库的可用性。在没有出现故障时，当一个用户对某个数据加排它锁进行修改时，其他用户可以读镜像数据库上的数据，而不必等待该用户释放锁。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>补充</p>
+<ul>
+<li><p>在系统故障的恢复策略中，为什么UNDO处理反向扫描日志文件，REDO处理正向扫描日志文件</p>
+<ul>
+<li>如果存在同一个数据的多个UNDO操作，需要将数据恢复到第一个失败事务之前，如果正向扫描处理日志文件，无法实现这一目标，因此应该反向扫描日志文件。对于同一个数据的多个REDO操作，需要将数据恢复到最后一个成功事务之后，因此应该正向扫描日志文件</li>
+</ul>
+</li>
+<li><p>说明恢复系统是否可以保证事务的原子性和持续性</p>
+<ul>
+<li>原子性是指操作要么都做，要么都不做，在恢复策略中UNDO可以保证将未成功提交的事务所有操作都取消，REDO可以保证将成功提交的事务所有操作都完成，因此需确保事务的原子性；</li>
+<li>持续性是指一旦事务提交，对数据库中数据的改变是永久性的，REDO可以保证事务只要提交，改变一定被永久实现，因此要确保事务的持续性</li>
+</ul>
+</li>
+<li><p>综合题</p>
+<p><img src="https://img.mubu.com/document_image/d7973db6-e781-4b4a-96c8-e63918b5be8b-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/19748bd2-b810-4b52-84e7-264a1896cd41-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/29fd8602-6c7d-4658-917f-d300407f0cb8-2893733.jpg" alt="img"></p>
+</li>
+<li><p>数据库中为什么要有恢复子系统？它的功能是什么？</p>
+<ul>
+<li>答： 因为计算机系统中硬件的故障、软件的错误、操作员的失误以及恶意的破坏是不可避免的，这些故障轻则造成运行事务非正常中断，影响数据库中数据的正确性，重则破坏数据库，使数据库中全部或部分数据丢失，因此必须要有恢复子系统。</li>
+<li>恢复子系统的功能是：把数据库从错误状态恢复到某一已知的正确状态（亦称为一致状态或完整状态）。</li>
+</ul>
+</li>
+<li><p>数据库运行中可能产生的故障有哪几类？哪些故障影响事务的正常执行？哪些故障破坏数据库数据？</p>
+<ul>
+<li>事务内部的故障</li>
+<li>系统故障</li>
+<li>介质故障</li>
+<li>计算机病毒<br>事务故障、系统故障和介质故障影响事务的正常执行；介质故障和计算机病毒破坏数据</li>
+</ul>
+</li>
+<li><p>数据库恢复的基本技术有哪些？</p>
+<ul>
+<li>数据转储和登录日志文件是数据库恢复的基本技术。</li>
+<li>当系统运行过程中发生故障，利用转储的数据库后备副本和日志文件就可以将数据库恢复到故障前的某个一致性状态。</li>
+</ul>
+</li>
+<li><p>数据库转储的意义是什么？ 试比较各种数据转储方法。</p>
+<ul>
+<li>数据转储是数据库恢复中采用的基本技术。所谓转储即DBA定期地将数据库复制到磁带或另一个磁盘上保存起来的过程。当数据库遭到破坏后可以将后备副本重新装入，将数据库恢复到转储时的状态。<ul>
+<li>静态转储：在系统中无运行事务时进行的转储操作。静态转储简单，但必须等待正运行的用户事务结束才能进行。同样，新的事务必须等待转储结束才能执行。显然，这会降低数据库的可用性。</li>
+<li>动态转储：指转储期间允许对数据库进行存取或修改。动态转储可克服静态转储的缺点，它不用等待正在运行的用户事务结束，也不会影响新事务的运行。但是，转储结束时后援副本上的数据并不能保证正确有效。因为转储期间运行的事务可能修改了某些数据，使得后援副本上的数据不是数据库的一致版本。</li>
+<li>为此，必须把转储期间各事务对数据库的修改活动登记下来，建立日志文件（log file）。这样，后援副本加上日志文件就能得到数据库某一时刻的正确状态。</li>
+</ul>
+</li>
+<li>转储还可以分为海量转储和增量转储两种方式。<ul>
+<li>海量转储是指每次转储全部数据库。</li>
+<li>增量转储则指每次只转储上一次转储后更新过的数据。</li>
+<li>从恢复角度看，使用海量转储得到的后备副本进行恢复一般说来更简单些。但如果数据库很大，事务处理又十分频繁，则增量转储方式更实用更有效。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>什么是日志文件？为什么要设立日志文件？</p>
+<ul>
+<li>日志文件是用来记录事务对数据库的更新操作的文件。</li>
+<li>设立日志文件的目的是： 进行事务故障恢复；进行系统故障恢复；协助后备副本进行介质故障恢复。</li>
+</ul>
+</li>
+<li><p>登记日志文件时为什么必须先写日志文件，后写数据库？</p>
+<ul>
+<li>把对数据的修改写到数据库中和把表示这个修改的日志记录写到日志文件中是两个不同的操作。有可能在这两个操作之间发生故障，即这两个写操作只完成了一个。</li>
+<li>如果先写了数据库修改，而在运行记录中没有登记这个修改，则以后就无法恢复这个修改了。如果先写日志，但没有修改数据库，在恢复时只不过是多执行一次UNDO操作，并不会影响数据库的正确性。所以一定要先写日志文件，即首先把日志记录写到日志文件中，然后写数据库的修改。</li>
+</ul>
+</li>
+<li><p>一个事务的执行，要么全部完成，要么全部不做，一个事务中对数据库的所有操作都是一个不可分割的操作序列的属性是【原子性】</p>
+</li>
+<li><p>表示两个或多个事务可以同时运行而不互相影响的是【独立性】</p>
+</li>
+<li><p>事务的持续性是指【事务一旦提交，对数据库的改变是永久的】</p>
+</li>
+<li><p>SQL语言中的COMMIT语句的主要作用是【提交事务】</p>
+</li>
+<li><p>SQL语言中用【ROLLBACK】语句实现事务的回滚</p>
+</li>
+<li><p>若系统在运行过程中，由于某种硬件故障，使存储在外存上的数据部分损失或全部损失，这种情况称为【介质故障】</p>
+</li>
+<li><p>在DBMS中实现事务持久性的子系统是【恢复管理子系统】</p>
+</li>
+<li><p>后援副本的作用是【故障后的恢复】</p>
+</li>
+<li><p>事务日志用于保存【对数据的更新操作】</p>
+</li>
+<li><p>数据库恢复的基础是利用转储的冗余数据。这些转储的冗余数据包括【日志文件、数据库后备副本】</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="第11章-并发控制"><a href="#第11章-并发控制" class="headerlink" title="第11章 并发控制"></a>第11章 并发控制</h3><ul>
+<li><p>了解</p>
+<ul>
+<li>数据库并发控制技术的必要性</li>
+<li>活锁与死锁的概念</li>
+</ul>
+</li>
+<li><p>掌握</p>
+<ul>
+<li>并发操作可能产生数据不一致的情况，包括丢失修改、不可重复读、读“脏”数据等</li>
+<li>封锁的类型及不同封锁类型（X锁、S锁）的性质和定义，相关的相容控制矩阵</li>
+<li>封锁协议的概念</li>
+<li>封锁粒度的概念，多粒度封锁方法，多粒度封锁协议的相容控制矩阵</li>
+<li>封锁协议与数据一致性的关系，并发调度的可串行性概念</li>
+<li>两段锁协议与可串行性的关系，两段锁协议与死锁的关系</li>
+</ul>
+</li>
+<li><p>知识点</p>
+<ul>
+<li><p><strong>在数据库中为什么要并发控制？并发控制技术能保证事务的哪些特性？</strong></p>
+<ul>
+<li>数据库是共享资源，通常有许多个事务同时在运行。当多个事务并发地存取数据库时就会产生同时读取和&#x2F;或修改同一数据的情况。若对并发操作不加控制就可能会存取和存储不正确的数据，破坏数据库的一致性。所以数据库管理系统必须提供并发控制机制。</li>
+<li>并发控制可以保证事务的【一致性】和【隔离性】</li>
+</ul>
+</li>
+<li><p><strong>并发操作可能会产生哪几类数据不一致？用什么方法能避免各种不一致的情况？</strong></p>
+<ul>
+<li>并发操作带来的数据不一致性包括三类<ul>
+<li>丢失修改（LostUpdate）<br>两个事务T1和T2读入同一数据并修改，T2提交的结果破坏了（覆盖了）T1提交的结果，导致T1的修改被丢失。</li>
+<li>不可重复读（Non-RepeatableRead）<br>不可重复读是指事务T1读取数据后，事务T2执行更新操作，使T1无法再现前一次读取结果。不可重复读包括三种情况1.事务T1读取某一数据后，事务T2对其做了修改，当事务T1再次读改数据时，得到与前一次不同的值2.事务T1按一定条件从数据库中读取了某些数据记录后，事务T2删除了其中部分记录，当T1再次按相同条件读取数据时，发现某些记录消失了3.事务T1按一条件从数据库中读取某些数据记录后，事务T2插入了一些记录，当T1再次按相同条件读取数据时，发现多了一些记录后两种不可重复读有时也称为幻影（phantom row）现象​​​​​</li>
+<li>读“脏”数据（DirtyRead）<br>读“脏”数据是指事务T1修改某一数据，并将其写回磁盘，事务T2读取同一数据后，T1由于某种原因被撤销，这时T1已修改过的数据恢复原值，T2读到的数据就与数据库中的数据不一致，则T2读到的数据就为“脏”数据，即不正确的数据。</li>
+</ul>
+</li>
+<li>避免不一致性的方法和技术就是并发控制。常用的并发控制技术包括封锁技术、时间戳方法、乐观控制方法、多版本并发控制方法等</li>
+</ul>
+</li>
+<li><p><strong>什么是封锁？基本的封锁类型有几种？试述它们的含义。</strong></p>
+<ul>
+<li>封锁就是事务T在对某个数据对象例如表、记录等操作之前，先向系统发出请求，对其加锁。加锁后事务T就对该数据对象有了一定的控制，在事务T释放它的锁之前，其他的事务不能更新此数据对象。</li>
+<li>基本的封锁类型有两种: 排它锁(简称X锁) 和共享锁(简称S锁)。</li>
+<li>排它锁又称为写锁。若事务T对数据对象A加上X锁，则只允许T读取和修改A，其他任何事务都不能再对A加任何类型的锁，直到T释放A上的锁。这就保证了其他事务在T释放A上的锁之前不能再读取和修改A。</li>
+<li>共享锁又称为读锁。若事务T对数据对象A加上S锁，则事务T可以读A但不能修改A，其他事务只能再对A加S锁，而不能加X锁，直到T释放A上的S锁。这就保证了其他事务可以读A，但在T释放A上的S锁之前不能对A做任何修改。</li>
+</ul>
+</li>
+<li><p><strong>如何用封锁机制保证数据的一致性</strong></p>
+<ul>
+<li><p>DBMS在对数据进行读写操作之前首先对该数据执行封锁操作</p>
+<p><img src="https://img.mubu.com/document_image/dcee18ec-a066-4768-9c12-ff88c966b1fe-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>什么是活锁？活锁的产生原因和解决方法</strong></p>
+<p>- </p>
+<p>  <img src="https://img.mubu.com/document_image/99029c2a-8674-4f79-a003-d11d2e2098cc-2893733.jpg" alt="img"></p>
+<ul>
+<li><p>活锁产生的原因：当一系列封锁不能按照其先后顺序执行时，就可能导致一些事务无限期等待某个封锁，从而导致活锁。</p>
+</li>
+<li><p>避免活锁的简单方法是采用先来先服务的策略。当多个事务请求封锁同一数据对象时，封锁子系统按请求封锁的先后次序对事务排队，数据对象上的锁一旦释放就批准申请队列中第一个事务获得锁。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>什么是死锁？请给出预防死锁的若干方法。</strong></p>
+<p><img src="https://img.mubu.com/document_image/61136e43-13d8-41ba-aab7-006c9ce3722e-2893733.jpg" alt="img"></p>
+<ul>
+<li>在数据库中，产生死锁的原因是两个或多个事务都已封锁了一些数据对象，然后又都请求已被其他事务封锁的数据加锁，从而出现死等待。</li>
+<li>防止死锁的发生其实就是要破坏产生死锁的条件。预防死锁通常有两种方法：<ul>
+<li>一次封锁法<br>要求每个事务必须一次将所有要使用的数据全部加锁，否则就不能继续执行。</li>
+<li>顺序封锁法<br>预先对数据对象规定一个封锁顺序，所有事务都按这个顺序实行封锁。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>请给出检测死锁发生的一种方法，当发生死锁后如何解除死锁？</strong></p>
+<ul>
+<li>数据库系统一般采用允许死锁发生，DBMS检测到死锁后加以解除的方法。</li>
+<li>DBMS中诊断死锁的方法与操作系统类似，一般使用超时法或事务等待图法。</li>
+<li>超时法：如果一个事务的等待时间超过了规定的时限，就认为发生了死锁。</li>
+<li>DBMS并发控制子系统检测到死锁后，就要设法解除。通常采用的方法是选择一个处理死锁代价最小的事务，将其撤消，释放此事务持有的所有锁，使其他事务得以继续运行下去。</li>
+</ul>
+</li>
+<li><p><strong>什么样的并发调度是正确的调度？</strong></p>
+<ul>
+<li>可串行化的调度是正确的调度。</li>
+<li>可串行化的调度的定义：多个事务的并发执行是正确的，当且仅当其结果与按某一次序串行地执行它们时的结果相同，我们称这种调度策略为可串行化的调度。</li>
+</ul>
+</li>
+<li><p><strong>综合题</strong></p>
+<p><img src="https://img.mubu.com/document_image/ff04f076-cfed-4cb6-83a9-f1b90c29b75b-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/ffa85e9f-902d-4d22-b06c-92b0ff051d80-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/4d10fb57-f58d-40a7-a625-b8c8352f3efc-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/3289483f-a5b0-4970-b1ef-ad38bfbfac42-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/2c6b7509-60af-4565-9af3-ad367140f217-2893733.jpg" alt="img"></p>
+</li>
+<li><p><strong>证明题</strong></p>
+<p><img src="https://img.mubu.com/document_image/d4be91e8-3690-44fa-897e-9433e16326fb-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/ec774999-e813-49e4-8008-a724911fac95-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/ea4161de-1fcd-4f5b-858e-63263a19687a-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/299fdfd5-99b4-48e8-b8fe-1b75aebe3fac-2893733.jpg" alt="img"></p>
+</li>
+<li><p><img src="https://img.mubu.com/document_image/d9ed33d4-16e9-46ee-9d75-c2d0d8d7019c-2893733.jpg" alt="img"></p>
+</li>
+<li><p><strong>为什么要引进意向锁？ 意向锁的含义是什么？</strong></p>
+<ul>
+<li>引进意向锁是为了提高封锁子系统的效率。</li>
+<li>原因是：在多粒度封锁方法中，一个数据对象可能以两种方式加锁—显式封锁和隐式封锁。因此系统在对某一数据对象加锁时不仅要检查该数据对象上有无（显式和隐式）封锁与之冲突；还要检查其所有上级结点和所有下级结点，看申请的封锁是否与这些结点上的（显式和隐式）封锁冲突；显然，这样的检查方法效率很低。为此引进了意向锁。</li>
+<li>意向锁的含义是：对任一结点加锁时，必须先对它的上层结点加意向锁。引进意向锁后，系统对某一数据对象加锁时不必逐个检查与下一级结点的封锁冲突了。</li>
+</ul>
+</li>
+<li><p><strong>试述常用的意向锁：IS锁，IX锁，SIX锁，给出这些锁的相容矩阵。</strong></p>
+</li>
+<li><p>IS锁：如果对一个数据对象加IS锁，表示它的后裔结点拟（意向）加S锁。例如，要对某个元组加S锁，则要首先对关系和数据库加IS锁</p>
+</li>
+<li><p>IX锁：如果对一个数据对象加IX锁，表示它的后裔结点拟（意向）加X锁。例如，要对某个元组加X锁，则要首先对关系和数据库加IX锁。</p>
+</li>
+<li><p>SIX锁：如果对一个数据对象加SIX锁，表示对它加S锁，再加IX锁，即SIX &#x3D; S + IX。</p>
+</li>
+<li><p>相容矩阵</p>
+<p><img src="https://img.mubu.com/document_image/f0f109a2-6c9f-40b9-baa7-ba93031637e0-2893733.jpg" alt="img"></p>
+</li>
+</ul>
+</li>
+<li><p>补充</p>
+<ul>
+<li><p>试述两段锁协议的概念。</p>
+<ul>
+<li>两段锁协议是指所有事务必须分两个阶段对数据项加锁和解锁。<ul>
+<li>在对任何数据进行读、写操作之前，首先要申请并获得对该数据的封锁；</li>
+<li>在释放一个封锁之后，事务不再申请和获得任何其他封锁。</li>
+</ul>
+</li>
+<li>“两段”的含义是，事务分为两个阶段：<ul>
+<li>第一阶段是获得封锁，也称为扩展阶段。在这阶段，事务可以申请获得任何数据项上的任何类型的锁，但是不能释放任何锁。</li>
+<li>第二阶段是释放封锁，也称为收缩阶段。在这阶段，事务释放已经获得的锁，但是不能再申请任何锁。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>不同封锁协议与系统一致性级别的关系是什么？</p>
+<ul>
+<li>不同的封锁协议对应不同的一致性级别。</li>
+<li>一级封锁协议可防止丢失修改，并保证事务T是可恢复的。在一级封锁协议中，对读数据是不加S锁的，所以它不能保证可重复读和不读“脏”数据。</li>
+<li>二级封锁协议除防止了丢失修改，还可进一步防止读“脏”数据。在二级封锁协议中，由于读完数据后立即释放S锁，所以它不能保证可重复读。</li>
+<li>在三级封锁协议中，无论是读数据还是写数据都加长锁，即都要到事务结束时才释放封锁。所以三级封锁协议除防止了丢失修改和不读“脏”数据外，还进一步防止了不可重复读。</li>
+</ul>
+</li>
+<li><p>什么是封锁协议？不同级别的封锁协议的主要区别是什么？</p>
+<ul>
+<li>在运用封锁技术对数据加锁时，要约定一些规则。例如，在运用X锁和S锁对数据对象加锁时，要约定何时申请X锁或S锁、何时释放封锁等。这些约定或者规则称为封锁协议（Locking Protocol）。对封锁方式约定不同的规则，就形成了各种不同的封锁协议。不同级别的封锁协议，例如《概论》中介绍的三级封锁协议，三级协议的主要区别在于什么操作需要申请封锁，何时申请封锁以及何时释放锁（即持锁时间的长短）。</li>
+<li>一级封锁协议：事务T在修改数据R之前必须先对其加X锁，直到事务结束才释放。</li>
+<li>二级封锁协议：一级封锁协议加上事务T在读取数据R之前必须先对其加S锁，读完后即可释放S锁。</li>
+<li>三级封锁协议：一级封锁协议加上事务T在读取数据R之前必须先对其加S锁，直到事务结束才释放。</li>
+</ul>
+</li>
+<li><p>意向锁中为什么存在SIX锁，而没有XIS锁</p>
+<p><img src="https://img.mubu.com/document_image/bb7a3bb2-03d7-46c7-9a2a-c150d17893a0-2893733.jpg" alt="img"></p>
+</li>
+<li><p>完整性约束是否能够保证数据库在处理多个事务时处于一致状态</p>
+<p><img src="https://img.mubu.com/document_image/171e65db-49c0-44c1-aeb1-696e443549fe-2893733.jpg" alt="img"></p>
+</li>
+<li><p>综合题</p>
+<p><img src="https://img.mubu.com/document_image/fdda5f19-419d-45a3-834e-785ac1f684b0-2893733.jpg" alt="img"></p>
+<p><img src="https://img.mubu.com/document_image/de194d0c-1343-4038-a988-00b6678051ef-2893733.jpg" alt="img"></p>
+</li>
+<li><p>为了防止一个用户的工作不适当地影响另一个用户，应该采取【并发控制】</p>
+</li>
+<li><p>解决并发操作带来的数据不一致问题普遍采用【封锁】技术。</p>
+</li>
+<li><p>下列不属于并发操作带来的问题是【死锁】</p>
+</li>
+<li><p>DBMS普遍采用【封锁】方法来保证调度的正确性</p>
+</li>
+<li><p>事务T在修改数据R之前必须先对其加X锁，直到事务结束才释放，这是【一级封锁协议】</p>
+</li>
+<li><p>如果事务T获得了数据项Q上的排他锁，则T对Q【既可读又可写】</p>
+</li>
+<li><p>设事务T1和T2，对数据库中地数据A进行操作，可能有如下几种情况，请问哪一种不会发生冲突操作【T1正在读A，T2也要读A】</p>
+</li>
+<li><p>如果有两个事务，同时对数据库中同一数据进行操作，不会引起冲突的操作是【两个都是SELECT】</p>
+</li>
+<li><p>在数据库系统中，死锁属于【事务故障】</p>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Database</p><p><a href="http://example.com/2020/02/09/数据库知识点整理/">http://example.com/2020/02/09/数据库知识点整理/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>苒</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2020-02-09</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2021-01-26</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/02/09/%E6%95%85%E4%BA%8B/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">睡前故事</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/02/07/Word%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="level-item">Word 学习笔记</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="苒"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">苒</p><p class="is-size-6 is-block">It is written.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>UJN</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">8</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/QinMoMeak/QinMoMeak.github.io"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#第1章-绪论"><span class="level-left"><span class="level-item">1</span><span class="level-item">第1章 绪论</span></span></a></li><li><a class="level is-mobile" href="#第2章-关系数据库（重点）"><span class="level-left"><span class="level-item">2</span><span class="level-item">第2章 关系数据库（重点）</span></span></a></li><li><a class="level is-mobile" href="#第3章-关系数据库标准语言SQL（重点）"><span class="level-left"><span class="level-item">3</span><span class="level-item">第3章 关系数据库标准语言SQL（重点）</span></span></a></li><li><a class="level is-mobile" href="#第4章-数据库安全性"><span class="level-left"><span class="level-item">4</span><span class="level-item">第4章 数据库安全性</span></span></a></li><li><a class="level is-mobile" href="#第5章-数据库完整性"><span class="level-left"><span class="level-item">5</span><span class="level-item">第5章 数据库完整性</span></span></a></li><li><a class="level is-mobile" href="#第6章-关系数据理论（重点）"><span class="level-left"><span class="level-item">6</span><span class="level-item">第6章 关系数据理论（重点）</span></span></a></li><li><a class="level is-mobile" href="#第7章-数据库设计"><span class="level-left"><span class="level-item">7</span><span class="level-item">第7章 数据库设计</span></span></a></li><li><a class="level is-mobile" href="#第8章-数据库编程"><span class="level-left"><span class="level-item">8</span><span class="level-item">第8章 数据库编程</span></span></a></li><li><a class="level is-mobile" href="#第9章-关系查询处理和查询优化"><span class="level-left"><span class="level-item">9</span><span class="level-item">第9章 关系查询处理和查询优化</span></span></a></li><li><a class="level is-mobile" href="#第10章-数据库恢复技术"><span class="level-left"><span class="level-item">10</span><span class="level-item">第10章 数据库恢复技术</span></span></a></li><li><a class="level is-mobile" href="#第11章-并发控制"><span class="level-left"><span class="level-item">11</span><span class="level-item">第11章 并发控制</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/A-SOUL/"><span class="level-start"><span class="level-item">A-SOUL</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Learn/"><span class="level-start"><span class="level-item">Learn</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/Life/"><span class="level-start"><span class="level-item">Life</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Literal/"><span class="level-start"><span class="level-item">Literal</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Misc/"><span class="level-start"><span class="level-item">Misc</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/UJN/"><span class="level-start"><span class="level-item">UJN</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-01T15:45:38.181Z">2023-07-01</time></p><p class="title"><a href="/2023/07/01/%E5%BD%93%E4%BB%A3%E9%9D%92%E5%B9%B4%E7%A9%BF%E6%90%AD/">当代青年极简穿搭指南</a></p><p class="categories"><a href="/categories/Life/">Life</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-24T05:26:09.000Z">2023-06-24</time></p><p class="title"><a href="/2023/06/24/Eileen_data/">UID:672342685 动态留档</a></p><p class="categories"><a href="/categories/A-SOUL/">A-SOUL</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-30T06:29:17.000Z">2021-10-30</time></p><p class="title"><a href="/2021/10/30/Tips/">Tips</a></p><p class="categories"><a href="/categories/Learn/">Learn</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-29T13:57:05.000Z">2021-10-29</time></p><p class="title"><a href="/2021/10/29/SwitchyOmega/">SwitchyOmega安装使用</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-10-28T05:26:09.000Z">2021-10-28</time></p><p class="title"><a href="/2021/10/28/Kali/">VirtualBox中各版本Kali Linux的安装</a></p><p class="categories"><a href="/categories/Learn/">Learn</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/"><span class="level-start"><span class="level-item">2021</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/"><span class="level-start"><span class="level-item">2020</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/"><span class="level-start"><span class="level-item">2019</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Learn/"><span class="tag">Learn</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Literal/"><span class="tag">Literal</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Notes/"><span class="tag">Notes</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Probabilism/"><span class="tag">Probabilism</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Programming/"><span class="tag">Programming</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Spring/"><span class="tag">Spring</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SpringBoot/"><span class="tag">SpringBoot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/office/"><span class="tag">office</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="苒" height="28"></a><p class="is-size-7"><span>&copy; 2023 苒</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
